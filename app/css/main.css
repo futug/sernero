@@ -219,14 +219,10 @@ p {
   color: var(--light-color);
   background-color: transparent;
 }
-@media (max-width: 481px) {
-  .primary-button {
-    padding: 14px 16px;
-  }
-}
 @media (max-width: 375px) {
   .primary-button {
     font-size: 16px;
+    padding: 14px 16px;
   }
 }
 
@@ -271,6 +267,7 @@ p {
   .secondary-button {
     font-size: 14px;
     padding: 13px 10px;
+    gap: 15px;
   }
 }
 
@@ -1090,6 +1087,12 @@ p {
 }
 .advantages__list-item:not(:first-child) {
   margin-top: 24px;
+}
+@media (max-width: 375px) {
+  .advantages__list {
+    font-size: 18px;
+    word-wrap: break-word;
+  }
 }
 .advantages-cta {
   margin-top: 40px;

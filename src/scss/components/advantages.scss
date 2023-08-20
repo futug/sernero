@@ -50,6 +50,11 @@
     &-item:not(:first-child) {
       margin-top: 24px;
     }
+
+    @media (max-width: 375px) {
+      font-size: 18px;
+      word-wrap: break-word;
+    }
   }
   &-cta {
     margin-top: 40px;

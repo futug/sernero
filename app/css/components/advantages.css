@@ -41,6 +41,12 @@
 .advantages__list-item:not(:first-child) {
   margin-top: 24px;
 }
+@media (max-width: 375px) {
+  .advantages__list {
+    font-size: 18px;
+    word-wrap: break-word;
+  }
+}
 .advantages-cta {
   margin-top: 40px;
 }
