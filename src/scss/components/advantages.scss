@@ -1,10 +1,11 @@
 .advantages {
-  background: url("../../img/home-background-decore-1.png") no-repeat center / 373px 361px,url('../../img/home-background-decore-2.png') no-repeat 12% 88%/ 336px 325px, var(--primary-accent-color);
+  background: url("../img/home-background-decore-1.webp") no-repeat center /
+      373px 361px,
+    url("../img/home-background-decore-1.png") no-repeat center / 373px 361px,
+    url("../img/home-background-decore-2.webp") no-repeat 12% 88%/ 336px 325px,
+    url("../img/home-background-decore-2.png") no-repeat 12% 88%/ 336px 325px,
+    var(--primary-accent-color);
   margin: 0;
-
-
-
-
 
   & .container {
     padding: 120px 15px;
@@ -49,15 +50,21 @@
     &-item:not(:first-child) {
       margin-top: 24px;
     }
-
-
   }
   &-cta {
     margin-top: 40px;
   }
 
   @media screen and (max-width: 980px) {
-    background: url("../../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,url('../../img/home-decore-mobile-2.png') no-repeat center/ 373px 361px,url("../../img/home-decore-mobile-3.png") no-repeat bottom left / 336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right /
+        373px 361px,
+      url("../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,
+      url("../img/home-decore-mobile-2.webp") no-repeat center/ 373px 361px,
+      url("../img/home-decore-mobile-2.png") no-repeat center/ 373px 361px,
+      url("../img/home-decore-mobile-3.webp") no-repeat bottom left / 336px
+        325px,
+      url("../img/home-decore-mobile-3.png") no-repeat bottom left / 336px 325px,
+      var(--primary-accent-color);
 
     &-title {
       font-size: 26px;
@@ -82,14 +89,18 @@
       margin: 0 auto;
       display: block;
       margin-top: 30px;
-
     }
-
   }
 
   @media screen and (max-width: 480px) {
-
-    background: url("../../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,url('../../img/home-decore-mobile-2.png') no-repeat left center/ 373px 361px,url("../../img/home-decore-mobile-3.png") no-repeat 10% 97% / 336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right /
+        373px 361px,
+      url("../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,
+      url("../img/home-decore-mobile-2.webp") no-repeat left center/ 373px 361px,
+      url("../img/home-decore-mobile-2.png") no-repeat left center/ 373px 361px,
+      url("../img/home-decore-mobile-3.webp") no-repeat 10% 97% / 336px 325px,
+      url("../img/home-decore-mobile-3.png") no-repeat 10% 97% / 336px 325px,
+      var(--primary-accent-color);
 
     &__list {
       font-weight: 300;

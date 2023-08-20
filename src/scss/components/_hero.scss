@@ -1,7 +1,8 @@
 .hero {
   min-height: 100vh;
   margin: 0 auto;
-  background: url("../../img/hero_background.jpg") no-repeat center / cover;
+  background: url("../img/hero_background.webp") no-repeat center/ cover,
+    url("../img/hero_background.jpg") no-repeat center / cover;
   box-shadow: inset 1px 1px 232px #000000;
 
   &__content {

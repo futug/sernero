@@ -1,6 +1,7 @@
 .offer {
   padding: 0;
-  background: url("../../img/offer-background.jpg") no-repeat center/cover;
+  background: url("../img/offer-background.webp") no-repeat center/cover,
+    url("../img/offer-background.jpg") no-repeat center/cover;
 
   &-content {
     padding: 120px 15px;

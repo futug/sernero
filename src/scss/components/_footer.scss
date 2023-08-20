@@ -1,6 +1,6 @@
 .footer {
-  background: url("../../img/footer-decore.png") no-repeat 90% 0 / contain,
-    var(--dark-color);
+  background: url("../img/footer-decore.webp") no-repeat 90% 0 / contain,
+    url("../img/footer-decore.png") no-repeat 90% 0 / contain, var(--dark-color);
 
   padding: 120px 15px 35px 15px;
 
@@ -452,8 +452,9 @@
 
 @media (max-width: 1024px) {
   .footer {
-    background: url("../../img/mobile-footer-bacground.png") no-repeat 90% 0 /
+    background: url("../img/mobile-footer-bacground.webp") no-repeat 90% 0 /
         cover,
+      url("../img/mobile-footer-bacground.png") no-repeat 90% 0 / cover,
       var(--dark-color);
     padding: 90px 15px;
   }

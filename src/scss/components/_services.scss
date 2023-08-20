@@ -172,13 +172,13 @@
     0 45%
   );
   background-color: rgb(205, 255, 204);
-  background: url("../../img/Union.png") no-repeat center / cover,
-    rgb(205, 255, 204);
+  background: url("../img/Union.webp") no-repeat center / cover,
+    url("../../img/Union.png") no-repeat center / cover, rgb(205, 255, 204);
   box-shadow: none;
 
   &:hover {
-    background: url("../../img/Union.png") no-repeat center / cover,
-      rgb(149, 185, 148);
+    background: url("../img/Union.webp") no-repeat center / cover,
+      url("../../img/Union.png") no-repeat center / cover, rgb(149, 185, 148);
   }
 
   & p {
@@ -344,14 +344,14 @@
       0 45%
     );
     background-color: rgb(205, 255, 204);
-    background: url("../../img/Union.png") no-repeat center / cover,
-      rgb(205, 255, 204);
+    background: url("../img/Union.webp") no-repeat center / cover,
+      url("../../img/Union.png") no-repeat center / cover, rgb(205, 255, 204);
     box-shadow: none;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background: url("../../img/Union.png") no-repeat center / cover,
-        rgb(149, 185, 148);
+      background: url("../img/Union.webp") no-repeat center / cover,
+        url("../../img/Union.png") no-repeat center / cover, rgb(149, 185, 148);
     }
 
     & p {

@@ -384,7 +384,7 @@ p {
 .hero {
   min-height: 100vh;
   margin: 0 auto;
-  background: url("../../img/hero_background.jpg") no-repeat center/cover;
+  background: url("../img/hero_background.webp") no-repeat center/cover, url("../img/hero_background.jpg") no-repeat center/cover;
   -webkit-box-shadow: inset 1px 1px 232px #000000;
   box-shadow: inset 1px 1px 232px #000000;
 }
@@ -730,12 +730,12 @@ p {
   -webkit-clip-path: polygon(65% 45%, 65% 0, 100% 0, 100% 55%, 85% 55%, 85% 100%, 0 100%, 0 45%);
   clip-path: polygon(65% 45%, 65% 0, 100% 0, 100% 55%, 85% 55%, 85% 100%, 0 100%, 0 45%);
   background-color: rgb(205, 255, 204);
-  background: url("../../img/Union.png") no-repeat center/cover, rgb(205, 255, 204);
+  background: url("../img/Union.webp") no-repeat center/cover, url("../../img/Union.png") no-repeat center/cover, rgb(205, 255, 204);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .clip-link:hover {
-  background: url("../../img/Union.png") no-repeat center/cover, rgb(149, 185, 148);
+  background: url("../img/Union.webp") no-repeat center/cover, url("../../img/Union.png") no-repeat center/cover, rgb(149, 185, 148);
 }
 .clip-link p {
   font-family: "RubikMonoOne";
@@ -881,14 +881,14 @@ p {
   -webkit-clip-path: polygon(65% 45%, 65% 0, 100% 0, 100% 55%, 85% 55%, 85% 100%, 0 100%, 0 45%);
   clip-path: polygon(65% 45%, 65% 0, 100% 0, 100% 55%, 85% 55%, 85% 100%, 0 100%, 0 45%);
   background-color: rgb(205, 255, 204);
-  background: url("../../img/Union.png") no-repeat center/cover, rgb(205, 255, 204);
+  background: url("../img/Union.webp") no-repeat center/cover, url("../../img/Union.png") no-repeat center/cover, rgb(205, 255, 204);
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .services-mobile__content-clip-link:hover {
-  background: url("../../img/Union.png") no-repeat center/cover, rgb(149, 185, 148);
+  background: url("../img/Union.webp") no-repeat center/cover, url("../../img/Union.png") no-repeat center/cover, rgb(149, 185, 148);
 }
 .services-mobile__content-clip-link p {
   font-family: "RubikMonoOne";
@@ -1049,7 +1049,7 @@ p {
 }
 
 .advantages {
-  background: url("../../img/home-background-decore-1.png") no-repeat center/373px 361px, url("../../img/home-background-decore-2.png") no-repeat 12% 88%/336px 325px, var(--primary-accent-color);
+  background: url("../img/home-background-decore-1.webp") no-repeat center/373px 361px, url("../img/home-background-decore-1.png") no-repeat center/373px 361px, url("../img/home-background-decore-2.webp") no-repeat 12% 88%/336px 325px, url("../img/home-background-decore-2.png") no-repeat 12% 88%/336px 325px, var(--primary-accent-color);
   margin: 0;
 }
 .advantages .container {
@@ -1096,7 +1096,7 @@ p {
 }
 @media screen and (max-width: 980px) {
   .advantages {
-    background: url("../../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../../img/home-decore-mobile-2.png") no-repeat center/373px 361px, url("../../img/home-decore-mobile-3.png") no-repeat bottom left/336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat center/373px 361px, url("../img/home-decore-mobile-2.png") no-repeat center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat bottom left/336px 325px, url("../img/home-decore-mobile-3.png") no-repeat bottom left/336px 325px, var(--primary-accent-color);
   }
   .advantages-title {
     font-size: 26px;
@@ -1121,7 +1121,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .advantages {
-    background: url("../../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../../img/home-decore-mobile-2.png") no-repeat left center/373px 361px, url("../../img/home-decore-mobile-3.png") no-repeat 10% 97%/336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat left center/373px 361px, url("../img/home-decore-mobile-2.png") no-repeat left center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat 10% 97%/336px 325px, url("../img/home-decore-mobile-3.png") no-repeat 10% 97%/336px 325px, var(--primary-accent-color);
   }
   .advantages__list {
     font-weight: 300;
@@ -1135,7 +1135,7 @@ p {
 
 .offer {
   padding: 0;
-  background: url("../../img/offer-background.jpg") no-repeat center/cover;
+  background: url("../img/offer-background.webp") no-repeat center/cover, url("../img/offer-background.jpg") no-repeat center/cover;
 }
 .offer-content {
   padding: 120px 15px;
@@ -1359,7 +1359,7 @@ p {
 }
 
 .footer {
-  background: url("../../img/footer-decore.png") no-repeat 90% 0/contain, var(--dark-color);
+  background: url("../img/footer-decore.webp") no-repeat 90% 0/contain, url("../img/footer-decore.png") no-repeat 90% 0/contain, var(--dark-color);
   padding: 120px 15px 35px 15px;
 }
 .footer-content__inner {
@@ -1814,7 +1814,7 @@ p {
 
 @media (max-width: 1024px) {
   .footer {
-    background: url("../../img/mobile-footer-bacground.png") no-repeat 90% 0/cover, var(--dark-color);
+    background: url("../img/mobile-footer-bacground.webp") no-repeat 90% 0/cover, url("../img/mobile-footer-bacground.png") no-repeat 90% 0/cover, var(--dark-color);
     padding: 90px 15px;
   }
   .footer-content__mobile-inner {
