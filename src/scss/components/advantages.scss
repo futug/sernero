@@ -1,0 +1,104 @@
+.advantages {
+  background: url("../../img/home-background-decore-1.png") no-repeat center / 373px 361px,url('../../img/home-background-decore-2.png') no-repeat 12% 88%/ 336px 325px, var(--primary-accent-color);
+  margin: 0;
+
+
+
+
+
+  & .container {
+    padding: 120px 15px;
+    position: relative;
+
+    .image {
+      position: absolute;
+      top: -5%;
+      right: 0;
+    }
+    @media screen and (max-width: 980px) {
+      .image {
+        display: none;
+      }
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-family: "RubikMonoOne";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+    color: var(--dark-color);
+  }
+
+  &__list {
+    margin-top: 80px;
+    max-width: 988px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--dark-color);
+
+    & span {
+      font-weight: 500;
+    }
+
+    &-item:not(:first-child) {
+      margin-top: 24px;
+    }
+
+
+  }
+  &-cta {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 980px) {
+    background: url("../../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,url('../../img/home-decore-mobile-2.png') no-repeat center/ 373px 361px,url("../../img/home-decore-mobile-3.png") no-repeat bottom left / 336px 325px, var(--primary-accent-color);
+
+    &-title {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    &__list {
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: 20px;
+
+      &-item:not(:first-child) {
+        margin-top: 18px;
+      }
+    }
+
+    & .container {
+      padding: 90px 15px;
+    }
+
+    &-cta {
+      margin: 0 auto;
+      display: block;
+      margin-top: 30px;
+
+    }
+
+  }
+
+  @media screen and (max-width: 480px) {
+
+    background: url("../../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,url('../../img/home-decore-mobile-2.png') no-repeat left center/ 373px 361px,url("../../img/home-decore-mobile-3.png") no-repeat 10% 97% / 336px 325px, var(--primary-accent-color);
+
+    &__list {
+      font-weight: 300;
+      max-width: 400px;
+      line-height: normal;
+
+      & span {
+        font-weight: 400;
+      }
+    }
+  }
+}

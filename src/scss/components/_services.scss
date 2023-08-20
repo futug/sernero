@@ -1,0 +1,447 @@
+.services__content {
+  padding: 120px 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  @media (max-width: 1200px) {
+    max-width: 1070px;
+  }
+
+  @media (max-width: 1170px) {
+    max-width: 1016px;
+  }
+
+  &-title {
+    max-width: 937px;
+    font-family: "RubikMonoOne";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+    color: var(--secondary-accent-color);
+
+    & span {
+      color: var(--dark-color);
+    }
+  }
+
+  &-offers {
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 1200px) {
+      margin-top: 0;
+    }
+    @media (max-width: 1170px) {
+      margin-top: 30px;
+    }
+  }
+
+  &-link {
+    position: absolute;
+    background: #000;
+    height: 210px;
+    background: #715a40;
+    box-shadow: inset 0px 0px 100px var(--dark-color);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: none;
+
+      p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      p:nth-child(2) {
+        color: var(--light-color);
+      }
+    }
+
+    & p {
+      font-family: "RubikMonoOne";
+      max-width: 271px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 37px;
+      color: var(--light-color);
+      padding: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    & p:nth-child(2) {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      max-width: 100%;
+      text-align: right;
+      letter-spacing: -0.05em;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+    }
+    @media (max-width: 1200px) {
+      transform: scale(0.8);
+    }
+
+    @media (max-width: 1170px) {
+      transform: scale(0.7);
+    }
+  }
+
+  .beauty {
+    width: 420px;
+    @media (max-width: 1200px) {
+      top: 30px;
+      left: 25px;
+    }
+
+    @media (max-width: 1170px) {
+      top: 45px;
+      left: 40px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    @media (max-width: 1200px) {
+      gap: 30px;
+    }
+    @media (max-width: 1170px) {
+      gap: 20px;
+    }
+  }
+
+  &-right-wrapper {
+    @media (max-width: 1200px) {
+      position: relative;
+      right: 110px;
+      top: 20px;
+    }
+
+    @media (max-width: 1170px) {
+      right: 170px;
+      top: 32px;
+    }
+  }
+
+  &-btn {
+    @media (max-width: 1200px) {
+      padding: 10px 20px;
+      position: relative;
+      left: 45px;
+      top: 20px;
+    }
+    @media (max-width: 1170px) {
+      font-size: 14px;
+      left: 85px;
+      top: 40px;
+    }
+  }
+}
+
+.clip-link {
+  display: block;
+  position: relative;
+  min-width: 680px;
+  height: 510px;
+  -webkit-clip-path: polygon(
+    65% 45%,
+    65% 0,
+    100% 0,
+    100% 55%,
+    85% 55%,
+    85% 100%,
+    0 100%,
+    0 45%
+  );
+  clip-path: polygon(
+    65% 45%,
+    65% 0,
+    100% 0,
+    100% 55%,
+    85% 55%,
+    85% 100%,
+    0 100%,
+    0 45%
+  );
+  background-color: rgb(205, 255, 204);
+  background: url("../../img/Union.png") no-repeat center / cover,
+    rgb(205, 255, 204);
+  box-shadow: none;
+
+  &:hover {
+    background: url("../../img/Union.png") no-repeat center / cover,
+      rgb(149, 185, 148);
+  }
+
+  & p {
+    font-family: "RubikMonoOne";
+    max-width: 271px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    color: var(--light-color);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 45%;
+  }
+
+  & p:nth-child(2) {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 100%;
+    text-align: right;
+    letter-spacing: -0.05em;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    padding-bottom: 0;
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    right: 110px;
+  }
+}
+
+.it {
+  width: 440px;
+  position: relative;
+  display: block;
+  margin-top: 17px;
+}
+
+.emergency {
+  width: 540px;
+  bottom: 0;
+  right: 0;
+  @media (max-width: 1200px) {
+    bottom: 30px;
+    right: 0px;
+  }
+
+  @media (max-width: 1170px) {
+    bottom: 45px;
+  }
+}
+
+.services-mobile__content {
+  padding: 120px 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: none;
+
+  &-title {
+    max-width: 937px;
+    font-family: "RubikMonoOne";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+    color: var(--secondary-accent-color);
+
+    & span {
+      color: var(--dark-color);
+    }
+
+    @media (max-width: 575px) {
+      max-width: 378px;
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &-offers {
+    margin-top: 70px;
+    position: relative;
+  }
+
+  &-link {
+    height: 180px;
+    display: block;
+    background: #715a40;
+    box-shadow: inset 0px 0px 100px var(--dark-color);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    position: relative;
+
+    &:hover {
+      box-shadow: none;
+
+      p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      p:nth-child(2) {
+        color: var(--light-color);
+      }
+    }
+
+    & p {
+      font-family: "RubikMonoOne";
+      max-width: 271px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 37px;
+      color: var(--light-color);
+      padding: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    & p:nth-child(2) {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      max-width: 100%;
+      text-align: right;
+      letter-spacing: -0.05em;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+    }
+  }
+
+  &-clip-link {
+    display: block;
+    position: relative;
+    height: 510px;
+    -webkit-clip-path: polygon(
+      65% 45%,
+      65% 0,
+      100% 0,
+      100% 55%,
+      85% 55%,
+      85% 100%,
+      0 100%,
+      0 45%
+    );
+    clip-path: polygon(
+      65% 45%,
+      65% 0,
+      100% 0,
+      100% 55%,
+      85% 55%,
+      85% 100%,
+      0 100%,
+      0 45%
+    );
+    background-color: rgb(205, 255, 204);
+    background: url("../../img/Union.png") no-repeat center / cover,
+      rgb(205, 255, 204);
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: url("../../img/Union.png") no-repeat center / cover,
+        rgb(149, 185, 148);
+    }
+
+    & p {
+      font-family: "RubikMonoOne";
+      max-width: 271px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 37px;
+      color: var(--light-color);
+      padding-left: 20px;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    & p:nth-child(2) {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      max-width: 100%;
+      text-align: right;
+      letter-spacing: -0.05em;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 100px;
+      right: 60px;
+    }
+
+    @media (max-width: 700px) {
+      height: 400px;
+    }
+
+    @media (max-width: 575px) {
+      height: 300px;
+    }
+
+    @media (max-width: 500px) {
+      height: 262px;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    margin-top: 30px;
+
+    .buttons {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      display: flex;
+      gap: 10px;
+      width: 60%;
+
+      .services-mobile__content-btn {
+        flex-grow: 1;
+      }
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .wrapper {
+        width: 100%;
+      }
+      .services-mobile__content-clip-link {
+        display: none;
+      }
+
+      .buttons {
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1010px) {
+  .services__content {
+    display: none;
+  }
+
+  .services-mobile__content {
+    display: block;
+    padding: 90px 15px 120px 15px;
+  }
+}

@@ -1,0 +1,30 @@
+.secondary-button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 14px 34px 14px 19px;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  gap: 17px;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--dark-color);
+  }
+
+  @media (max-width: 481px) {
+    padding: 13px 18px 13px 14px;
+  }
+  @media (max-width: 375px) {
+    font-size: 14px;
+    padding: 13px 10px;
+  }
+}

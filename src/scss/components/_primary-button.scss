@@ -1,0 +1,35 @@
+.primary-button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 14px 43px;
+  color: var(--dark-color);
+  background-color: var(--primary-accent-color);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  border: 1px solid var(--primary-accent-color);
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+    background-color: transparent;
+  }
+
+  @media (max-width: 481px) {
+    padding: 14px 16px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+  }
+}
+
+.light {
+  &:hover {
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+  }
+}

@@ -1,0 +1,54 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+    gap: 55px;
+
+    &-link {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--light-color);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--primary-accent-color);
+      }
+
+      &--active {
+        color: var(--primary-accent-color);
+      }
+
+      @media (max-width: 840px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      gap: 35px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 25px;
+    }
+
+    @media (max-width: 375px) {
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .contacts-link {
+    font-weight: 500;
+  }
+}
