@@ -1,0 +1,176 @@
+.services-cta {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/services-cta-bg.webp") no-repeat top center/ cover,
+    url("../img/services-cta-bg.jpg") no-repeat top center / cover;
+
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--dark-color);
+  }
+
+  &__subtitle {
+    margin-top: 17px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--dark-color);
+  }
+
+  &__content {
+    .title-group {
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        max-width: 544px;
+        font-family: "RubikMonoOne";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 37px;
+        color: var(--dark-color);
+      }
+
+      &__subtitle {
+        max-width: 378px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.05em;
+        color: var(--dark-color);
+      }
+    }
+
+    .services-cta__form {
+      margin-top: 66px;
+      padding: 25px 35px;
+      background-color: var(--light-color);
+
+      .form {
+        margin-top: 14px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        align-items: start;
+        flex-wrap: wrap;
+
+        &__inputs {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        &__inputs-top {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        &__label {
+          flex-grow: 1;
+          display: flex;
+          border: 1px solid var(--dark-color);
+        }
+        &__input {
+          flex-grow: 1;
+          padding: 13px;
+          outline: none;
+        }
+
+        &__button {
+          flex-grow: 1;
+          padding: 12px;
+          border: 1px solid var(--dark-color);
+          transition: all 0.3s ease-in-out;
+          background-color: var(--dark-color);
+          color: var(--light-color);
+
+          &:hover {
+            background-color: transparent;
+            color: var(--dark-color);
+          }
+        }
+
+        .select {
+          position: relative;
+          flex-grow: 1;
+
+          select {
+            flex-grow: 1;
+            display: flex;
+            border: 1px solid var(--dark-color);
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+          }
+          .downarrow {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 13px;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__privacy-warn {
+    margin-top: 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--dark-color);
+
+    & a {
+      color: var(--dark-color);
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .title-group {
+      flex-direction: column;
+      gap: 20px;
+
+      &__title {
+        max-width: 380px;
+      }
+
+      &__subtitle {
+        max-width: 378px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 90px;
+    .services-cta__form {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .select {
+      width: 100%;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+}

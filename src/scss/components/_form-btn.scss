@@ -23,3 +23,15 @@
 .black {
   background-color: var(--dark-color);
 }
+
+.light-send {
+  background-color: var(--light-color);
+  color: var(--secondary-accent-color);
+  border: 1px solid var(--light-color);
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+  }
+}

@@ -1,0 +1,80 @@
+.item {
+  max-width: 213px;
+  padding: 20px 16px 16px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &__image {
+    justify-self: center;
+  }
+
+  &__title {
+    margin-top: 19px;
+    max-width: 180px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: -0.05em;
+    color: #8db48d;
+    align-self: start;
+  }
+
+  &__desc {
+    margin-top: 9px;
+    max-width: 180px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: -0.05em;
+    color: var(--dark-color);
+    align-self: start;
+  }
+
+  &__button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    max-width: 380px;
+    min-height: 248px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: space-between;
+    gap: 23px;
+
+    &__image {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 20px;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin: 0;
+      align-self: start;
+    }
+
+    &__desc {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-top: 30px;
+      align-self: center;
+    }
+
+    &__button {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin: 0;
+    }
+  }
+}

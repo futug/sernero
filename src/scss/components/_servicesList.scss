@@ -1,0 +1,24 @@
+.services-list {
+  &__content {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &-title {
+      max-width: 560px;
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+      color: var(--dark-color);
+    }
+
+    &-list {
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -7,6 +7,8 @@
 // подключения компонентов страницы
 @import "./components/primary-button";
 @import "./components/secondary-button";
+@import "./components/services-button";
+@import "./components/servicesListItem";
 @import "./components/form-btn";
 @import "./components/case-button";
 @import "./components/secondary-title";
@@ -22,3 +24,7 @@
 @import "./components/footer";
 
 @import "./components/aboutHero";
+@import "./components/aboutRepresent";
+@import "./components/servicesHero";
+@import "./components/servicesList";
+@import "./components/servicesCta";

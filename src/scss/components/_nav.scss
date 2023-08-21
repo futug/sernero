@@ -12,6 +12,20 @@
       color: var(--light-color);
       transition: color 0.3s ease-in-out;
 
+      &:after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: var(--primary-accent-color);
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        background-color: var(--primary-accent-color);
+        width: 100%;
+      }
+
       &:hover {
         color: var(--primary-accent-color);
       }

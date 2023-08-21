@@ -1,0 +1,61 @@
+.about-represent {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/whitenoise-bg.webp") no-repeat center/ cover,
+    url("../img/whitenoise-bg.png") no-repeat center/ cover,
+    var(--secondary-accent-color);
+
+  @media (max-width: 480px) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-image-mobile {
+      display: none;
+    }
+
+    @media (max-width: 1080px) {
+      &-image {
+        display: none;
+      }
+
+      @media (max-width: 480px) {
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+
+        &-image-mobile {
+          display: block;
+        }
+      }
+    }
+
+    &-text {
+      max-width: 800px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--light-color);
+
+      .content-text-paragraph:nth-child(2) {
+        opacity: 0.5;
+      }
+
+      .content-text-paragraph:not(:first-child) {
+        margin-top: 40px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        max-width: 378px;
+      }
+    }
+  }
+}

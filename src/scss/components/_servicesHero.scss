@@ -1,0 +1,65 @@
+.services-hero {
+  background: url("../img/servicesHero-bg.webp") no-repeat top center/ cover,
+    url("../img/servicesHero-bg.jpg") no-repeat top center / cover;
+
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 232px #000000;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: 260px;
+    padding-bottom: 136px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media (max-width: 480px) {
+      padding-top: 167px;
+      padding-bottom: 120px;
+      max-width: 408px;
+
+      &-text {
+        font-size: 20px;
+      }
+
+      &-image {
+        width: 119px;
+        height: 119px;
+      }
+    }
+
+    &-text {
+      max-width: 702px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: -0.05em;
+      color: #ffffff;
+    }
+
+    &-image {
+      width: 248px;
+      height: 248px;
+    }
+  }
+}
