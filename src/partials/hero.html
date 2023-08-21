@@ -1,6 +1,6 @@
 <section class="hero">
   <div class="hero__content container">
-    <div class="content__text">
+    <div class="content__text" data-aos="fade-up">
       <h1 class="content__text-title">
         Умный <span>digital маркетинг </span> <br />
         для Вашего бизнеса
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="content__form">
-      <form action="#" class="form">
+      <form action="#" class="form hero-form">
         <p class="content__form-title">Запишись на консультацию</p>
         <p class="content__form-subtittle">
           Наши менеджеры свяжутся с вами в ближайшее время!
@@ -32,15 +32,15 @@
             <input
               type="text"
               name="Имя"
-              class="input-reset form__input"
+              class="input-reset form__input hero-form__name"
               placeholder="Ваше имя"
             />
           </label>
           <label class="form__labels-item">
             <input
-              type="phone"
+              type="tel"
               name="Телефон"
-              class="input-reset form__input"
+              class="input-reset form__input hero-form__tel"
               placeholder="Ваш телефон"
             />
           </label>
@@ -48,14 +48,12 @@
             <input
               type="email"
               name="email"
-              class="input-reset form__input"
+              class="input-reset form__input hero-form__email"
               placeholder="Ваш e-mail"
             />
           </label>
         </div>
-        <button type="button" class="btn-reset form__btn black">
-          Отправить
-        </button>
+        <button class="btn-reset form__btn black">Отправить</button>
       </form>
     </div>
   </div>

@@ -7,11 +7,12 @@
 
   &__content {
     @include flex-all-sb;
-    padding-top: 220px;
+    padding-top: 250px;
     align-items: center;
     flex-wrap: wrap;
 
     @media (max-width: 481px) {
+      padding-top: 170px;
     }
   }
 

@@ -378,6 +378,48 @@ p {
   }
 }
 
+.light-header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.light-header__logo-image {
+  width: 140px;
+  height: 68px;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+@media (max-width: 840px) {
+  .light-header__logo-image {
+    width: 120px;
+    height: 59px;
+  }
+}
+.light-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+@media (max-width: 840px) {
+  .light-header__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 35px;
+  }
+}
+
 .hero {
   min-height: 100vh;
   margin: 0 auto;
@@ -395,10 +437,15 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 220px;
+  padding-top: 250px;
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+@media (max-width: 481px) {
+  .hero__content {
+    padding-top: 170px;
+  }
 }
 .hero .content__text-title {
   max-width: 700px;
@@ -1042,6 +1089,70 @@ p {
   }
 }
 .nav .contacts-link {
+  font-weight: 500;
+}
+
+.light-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 55px;
+}
+.light-nav__list-link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--dark-color);
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.light-nav__list-link:hover {
+  color: var(--primary-accent-color);
+}
+.light-nav__list-link--active {
+  color: var(--primary-accent-color);
+}
+@media (max-width: 840px) {
+  .light-nav__list-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .light-nav__list-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .light-nav__list-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .light-nav__list {
+    gap: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .light-nav__list {
+    gap: 25px;
+  }
+}
+@media (max-width: 375px) {
+  .light-nav__list {
+    gap: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.light-nav .contacts-link {
   font-weight: 500;
 }
 
@@ -1831,5 +1942,12 @@ p {
   .inner__footer-social {
     display: none !important;
   }
+}
+.about-hero {
+  min-height: 100vh;
+}
+.about-hero__content {
+  padding-top: 233px;
+  padding-bottom: 120px;
 }
 /*# sourceMappingURL=main.css.map */
