@@ -1,0 +1,58 @@
+.portfolio-hero {
+  background: url("../img/hero_background.webp") no-repeat top center/ cover,
+    url("../img/hero_background.jpg") no-repeat top center/ cover;
+
+  &__content {
+    padding-top: 234px;
+    padding-bottom: 234px;
+
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+
+    .content__top {
+      display: flex;
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+      gap: 30px;
+
+      &-title {
+        font-family: "RubikMonoOne";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 56px;
+        color: var(--light-color);
+        max-width: 210px;
+      }
+
+      &-text {
+        width: 696px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: var(--light-color);
+      }
+    }
+
+    .content__bottom {
+      margin-top: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      width: fit-content;
+
+      @media (max-width: 480px) {
+        gap: 10px;
+
+        .portfolio-btn {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
