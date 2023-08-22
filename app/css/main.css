@@ -3367,11 +3367,6 @@ p {
   color: var(--dark-color);
   list-style-type: none;
 }
-@media (max-width: 480px) {
-  .privat-rules__content {
-    max-width: 408px;
-  }
-}
 
 .audit-hero {
   padding-top: 233px;
