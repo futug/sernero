@@ -30,3 +30,22 @@
     gap: 15px;
   }
 }
+
+.black-outline {
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+
+  .prime-msg-ico {
+    stroke: var(--dark-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+
+    .prime-msg-ico {
+      stroke: var(--light-color);
+    }
+  }
+}

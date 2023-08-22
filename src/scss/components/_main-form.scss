@@ -1,0 +1,81 @@
+.main-form {
+  padding: 35px;
+  max-width: 350px;
+  max-height: 440px;
+
+  &__title {
+    max-width: 259px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__subtitle {
+    margin-top: 11px;
+    max-width: 259px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__label {
+    display: block;
+    flex-grow: 1;
+  }
+
+  .wrapper {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px;
+    background-color: transparent;
+    outline: 0;
+    -webkit-tap-highlight-color: none;
+  }
+
+  &__button {
+    margin-top: 26px;
+  }
+}
+
+.black-version {
+  background-color: var(--dark-color);
+
+  .main-form__title {
+    color: var(--light-color);
+  }
+
+  .main-form__subtitle {
+    color: var(--light-color);
+  }
+
+  input {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+  }
+
+  button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--light-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--light-color);
+      border: 1px solid var(--light-color);
+    }
+  }
+}
