@@ -22,7 +22,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
 /* harmony import */ var _components_ex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/ex */ "./src/js/components/ex.js");
 /* harmony import */ var _components_ex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_ex__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
 console.log("components");
+
 
 
 
@@ -169,6 +172,20 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "./src/js/components/preloader.js":
+/*!****************************************!*\
+  !*** ./src/js/components/preloader.js ***!
+  \****************************************/
+/***/ (() => {
+
+const preloader = document.querySelector(".preloader");
+window.addEventListener("load", () => {
+  console.log("Загружено");
+  preloader.classList.add("preloader--hide");
+});
 
 /***/ }),
 
