@@ -3380,7 +3380,7 @@ p {
 }
 @media (max-width: 480px) {
   .audit-hero {
-    background: url("../img/contacts-hero-bg-mobile.webp") no-repeat top center/contain, url("../img/contacts-hero-bg-mobile.png") no-repeat top center/contain;
+    background: url("../img/audit-hero-bg_mobile.webp") no-repeat top center/contain, url("../img/audit-hero-bg_mobile.png") no-repeat top center/contain;
   }
 }
 .audit-hero__content {
@@ -3525,5 +3525,51 @@ p {
     justify-self: center;
     margin-top: 40px;
   }
+}
+
+.audit-quote {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/audit-quote-bg.webp") no-repeat 5% 0/contain, url("../img/audit-quote-bg.png") no-repeat 5% 0/contain;
+}
+@media (max-width: 1024px) {
+  .audit-quote {
+    background: none;
+    padding-top: 90px;
+  }
+}
+.audit-quote__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .audit-quote__content {
+    max-width: 408px;
+  }
+}
+.audit-quote__title {
+  max-width: 230px;
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  color: var(--dark-color);
+}
+.audit-quote__subtitle {
+  max-width: 710px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--dark-color);
 }
 /*# sourceMappingURL=main.css.map */

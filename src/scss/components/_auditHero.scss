@@ -5,9 +5,9 @@
     url("../img/audit-hero-bg.png") no-repeat center / contain;
 
   @media (max-width: 480px) {
-    background: url("../img/contacts-hero-bg-mobile.webp") no-repeat top center/
+    background: url("../img/audit-hero-bg_mobile.webp") no-repeat top center/
         contain,
-      url("../img/contacts-hero-bg-mobile.png") no-repeat top center / contain;
+      url("../img/audit-hero-bg_mobile.png") no-repeat top center / contain;
   }
   &__content {
     display: grid;

@@ -1,0 +1,44 @@
+.audit-quote {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/audit-quote-bg.webp") no-repeat 5% 0 / contain,
+    url("../img/audit-quote-bg.png") no-repeat 5% 0 / contain;
+
+  @media (max-width: 1024px) {
+    background: none;
+    padding-top: 90px;
+  }
+
+  &__content {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+
+
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__title {
+    max-width: 230px;
+    font-family: 'RubikMonoOne';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    color: var(--dark-color);
+  }
+
+  &__subtitle {
+    max-width: 710px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--dark-color);
+  }
+}
