@@ -31,5 +31,9 @@
       color: var(--dark-color);
       list-style-type: none;
     }
+
+    @media (max-width: 480px) {
+      max-width: 378px;
+    }
   }
 }
