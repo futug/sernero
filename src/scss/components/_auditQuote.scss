@@ -1,6 +1,15 @@
 .audit-quote {
-  background: url("../img/audit-quote-bg.webp") no-repeat 5% 0 / contain,
-    url("../img/audit-quote-bg.png") no-repeat 5% 0 / contain;
+  background: image-set(
+    url("../img/audit-quote-bg.webp") type("image/webp"),
+    url("../img/audit-quote-bg.png") type("image/png"));
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 5% 0;
+
+  @media (max-width: 1024px) {
+    background: none;
+  }
 
   &__content {
     display: flex;

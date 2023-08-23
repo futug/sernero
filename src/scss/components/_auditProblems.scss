@@ -1,0 +1,83 @@
+.audit-problems {
+  background-image: image-set(url("../img/audit-problems-bg.webp") type("image/webp"),
+      url("../img/audit-problems-bg.png") type("image/png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--dark-color);
+
+  @media (max-width: 480px) {
+    background-image: image-set(url("../img/audit-problems-bg_mobile.webp") type("image/webp"),
+        url("../img/audit-problems-bg_mobile.png") type("image/png"));
+  }
+
+  &__content {
+    @media (max-width: 480px) {
+      padding-left: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 93px;
+    max-width: 960px;
+    font-family: 'RubikMonoOne';
+    font-weight: 400;
+    font-size: 38px;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 60px;
+  }
+
+  &__item-title {
+    flex: 1 1 400px;
+    font-family: 'RubikMonoOne';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+  }
+
+  &__item-text {
+    flex: 1 1 500px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  &__bot {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 26px;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.audit-problems__bot>span {
+  font-weight: 700;
+}
