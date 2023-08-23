@@ -1,0 +1,71 @@
+.seo-result {
+  background-color: var(--dark-color);
+
+  &__content {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 575px) {
+      max-width: 408px;
+    }
+    &-title {
+      max-width: 795px;
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+      color: var(--light-color);
+
+      & span {
+        color: var(--primary-accent-color);
+      }
+
+      @media (max-width: 575px) {
+        max-width: 378px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    &-decore {
+      width: 4px;
+      background-color: var(--light-color);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 21px;
+        width: 21px;
+        border-radius: 50%;
+        background-color: var(--light-color);
+      }
+    }
+
+    &-text {
+      max-width: 1100px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--light-color);
+
+      & span {
+        color: var(--primary-accent-color);
+      }
+
+      @media (max-width: 575px) {
+        max-width: 337px;
+      }
+    }
+  }
+}
