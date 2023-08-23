@@ -4,15 +4,6 @@
     linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%),
     #8DB48D;
 
-  &__content {
-    padding-top: 120px;
-    padding-bottom: 120px;
-
-    @media (max-width: 480px) {
-      padding-top: 90px;
-    }
-  }
-
   &__title {
     margin-bottom: 70px;
     max-width: 960px;
@@ -66,3 +57,6 @@
   }
 }
 
+.audit_need__text-item > span {
+  font-weight: 500;
+}

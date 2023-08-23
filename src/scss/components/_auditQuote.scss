@@ -1,13 +1,6 @@
 .audit-quote {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: url("../img/audit-quote-bg.webp") no-repeat 5% 0 / contain,
     url("../img/audit-quote-bg.png") no-repeat 5% 0 / contain;
-
-  @media (max-width: 1024px) {
-    background: none;
-    padding-top: 90px;
-  }
 
   &__content {
     display: flex;

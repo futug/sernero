@@ -3826,15 +3826,7 @@ h1 {
 }
 
 .audit-quote {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: url("../img/audit-quote-bg.webp") no-repeat 5% 0/contain, url("../img/audit-quote-bg.png") no-repeat 5% 0/contain;
-}
-@media (max-width: 1024px) {
-  .audit-quote {
-    background: none;
-    padding-top: 90px;
-  }
 }
 .audit-quote__content {
   display: -webkit-box;
@@ -3880,15 +3872,6 @@ h1 {
 
 .audit-need {
   background: url("../img/audit-need-bg.png") no-repeat center/100% 100%, url("../img/audit-need-bg.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%), #8DB48D;
-}
-.audit-need__content {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-@media (max-width: 480px) {
-  .audit-need__content {
-    padding-top: 90px;
-  }
 }
 .audit-need__title {
   margin-bottom: 70px;
@@ -3952,6 +3935,83 @@ h1 {
   font-size: 24px;
   line-height: 29px;
   color: var(--dark-color);
+}
+
+.audit_need__text-item > span {
+  font-weight: 500;
+}
+
+.audit-tasks {
+  background: url("../img/audit-tasks-bg.png") no-repeat center, #000000;
+}
+.audit-tasks__content {
+  color: var(--light-color);
+}
+@media (max-width: 480px) {
+  .audit-tasks__content {
+    padding-left: 30px;
+  }
+}
+.audit-tasks__title {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 38px;
+  margin-bottom: 70px;
+  max-width: 960px;
+}
+@media (max-width: 480px) {
+  .audit-tasks__title {
+    font-size: 26px;
+    max-width: 315px;
+  }
+}
+.audit-tasks__list {
+  margin: 0 0 50px 0;
+  padding-left: 30px;
+  max-width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+}
+.audit-tasks__item {
+  font-size: 24px;
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  .audit-tasks__item {
+    font-size: 20px;
+  }
+}
+.audit-tasks__attention {
+  position: relative;
+  margin-left: 20px;
+  max-width: 940px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: normal;
+  opacity: 0.7;
+}
+@media (max-width: 480px) {
+  .audit-tasks__attention {
+    font-size: 18px;
+  }
+}
+.audit-tasks__attention:before {
+  position: absolute;
+  left: -20px;
+  width: 11px;
+  height: 43px;
+  content: url("../img/attention.svg");
+}
+
+.audit-tasks__item > span {
+  font-weight: 500;
 }
 
 .google-hero {
