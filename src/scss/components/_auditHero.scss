@@ -1,14 +1,19 @@
 .audit-hero {
   padding-top: 233px;
   padding-bottom: 120px;
-  background: url("../img/audit-hero-bg.webp") no-repeat center/ contain,
-    url("../img/audit-hero-bg.png") no-repeat center / contain;
+  background-image: image-set(
+    url("../img/audit-hero-bg.webp") type("image/webp"),
+    url("../img/audit-hero-bg.png") type("image/png"));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @media (max-width: 480px) {
-    background: url("../img/audit-hero-bg_mobile.webp") no-repeat top center/
-        contain,
-      url("../img/audit-hero-bg_mobile.png") no-repeat top center / contain;
+    background-image: image-set(
+      url("../img/audit-hero-bg_mobile.webp") type("image/webp"),
+      url("../img/audit-hero-bg_mobile.png") type("image/png"));
   }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
