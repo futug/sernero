@@ -694,6 +694,193 @@ h1 {
   border: 1px solid var(--light-color);
 }
 
+.main-form-horizont {
+  padding: 25px 35px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .main-form-horizont {
+    max-width: 350px;
+  }
+}
+.main-form-horizont__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .main-form-horizont__title {
+    font-size: 22px;
+  }
+}
+.main-form-horizont__subtitle {
+  margin-top: 17px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+@media (max-width: 480px) {
+  .main-form-horizont__subtitle {
+    margin-top: 5px;
+  }
+}
+.main-form-horizont__form-body {
+  margin-top: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 15px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.main-form-horizont__inputs {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+  background-color: transparent;
+}
+.main-form-horizont__inputs-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.main-form-horizont__label {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid var(--dark-color);
+}
+.main-form-horizont__input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 13px;
+  outline: none;
+  background-color: transparent;
+}
+.main-form-horizont__button {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid var(--dark-color);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+.main-form-horizont__button:hover {
+  background-color: transparent;
+  color: var(--dark-color);
+}
+.main-form-horizont__select {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.main-form-horizont__select select {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid var(--dark-color);
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.main-form-horizont__select .downarrow {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+  pointer-events: none;
+}
+.main-form-horizont__privacy-warn {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+.main-form-horizont__privacy-warn a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.horiz-black-version {
+  background-color: var(--dark-color);
+}
+.horiz-black-version h2 {
+  color: var(--light-color);
+}
+.horiz-black-version p {
+  color: var(--light-color);
+}
+.horiz-black-version input {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+.horiz-black-version input::-webkit-input-placeholder {
+  color: var(--light-color);
+}
+.horiz-black-version input::-moz-placeholder {
+  color: var(--light-color);
+}
+.horiz-black-version input:-ms-input-placeholder {
+  color: var(--light-color);
+}
+.horiz-black-version input::-ms-input-placeholder {
+  color: var(--light-color);
+}
+.horiz-black-version input::placeholder {
+  color: var(--light-color);
+}
+.horiz-black-version select {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+.horiz-black-version .downarrow {
+  fill: var(--light-color);
+}
+.horiz-black-version button {
+  border: 1px solid var(--light-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.horiz-black-version button:hover {
+  background-color: transparent;
+  color: var(--light-color);
+}
+
 .secondary-title {
   font-family: "RubikMonoOne";
   font-style: normal;
@@ -3676,7 +3863,7 @@ h1 {
 .google-hero {
   padding-top: 233px;
   padding-bottom: 120px;
-  background: url("../img/google-ads-bg.jpg") no-repeat center/cover, url("../img/google-ads-bg.webp") no-repeat center/cover;
+  background: url("../img/google-ads-bg.jpg") no-repeat center/cover, url("../img/google-ads-bg.webp") no-repeat center/cover, var(--dark-color);
 }
 .google-hero__content-title {
   max-width: 959px;
@@ -3684,6 +3871,15 @@ h1 {
 }
 .google-hero__content-title span {
   color: var(--primary-accent-color);
+}
+@media (max-width: 575px) {
+  .google-hero__content-title {
+    max-width: 378px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .google-hero__content-subtitle {
   margin-top: 30px;
@@ -3697,6 +3893,15 @@ h1 {
 .google-hero__content-subtitle span {
   color: var(--primary-accent-color);
 }
+@media (max-width: 575px) {
+  .google-hero__content-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 378px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .google-hero__content-cta {
   margin-top: 60px;
   display: -webkit-box;
@@ -3706,6 +3911,23 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   gap: 30px;
+}
+@media (max-width: 480px) {
+  .google-hero__content-cta {
+    max-width: 378px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+  .google-hero__content-cta button {
+    min-width: 209px;
+  }
 }
 
 .google-content {
@@ -3729,6 +3951,9 @@ h1 {
   font-size: 22px;
   line-height: 27px;
   color: rgba(0, 0, 0, 0.8);
+}
+.google-content__content-form {
+  margin-top: 60px;
 }
 .google-content__list {
   margin-top: 40px;

@@ -1,0 +1,155 @@
+.main-form-horizont {
+  padding: 25px 35px;
+  margin: 0 auto;
+  @media (max-width: 480px) {
+    max-width: 350px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 17px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    @media (max-width: 480px) {
+      margin-top: 5px;
+    }
+  }
+
+  &__form-body {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  &__inputs {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent;
+  }
+
+  &__inputs-top {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    flex-grow: 1;
+    display: flex;
+    border: 1px solid var(--dark-color);
+  }
+  &__input {
+    flex-grow: 1;
+    padding: 13px;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &__button {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--dark-color);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-color);
+    }
+  }
+
+  &__select {
+    position: relative;
+    flex-grow: 1;
+
+    select {
+      flex-grow: 1;
+      display: flex;
+      border: 1px solid var(--dark-color);
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+    }
+    .downarrow {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 13px;
+      pointer-events: none;
+    }
+  }
+
+  &__privacy-warn {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+    & a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.horiz-black-version {
+  background-color: var(--dark-color);
+
+  h2 {
+    color: var(--light-color);
+  }
+
+  p {
+    color: var(--light-color);
+  }
+
+  input {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+  }
+
+  select {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+  }
+
+  .downarrow {
+    fill: var(--light-color);
+  }
+
+  button {
+    border: 1px solid var(--light-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--light-color);
+    }
+  }
+}
