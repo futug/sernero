@@ -3749,6 +3749,7 @@ h1 {
   .audit-hero__content-subtitle {
     max-width: 408px;
     margin-top: 40px;
+    padding-left: 15px;
   }
 }
 .audit-hero__content-cta {
@@ -3836,11 +3837,6 @@ h1 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-@media (max-width: 480px) {
-  .audit-quote__content {
-    max-width: 408px;
-  }
-}
 .audit-quote__title {
   max-width: 230px;
   font-family: "RubikMonoOne";
@@ -3850,10 +3846,89 @@ h1 {
   line-height: 37px;
   color: var(--dark-color);
 }
+@media (max-width: 480px) {
+  .audit-quote__title {
+    max-width: 408px;
+    padding-left: 15px;
+  }
+}
 .audit-quote__subtitle {
   max-width: 710px;
   font-family: "Montserrat";
   font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--dark-color);
+}
+@media (max-width: 480px) {
+  .audit-quote__subtitle {
+    max-width: 408px;
+    padding-left: 15px;
+  }
+}
+
+.audit-need {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/audit-need-bg.png") no-repeat center/100% 100%, url("../img/audit-need-bg.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%), #8DB48D;
+}
+.audit-need__title {
+  margin-bottom: 70px;
+  max-width: 960px;
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.23;
+  color: var(--dark-color);
+}
+@media (max-width: 768px) {
+  .audit-need__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .audit-need__title {
+    max-width: 408px;
+    margin-top: 40px;
+    padding-left: 15px;
+  }
+}
+.audit-need__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 24px 34px;
+}
+@media (max-width: 480px) {
+  .audit-need__text {
+    max-width: 408px;
+    margin-top: 40px;
+    padding-left: 15px;
+  }
+}
+.audit-need__text-column {
+  margin: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 480.5px;
+  flex: 1 1 480.5px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 24px;
+}
+.audit-need__text-item {
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
