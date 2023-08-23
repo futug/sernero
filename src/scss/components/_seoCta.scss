@@ -1,0 +1,108 @@
+.seo-cta {
+  @media (max-width: 480px) {
+    background: url("../img/seo-cta-bg.webp") no-repeat center/200%;
+  }
+  &__content {
+    background: url("../img/seo-cta-bg.webp") no-repeat center/contain;
+
+    @media (max-width: 480px) {
+      max-width: 408px;
+      background: none;
+    }
+  }
+
+  &__content-title {
+    font-family: "RubikMonoOne";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+    color: var(--dark-color);
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__form {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 800px;
+      gap: 30px;
+
+      @media (max-width: 480px) {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--dark-color);
+      & span {
+        font-weight: 500;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+
+    &-link {
+      & svg {
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 40px;
+
+    &-paragraph {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--dark-color);
+
+      & span {
+        font-weight: 500;
+      }
+
+      &:last-child {
+        margin-top: 40px;
+      }
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
