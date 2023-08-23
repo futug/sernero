@@ -124,3 +124,12 @@ h1 {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.section-offset {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @media (max-width: 480px) {
+    padding-top: 90px;
+  }
+}
