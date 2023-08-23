@@ -1,0 +1,38 @@
+.google-hero {
+  padding-top: 233px;
+  padding-bottom: 120px;
+
+  background: url("../img/google-ads-bg.jpg") no-repeat center / cover,
+    url("../img/google-ads-bg.webp") no-repeat center / cover;
+
+  &__content {
+    &-title {
+      max-width: 959px;
+      color: var(--light-color);
+
+      & span {
+        color: var(--primary-accent-color);
+      }
+    }
+
+    &-subtitle {
+      margin-top: 30px;
+      max-width: 959px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--light-color);
+      & span {
+        color: var(--primary-accent-color);
+      }
+    }
+
+    &-cta {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}

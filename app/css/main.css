@@ -158,6 +158,14 @@ p {
   padding: 0;
 }
 
+h1 {
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 56px;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -323,6 +331,17 @@ p {
 .light-text:hover {
   color: var(--dark-color);
   border: 1px solid var(--dark-color);
+}
+
+.light-bg {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--light-color);
+}
+.light-bg:hover {
+  background-color: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
 }
 
 .secondary-button {
@@ -3652,5 +3671,88 @@ p {
   font-size: 24px;
   line-height: 29px;
   color: var(--dark-color);
+}
+
+.google-hero {
+  padding-top: 233px;
+  padding-bottom: 120px;
+  background: url("../img/google-ads-bg.jpg") no-repeat center/cover, url("../img/google-ads-bg.webp") no-repeat center/cover;
+}
+.google-hero__content-title {
+  max-width: 959px;
+  color: var(--light-color);
+}
+.google-hero__content-title span {
+  color: var(--primary-accent-color);
+}
+.google-hero__content-subtitle {
+  margin-top: 30px;
+  max-width: 959px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--light-color);
+}
+.google-hero__content-subtitle span {
+  color: var(--primary-accent-color);
+}
+.google-hero__content-cta {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.google-content {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.google-content__content-title {
+  max-width: 876px;
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 47px;
+  color: var(--dark-color);
+}
+.google-content__content-paragraph {
+  margin-top: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.google-content__list {
+  margin-top: 40px;
+}
+.google-content__list-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--dark-color);
+}
+.google-content__list-list {
+  padding-left: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.google-content__list-list li span {
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.google-content__list-list li:not(:first-child) {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=main.css.map */
