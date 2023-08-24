@@ -4152,6 +4152,106 @@ h1 {
   font-weight: 700;
 }
 
+.audit-product {
+  background: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--light-color);
+}
+@supports ((background-image: -webkit-image-set(url("../img/audit-products-bg.webp"))) or (background-image: image-set(url("../img/audit-products-bg.webp")))) {
+  .audit-product {
+    background-image: url("../img/audit-products-bg.webp");
+  }
+}
+@supports not ((background-image: -webkit-image-set(url("../img/audit-products-bg.webp"))) or (background-image: image-set(url("../img/audit-products-bg.webp")))) {
+  .audit-product {
+    background-image: url("../img/audit-products-bg.png");
+  }
+}
+@media (max-width: 480px) {
+  .audit-product__content {
+    max-width: 408px;
+  }
+}
+.audit-product__title {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 38px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__title {
+    font-size: 26px;
+  }
+}
+.audit-product__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__text {
+    font-size: 20px;
+  }
+}
+.audit-product__subtitle {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__subtitle {
+    font-size: 26px;
+  }
+}
+.audit-product__list {
+  padding: 0 0 0 30px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__list {
+    gap: 20px;
+  }
+}
+.audit-product__item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+}
+@media (max-width: 480px) {
+  .audit-product__item {
+    font-size: 20px;
+  }
+}
+
+.audit-product__title > span {
+  color: #CDFFCC;
+}
+
+.audit-product__text > span {
+  color: #CDFFCC;
+}
+
+.audit-product__item > span {
+  font-weight: 500;
+}
+
 .google-hero {
   padding-top: 233px;
   padding-bottom: 120px;
