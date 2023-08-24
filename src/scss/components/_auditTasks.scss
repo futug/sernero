@@ -1,0 +1,75 @@
+.audit-tasks {
+  background: #000000;
+
+  background-image: image-set(
+    url("../img/audit-tasks-bg.webp") type("image/webp"),
+    url("../img/audit-tasks-bg.png") type("image/png"));
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    color: var(--light-color);
+
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__title {
+    font-family: 'RubikMonoOne';
+    font-weight: 400;
+    font-size: 38px;
+    margin-bottom: 70px;
+    max-width: 960px;
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+      max-width: 315px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    margin: 0 0 50px 0;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+    font-size: 24px;
+    font-weight: 400;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  &__attention {
+    position: relative;
+    margin-left: 20px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: normal;
+    opacity: 0.7;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+
+    &:before {
+      position: absolute;
+      left: -20px;
+      width: 11px;
+      height: 43px;
+      content: url('../img/attention.svg');
+    }
+  }
+}
+
+.audit-tasks__item>span {
+  font-weight: 500;
+}
