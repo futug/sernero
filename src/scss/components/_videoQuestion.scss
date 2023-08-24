@@ -1,0 +1,61 @@
+.video-question {
+  background: url("../img/whitenoise-bg.webp") no-repeat center/cover,
+    linear-gradient(
+      136.82deg,
+      rgba(137, 110, 78, 0) 24.2%,
+      #715a40 43.55%,
+      #896e4e 69.26%
+    ),
+    var(--secondary-accent-color);
+  color: var(--light-color);
+
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+    &-title {
+      max-width: 960px;
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+      @media (max-width: 480px) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+
+    &-form {
+      margin-top: 70px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-block {
+      margin-top: 35px;
+    }
+
+    &-title {
+      font-weight: 500;
+    }
+
+    &-text {
+      margin-top: 35px;
+    }
+
+    &-splice {
+      margin-top: 35px;
+      display: block;
+    }
+  }
+}
