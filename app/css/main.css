@@ -3690,6 +3690,7 @@ h1 {
   padding-bottom: 120px;
   background-image: -webkit-image-set(url("../img/audit-hero-bg.webp") type("image/webp"), url("../img/audit-hero-bg.png") type("image/png"));
   background-image: image-set(url("../img/audit-hero-bg.webp") type("image/webp"), url("../img/audit-hero-bg.png") type("image/png"));
+  background-image: -webkit-image-set(url("../img/audit-hero-bg.webp"), url("../img/audit-hero-bg.png"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -3698,6 +3699,7 @@ h1 {
   .audit-hero {
     background-image: -webkit-image-set(url("../img/audit-hero-bg_mobile.webp") type("image/webp"), url("../img/audit-hero-bg_mobile.png") type("image/png"));
     background-image: image-set(url("../img/audit-hero-bg_mobile.webp") type("image/webp"), url("../img/audit-hero-bg_mobile.png") type("image/png"));
+    background-image: -webkit-image-set(url("../img/audit-hero-bg_mobile.webp"), url("../img/audit-hero-bg_mobile.png"));
     padding-top: 178px;
   }
 }
@@ -3743,6 +3745,11 @@ h1 {
     grid-row: 1/2;
     -ms-grid-column-align: start;
     justify-self: start;
+  }
+}
+@media (max-width: 375px) {
+  .audit-hero__content-title {
+    font-size: 36px;
   }
 }
 .audit-hero__content-subtitle {
@@ -3836,6 +3843,7 @@ h1 {
 .audit-quote {
   background: -webkit-image-set(url("../img/audit-quote-bg.webp") type("image/webp"), url("../img/audit-quote-bg.png") type("image/png"));
   background: image-set(url("../img/audit-quote-bg.webp") type("image/webp"), url("../img/audit-quote-bg.png") type("image/png"));
+  background: -webkit-image-set(url("../img/audit-quote-bg.webp"), url("../img/audit-quote-bg.png"));
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 5% 0;
@@ -3884,6 +3892,7 @@ h1 {
   background: #8DB48D;
   background-image: -webkit-image-set(url("../img/audit-need-bg.webp") type("image/webp"), url("../img/audit-need-bg.png") type("image/png")), linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
   background-image: image-set(url("../img/audit-need-bg.webp") type("image/webp"), url("../img/audit-need-bg.png") type("image/png")), linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
+  background-image: -webkit-image-set(url("../img/audit-need-bg.webp"), url("../img/audit-need-bg.png")), linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -3899,7 +3908,7 @@ h1 {
   font-family: "RubikMonoOne";
   font-weight: 400;
   font-size: 38px;
-  line-height: 1.23;
+  line-height: normal;
   color: var(--dark-color);
 }
 @media (max-width: 768px) {
@@ -3911,6 +3920,13 @@ h1 {
   .audit-need__title {
     margin-top: 40px;
     font-size: 24px;
+    word-wrap: break-word;
+  }
+}
+@media (max-width: 375px) {
+  .audit-need__title {
+    margin-top: 40px;
+    font-size: 20px;
     word-wrap: break-word;
   }
 }
@@ -3961,6 +3977,7 @@ h1 {
   background: #000000;
   background-image: -webkit-image-set(url("../img/audit-tasks-bg.webp") type("image/webp"), url("../img/audit-tasks-bg.png") type("image/png"));
   background-image: image-set(url("../img/audit-tasks-bg.webp") type("image/webp"), url("../img/audit-tasks-bg.png") type("image/png"));
+  background-image: -webkit-image-set(url("../img/audit-tasks-bg.webp"), url("../img/audit-tasks-bg.png"));
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -4036,6 +4053,7 @@ h1 {
 .audit-problems {
   background-image: -webkit-image-set(url("../img/audit-problems-bg.webp") type("image/webp"), url("../img/audit-problems-bg.png") type("image/png"));
   background-image: image-set(url("../img/audit-problems-bg.webp") type("image/webp"), url("../img/audit-problems-bg.png") type("image/png"));
+  background-image: -webkit-image-set(url("../img/audit-problems-bg.webp"), url("../img/audit-problems-bg.png"));
   background-repeat: no-repeat;
   background-position: center;
   color: var(--dark-color);
@@ -4044,6 +4062,7 @@ h1 {
   .audit-problems {
     background-image: -webkit-image-set(url("../img/audit-problems-bg_mobile.webp") type("image/webp"), url("../img/audit-problems-bg_mobile.png") type("image/png"));
     background-image: image-set(url("../img/audit-problems-bg_mobile.webp") type("image/webp"), url("../img/audit-problems-bg_mobile.png") type("image/png"));
+    background-image: -webkit-image-set(url("../img/audit-problems-bg_mobile.webp"), url("../img/audit-problems-bg_mobile.png"));
   }
 }
 @media (max-width: 480px) {
@@ -4096,11 +4115,15 @@ h1 {
   font-weight: 400;
   font-size: 30px;
   line-height: normal;
-  word-wrap: break-word;
 }
 @media (max-width: 480px) {
   .audit-problems__item-title {
     font-size: 26px;
+  }
+}
+@media (max-width: 375px) {
+  .audit-problems__item-title {
+    font-size: 22px;
   }
 }
 .audit-problems__item-title:before {

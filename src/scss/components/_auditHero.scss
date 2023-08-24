@@ -4,6 +4,10 @@
   background-image: image-set(
     url("../img/audit-hero-bg.webp") type("image/webp"),
     url("../img/audit-hero-bg.png") type("image/png"));
+  background-image: -webkit-image-set(
+    url("../img/audit-hero-bg.webp"),
+    url("../img/audit-hero-bg.png"));
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -12,7 +16,10 @@
     background-image: image-set(
       url("../img/audit-hero-bg_mobile.webp") type("image/webp"),
       url("../img/audit-hero-bg_mobile.png") type("image/png"));
-      padding-top: 178px;
+    background-image: -webkit-image-set(
+      url("../img/audit-hero-bg_mobile.webp"),
+      url("../img/audit-hero-bg_mobile.png"));
+    padding-top: 178px;
   }
 
   &__content {
@@ -41,6 +48,10 @@
         grid-column: 1/2;
         grid-row: 1/2;
         justify-self: start;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 36px;
       }
     }
 

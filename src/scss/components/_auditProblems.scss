@@ -1,6 +1,8 @@
 .audit-problems {
   background-image: image-set(url("../img/audit-problems-bg.webp") type("image/webp"),
       url("../img/audit-problems-bg.png") type("image/png"));
+  background-image: -webkit-image-set(url("../img/audit-problems-bg.webp"),
+      url("../img/audit-problems-bg.png"));
   background-repeat: no-repeat;
   background-position: center;
   color: var(--dark-color);
@@ -8,6 +10,8 @@
   @media (max-width: 480px) {
     background-image: image-set(url("../img/audit-problems-bg_mobile.webp") type("image/webp"),
         url("../img/audit-problems-bg_mobile.png") type("image/png"));
+    background-image: -webkit-image-set(url("../img/audit-problems-bg_mobile.webp"),
+        url("../img/audit-problems-bg_mobile.png"));
   }
 
   &__content {
@@ -53,11 +57,15 @@
     font-weight: 400;
     font-size: 30px;
     line-height: normal;
-    word-wrap: break-word;
 
     @media (max-width: 480px) {
       font-size: 26px;
     }
+
+    @media (max-width: 375px) {
+      font-size: 22px;
+    }
+
 
     &:before {
       content: counter(list-counter)".";
