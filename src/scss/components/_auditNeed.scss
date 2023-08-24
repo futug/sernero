@@ -6,6 +6,11 @@
     url("../img/audit-need-bg.png") type("image/png")),
     linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
 
+  background-image: -webkit-image-set(
+    url("../img/audit-need-bg.webp"),
+    url("../img/audit-need-bg.png")),
+    linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -22,7 +27,7 @@
     font-family: 'RubikMonoOne';
     font-weight: 400;
     font-size: 38px;
-    line-height: 1.23;
+    line-height: normal;
     color: var(--dark-color);
 
     @media (max-width: 768px) {
@@ -32,6 +37,12 @@
     @media (max-width: 480px) {
       margin-top: 40px;
       font-size: 24px;
+      word-wrap: break-word;
+    }
+
+    @media (max-width: 375px) {
+      margin-top: 40px;
+      font-size: 20px;
       word-wrap: break-word;
     }
   }
