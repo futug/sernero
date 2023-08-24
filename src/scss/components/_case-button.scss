@@ -8,6 +8,9 @@
   color: var(--dark-color);
   border: 1px solid var(--dark-color);
   transition: all 0.6s ease-in-out;
+  display: inline-block;
+  max-width: fit-content;
+  max-height: 50px;
 
   &:hover {
     background-color: var(--dark-color);

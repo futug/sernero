@@ -1,0 +1,52 @@
+.landing-diff {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 408px;
+
+      .case-button {
+        justify-self: start;
+      }
+    }
+
+    &-title {
+      max-width: 500px;
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+      color: var(--dark-color);
+
+      @media (max-width: 480px) {
+        font-size: 26px;
+        line-height: 31px;
+      }
+    }
+
+    &-text {
+      margin-top: 40px;
+      max-width: 500px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: var(--dark-color);
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      & span {
+        font-weight: 500;
+      }
+    }
+  }
+}
