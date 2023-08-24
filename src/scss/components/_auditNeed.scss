@@ -10,6 +10,12 @@
   background-position: center;
   background-size: 100% 100%;
 
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
   &__title {
     margin-bottom: 70px;
     max-width: 960px;
@@ -24,9 +30,7 @@
     }
 
     @media (max-width: 480px) {
-      max-width: 408px;
       margin-top: 40px;
-      padding-left: 15px;
       font-size: 24px;
       word-wrap: break-word;
     }
@@ -38,9 +42,7 @@
     gap: 24px 34px;
 
     @media (max-width: 480px) {
-      max-width: 408px;
       margin-top: 40px;
-      padding-left: 15px;
     }
   }
 
