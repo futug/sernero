@@ -1,0 +1,40 @@
+.landing-order {
+  background: url("../img/lp-cards-bg.webp") no-repeat center;
+  color: var(--dark-color);
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+    &-title {
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+
+      @media (max-width: 480px) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+
+    &-paragraph {
+      margin-top: 40px;
+      font-size: 22px;
+      line-height: 27px;
+      opacity: 0.8;
+
+      & span {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}
