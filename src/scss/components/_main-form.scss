@@ -79,3 +79,27 @@
     }
   }
 }
+
+.light-version {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  input {
+    border: 1px solid var(--dark-color);
+
+    &::placeholder {
+      color: var(--dark-color);
+    }
+  }
+
+  button {
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    background-color: var(--dark-color);
+
+    &:hover {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+    }
+  }
+}
