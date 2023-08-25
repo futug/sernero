@@ -5,6 +5,8 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/brown-gradient-section";
+@import "./components/main-list";
 @import "./components/section-title";
 @import "./components/marked-block-list";
 @import "./components/attentionMessage";
@@ -76,3 +78,4 @@
 @import "./components/searchHow";
 @import "./components/searchAdv";
 @import "./components/searchNegatives";
+@import "./components/searchReasons";

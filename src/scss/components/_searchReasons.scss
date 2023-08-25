@@ -1,0 +1,23 @@
+.search-reasons {
+  color: var(--light-color);
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__summary {
+    margin-top: 60px;
+    font-size: 26px;
+    line-height: 32px;
+
+    & span {
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

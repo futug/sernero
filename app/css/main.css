@@ -216,6 +216,28 @@ h1 {
   }
 }
 
+.brown-gradient-section {
+  background: url("../img/whitenoise-bg.webp") no-repeat center/cover, linear-gradient(136.82deg, rgba(137, 110, 78, 0) 24.2%, #715a40 43.55%, #896e4e 69.26%), #896e4e;
+}
+
+.list {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+}
+.list-item {
+  margin-top: 40px;
+}
+.list span {
+  font-weight: 500;
+}
+@media (max-width: 480px) {
+  .list {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 .section-title {
   font-family: "RubikMonoOne";
   font-style: normal;
@@ -6040,6 +6062,9 @@ h1 {
   }
 }
 
+.search-negatives {
+  color: var(--dark-color);
+}
 @media (max-width: 480px) {
   .search-negatives__content {
     max-width: 408px;
@@ -6133,6 +6158,29 @@ h1 {
 }
 @media (max-width: 480px) {
   .search-negatives__attention {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.search-reasons {
+  color: var(--light-color);
+}
+@media (max-width: 480px) {
+  .search-reasons__content {
+    max-width: 408px;
+  }
+}
+.search-reasons__summary {
+  margin-top: 60px;
+  font-size: 26px;
+  line-height: 32px;
+}
+.search-reasons__summary span {
+  font-weight: 500;
+}
+@media (max-width: 480px) {
+  .search-reasons__summary {
     font-size: 20px;
     line-height: 24px;
   }
