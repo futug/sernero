@@ -673,6 +673,103 @@ h1 {
 .brown-version {
   background-color: var(--secondary-accent-color);
 }
+.brown-version .main-form__title {
+  color: var(--light-color);
+}
+.brown-version .main-form__subtitle {
+  color: var(--light-color);
+}
+.brown-version input {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+.brown-version input::-webkit-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::-moz-placeholder {
+  color: var(--light-color);
+}
+.brown-version input:-ms-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::-ms-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::placeholder {
+  color: var(--light-color);
+}
+.brown-version button {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--light-color);
+}
+.brown-version button:hover {
+  background-color: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+}
+
+.brown-version {
+  background-color: #715a40;
+}
+.brown-version .main-form__title {
+  color: var(--light-color);
+}
+.brown-version .main-form__subtitle {
+  color: var(--light-color);
+}
+.brown-version input {
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
+}
+.brown-version input::-webkit-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::-moz-placeholder {
+  color: var(--light-color);
+}
+.brown-version input:-ms-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::-ms-input-placeholder {
+  color: var(--light-color);
+}
+.brown-version input::placeholder {
+  color: var(--light-color);
+}
+
+.light-version {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.light-version input {
+  border: 1px solid var(--dark-color);
+}
+.light-version input::-webkit-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::-moz-placeholder {
+  color: var(--dark-color);
+}
+.light-version input:-ms-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::-ms-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::placeholder {
+  color: var(--dark-color);
+}
+.light-version button {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 1px solid var(--light-color);
+}
+.light-version button:hover {
+  background-color: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+}
 
 .black-version {
   background-color: var(--dark-color);
@@ -711,78 +808,6 @@ h1 {
   background-color: transparent;
   color: var(--light-color);
   border: 1px solid var(--light-color);
-}
-
-
-.brown-version {
-  background-color: #715a40;
-}
-.brown-version .main-form__title {
-  color: var(--light-color);
-}
-.brown-version .main-form__subtitle {
-  color: var(--light-color);
-}
-.brown-version input {
-  border: 1px solid var(--light-color);
-  color: var(--light-color);
-}
-.brown-version input::-webkit-input-placeholder {
-  color: var(--light-color);
-}
-.brown-version input::-moz-placeholder {
-  color: var(--light-color);
-}
-.brown-version input:-ms-input-placeholder {
-  color: var(--light-color);
-}
-.brown-version input::-ms-input-placeholder {
-  color: var(--light-color);
-}
-.brown-version input::placeholder {
-  color: var(--light-color);
-}
-.brown-version button {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  border: 1px solid var(--light-color);
-}
-.brown-version button:hover {
-  background-color: transparent;
-  color: var(--light-color);
-  border: 1px solid var(--light-color);
-
-.light-version {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-.light-version input {
-  border: 1px solid var(--dark-color);
-}
-.light-version input::-webkit-input-placeholder {
-  color: var(--dark-color);
-}
-.light-version input::-moz-placeholder {
-  color: var(--dark-color);
-}
-.light-version input:-ms-input-placeholder {
-  color: var(--dark-color);
-}
-.light-version input::-ms-input-placeholder {
-  color: var(--dark-color);
-}
-.light-version input::placeholder {
-  color: var(--dark-color);
-}
-.light-version button {
-  color: var(--light-color);
-  border: 1px solid var(--dark-color);
-  background-color: var(--dark-color);
-}
-.light-version button:hover {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-
 }
 
 .main-form-horizont {
