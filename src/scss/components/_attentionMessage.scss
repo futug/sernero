@@ -1,0 +1,15 @@
+.attention-message {
+  font-size: 22px;
+  line-height: 27px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 11px;
+    height: 43px;
+    background: url("../img/attention.svg") no-repeat center;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+  }
+}

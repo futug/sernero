@@ -1,0 +1,87 @@
+.search-negatives {
+  color: var(--dark-color);
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 29px;
+    & span {
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__cards {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
+
+    &-item {
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 310px;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 110%;
+      /* or 24px */
+      letter-spacing: -0.05em;
+      color: #715a40;
+      max-width: 280px;
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-body {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__attention {
+    margin-top: 40px;
+    color: rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
