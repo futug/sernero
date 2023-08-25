@@ -49,6 +49,81 @@
 
 .brown-version {
   background-color: var(--secondary-accent-color);
+
+  .main-form__title {
+    color: var(--light-color);
+  }
+
+  .main-form__subtitle {
+    color: var(--light-color);
+  }
+
+  input {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+  }
+
+  button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--light-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--light-color);
+      border: 1px solid var(--light-color);
+    }
+  }
+}
+
+.brown-version {
+  background-color: #715a40;
+
+  .main-form__title {
+    color: var(--light-color);
+  }
+
+  .main-form__subtitle {
+    color: var(--light-color);
+  }
+
+  input {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+  }
+}
+
+.light-version {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  input {
+    border: 1px solid var(--dark-color);
+
+    &::placeholder {
+      color: var(--dark-color);
+    }
+  }
+
+  button {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid var(--light-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--light-color);
+      border: 1px solid var(--light-color);
+    }
+  }
 }
 
 .black-version {
@@ -80,61 +155,6 @@
       background-color: transparent;
       color: var(--light-color);
       border: 1px solid var(--light-color);
-    }
-  }
-}
-
-
-.brown-version {
-  background-color: #715a40;
-
-  .main-form__title {
-    color: var(--light-color);
-  }
-
-  .main-form__subtitle {
-    color: var(--light-color);
-  }
-
-  input {
-    border: 1px solid var(--light-color);
-    color: var(--light-color);
-
-    &::placeholder {
-      color: var(--light-color);
-
-.light-version {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-
-  input {
-    border: 1px solid var(--dark-color);
-
-    &::placeholder {
-      color: var(--dark-color);
-
-    }
-  }
-
-  button {
-
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    border: 1px solid var(--light-color);
-
-    &:hover {
-      background-color: transparent;
-      color: var(--light-color);
-      border: 1px solid var(--light-color);
-
-    color: var(--light-color);
-    border: 1px solid var(--dark-color);
-    background-color: var(--dark-color);
-
-    &:hover {
-      background-color: var(--light-color);
-      color: var(--dark-color);
-
     }
   }
 }
