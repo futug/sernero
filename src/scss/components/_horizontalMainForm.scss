@@ -1,5 +1,5 @@
 .main-form-horizont {
-  padding: 25px 35px;
+  padding: 25px 35px 45px 25px;
   margin: 0 auto;
   @media (max-width: 480px) {
     max-width: 350px;
@@ -163,5 +163,49 @@
 
   p {
     color: var(--dark-color);
+  }
+}
+
+.horiz-brown-version {
+  background-color: #715a40;
+  h2 {
+    color: var(--light-color);
+  }
+
+  p {
+    color: var(--light-color);
+  }
+
+  input {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+
+    &::placeholder {
+      color: var(--light-color);
+    }
+  }
+
+  select {
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+  }
+
+  .downarrow {
+    fill: var(--light-color);
+  }
+
+  button {
+    border: 1px solid var(--light-color);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--light-color);
+    }
+  }
+
+  .main-form-horizont__label {
+    border: none;
   }
 }
