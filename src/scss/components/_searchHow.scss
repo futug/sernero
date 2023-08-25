@@ -1,0 +1,25 @@
+.search-how {
+  background: url("../img/search-how-bg.webp") no-repeat center/ contain;
+
+  @media (max-width: 480px) {
+    background: url("../img/search-how-bg-mobile.webp") no-repeat center;
+  }
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__attention {
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    margin-top: 70px;
+  }
+}

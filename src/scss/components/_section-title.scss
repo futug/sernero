@@ -1,0 +1,12 @@
+.section-title {
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 47px;
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}

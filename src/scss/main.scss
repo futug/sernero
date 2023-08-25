@@ -5,6 +5,9 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/section-title";
+@import "./components/marked-block-list";
+@import "./components/attentionMessage";
 @import "./components/preloader";
 @import "./components/primary-button";
 @import "./components/secondary-button";
@@ -70,3 +73,4 @@
 @import "./components/videoAnalysis";
 
 @import "./components/searchHero";
+@import "./components/searchHow";
