@@ -6286,9 +6286,372 @@ h1 {
 .search-setup__form {
   margin-top: 80px;
 }
+
+.search-diffs {
+  background: url("../img/search-diffs-bg.webp") no-repeat center/contain;
+}
 @media (max-width: 480px) {
-  .search-setup__form {
-    display: none;
+  .search-diffs {
+    background: url("../img/search-diffs-bg-mob.webp") no-repeat center;
+  }
+}
+.search-diffs__content-title span {
+  color: var(--secondary-accent-color);
+}
+.search-diffs__content-subtitle {
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .search-diffs__content-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.search-diffs__differences {
+  margin-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: fit-content(1fr) 1fr 1fr;
+  grid-template-columns: fit-content(1fr) 1fr 1fr;
+  gap: 20px;
+}
+.search-diffs__differences-title {
+  max-width: 200px;
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  color: #715a40;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+.search-diffs__differences-title:nth-child(2) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+.search-diffs__differences-sub {
+  max-width: 204px;
+  font-family: "RubikMonoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #715a40;
+  opacity: 0.7;
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+@media (max-width: 480px) {
+  .search-diffs__differences-sub {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.search-diffs__differences .main-goal {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+.search-diffs__differences .targeting {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+.search-diffs__differences .format {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+.search-diffs__differences .sales {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+}
+.search-diffs__differences-item {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+}
+@media (max-width: 480px) {
+  .search-diffs__differences-item {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.search-diffs__differences .first {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .first {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+}
+.search-diffs__differences .second {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 1;
+    grid-row: 12/13;
+  }
+}
+.search-diffs__differences .third {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .third {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+}
+.search-diffs__differences .fourth {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .fourth {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 1;
+    grid-row: 14/15;
+  }
+}
+.search-diffs__differences .fifth {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .fifth {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+  }
+}
+.search-diffs__differences .sixth {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .sixth {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 16;
+    -ms-grid-row-span: 1;
+    grid-row: 16/17;
+  }
+}
+.search-diffs__differences .seventh {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .seventh {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9/10;
+  }
+}
+.search-diffs__differences .eighth {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+}
+@media (max-width: 850px) {
+  .search-diffs__differences .eighth {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 18;
+    -ms-grid-row-span: 1;
+    grid-row: 18/19;
+  }
+}
+@media (max-width: 850px) {
+  .search-diffs__differences {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  .search-diffs__differences-sub {
+    max-width: 100%;
+  }
+  .search-diffs__differences-title {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    margin-bottom: 40px;
+    max-width: 300px;
+    text-align: center;
+  }
+  .search-diffs__differences-title:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .search-diffs__differences-title:nth-child(2) {
+    margin-top: 40px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10/11;
+  }
+  .search-diffs__differences .main-goal {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .search-diffs__differences .main-goal-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: 11/12;
+  }
+  .search-diffs__differences .targeting {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .search-diffs__differences .targeting-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 1;
+    grid-row: 13/14;
+  }
+  .search-diffs__differences .format {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+  .search-diffs__differences .format-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 15;
+    -ms-grid-row-span: 1;
+    grid-row: 15/16;
+  }
+  .search-diffs__differences .sales {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+  }
+  .search-diffs__differences .sales-second {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 17;
+    -ms-grid-row-span: 1;
+    grid-row: 17/18;
+  }
+}
+
+.hidden-sub {
+  display: none;
+}
+@media (max-width: 850px) {
+  .hidden-sub {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */
