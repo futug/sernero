@@ -84,6 +84,7 @@
   }
 }
 
+
 .brown-version {
   background-color: #715a40;
 
@@ -101,10 +102,22 @@
 
     &::placeholder {
       color: var(--light-color);
+
+.light-version {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  input {
+    border: 1px solid var(--dark-color);
+
+    &::placeholder {
+      color: var(--dark-color);
+
     }
   }
 
   button {
+
     background-color: var(--light-color);
     color: var(--dark-color);
     border: 1px solid var(--light-color);
@@ -113,6 +126,15 @@
       background-color: transparent;
       color: var(--light-color);
       border: 1px solid var(--light-color);
+
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+    background-color: var(--dark-color);
+
+    &:hover {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+
     }
   }
 }

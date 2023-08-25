@@ -3,6 +3,10 @@
     url("../img/audit-quote-bg.webp") type("image/webp"),
     url("../img/audit-quote-bg.png") type("image/png"));
 
+  background: -webkit-image-set(
+    url("../img/audit-quote-bg.webp"),
+    url("../img/audit-quote-bg.png"));
+
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 5% 0;
