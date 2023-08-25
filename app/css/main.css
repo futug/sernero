@@ -709,6 +709,38 @@ h1 {
   border: 1px solid var(--light-color);
 }
 
+.light-version {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.light-version input {
+  border: 1px solid var(--dark-color);
+}
+.light-version input::-webkit-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::-moz-placeholder {
+  color: var(--dark-color);
+}
+.light-version input:-ms-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::-ms-input-placeholder {
+  color: var(--dark-color);
+}
+.light-version input::placeholder {
+  color: var(--dark-color);
+}
+.light-version button {
+  color: var(--light-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
+}
+.light-version button:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
 .main-form-horizont {
   padding: 25px 35px;
   margin: 0 auto;
@@ -1773,6 +1805,23 @@ h1 {
 }
 .light-nav .contacts-link {
   font-weight: 500;
+}
+
+.links-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 75px;
+}
+@media (max-width: 1024px) {
+  .links-bar {
+    gap: 50px;
+  }
+}
+.links-bar__item {
+  height: 45px;
+  width: 45px;
+  vertical-align: middle;
 }
 
 .advantages {
@@ -4165,6 +4214,165 @@ h1 {
 
 .audit-problems__bot > span {
   font-weight: 700;
+}
+
+.audit-product {
+  background: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--light-color);
+  background-image: url("../img/audit-products-bg.webp");
+}
+@supports not ((background-image: -webkit-image-set(url("../img/audit-products-bg.webp"))) or (background-image: image-set(url("../img/audit-products-bg.webp")))) {
+  .audit-product {
+    background-image: url("../img/audit-products-bg.png");
+  }
+}
+@media (max-width: 480px) {
+  .audit-product__content {
+    max-width: 408px;
+  }
+}
+.audit-product__title {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 38px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__title {
+    font-size: 26px;
+  }
+}
+.audit-product__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__text {
+    font-size: 20px;
+  }
+}
+.audit-product__subtitle {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 30px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__subtitle {
+    font-size: 26px;
+  }
+}
+.audit-product__list {
+  padding: 0 0 0 30px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-product__list {
+    gap: 20px;
+  }
+}
+.audit-product__item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+}
+@media (max-width: 480px) {
+  .audit-product__item {
+    font-size: 20px;
+  }
+}
+
+.audit-product__title > span {
+  color: #CDFFCC;
+}
+
+.audit-product__text > span {
+  color: #CDFFCC;
+}
+
+.audit-product__item > span {
+  font-weight: 500;
+}
+
+.audit-price {
+  color: var(--dark-color);
+  background: url("../img/audit-price-bg.webp") no-repeat center, url("../img/audit-price-bg2.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%), #8DB48D;
+}
+@supports not ((background-image: -webkit-image-set(url("../img/audit-price-bg.webp"))) or (background-image: image-set(url("../img/audit-price-bg.webp")))) {
+  .audit-price {
+    background: url("../img/audit-price-bg.png") no-repeat center, url("../img/audit-price-bg2.png") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%), #8DB48D;
+  }
+}
+@media (max-width: 480px) {
+  .audit-price__content {
+    max-width: 408px;
+  }
+}
+.audit-price__title {
+  font-family: "RubikMonoOne";
+  font-weight: 400;
+  font-size: 38px;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .audit-price__title {
+    font-size: 26px;
+  }
+}
+.audit-price__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 70px 60px;
+}
+.audit-price__left {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 350px;
+  flex: 1 1 350px;
+}
+.audit-price__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 1em;
+}
+.audit-price__links-bar {
+  margin-top: 70px;
+}
+@media (max-width: 768px) {
+  .audit-price__links-bar {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.audit-price__form {
+  margin: 0 auto;
 }
 
 .google-hero {

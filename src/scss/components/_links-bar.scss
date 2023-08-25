@@ -1,0 +1,14 @@
+.links-bar {
+  display: flex;
+  gap: 75px;
+
+  @media (max-width: 1024px) {
+    gap: 50px;
+  }
+
+  &__item {
+    height: 45px;
+    width: 45px;
+    vertical-align: middle;
+  }
+}
