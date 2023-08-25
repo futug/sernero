@@ -1,0 +1,65 @@
+.video-analysis {
+  color: var(--dark-color);
+  background: url("../img/whitenoise-bg.webp") no-repeat center/ cover,
+    linear-gradient(
+      136.82deg,
+      rgba(205, 255, 204, 0) 24.2%,
+      #e8ffe8 43.55%,
+      #cdffcc 69.26%
+    ),
+    #8db48d;
+
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+
+    &-title {
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+      padding-bottom: 10px;
+
+      @media (max-width: 480px) {
+        font-size: 26px;
+        line-height: 31px;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    font-size: 22px;
+    line-height: 27px;
+    opacity: 0.8;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-desc {
+      & span {
+        font-weight: 500;
+      }
+
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
+    }
+
+    &-list {
+      margin: 0;
+    }
+
+    & li {
+      margin-top: 40px;
+
+      & span {
+        font-weight: 500;
+      }
+    }
+  }
+}
