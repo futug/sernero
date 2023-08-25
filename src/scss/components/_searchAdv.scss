@@ -1,0 +1,60 @@
+.search-advantages {
+  color: var(--light-color);
+  background: url("../img/lp-cards-bg.webp") no-repeat center, var(--dark-color);
+  &__cards {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 40px;
+      gap: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-item {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      height: fit-content;
+    }
+
+    &-title {
+      font-weight: 500;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+
+    &-summary {
+      margin-top: 60px;
+      font-size: 26px;
+      line-height: 32px;
+
+      & span {
+        font-weight: 500;
+      }
+
+      @media (max-width: 480px) {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}
