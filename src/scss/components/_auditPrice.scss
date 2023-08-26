@@ -5,7 +5,7 @@
     linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%),
     #8DB48D;
 
-  @supports not (background-image: image-set(url("../img/audit-price-bg.webp"))) {
+  @supports not (background-image: url("../img/audit-price-bg.webp")) {
     background: url("../img/audit-price-bg.png") no-repeat center,
     url("../img/audit-price-bg2.png") no-repeat center / 100% 100%,
     linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%),
@@ -49,7 +49,7 @@
     margin-bottom: 1em;
   }
 
-  &__links-bar {
+  &__socials-bar {
     margin-top: 70px;
     @media (max-width: 768px) {
       justify-content: center;

@@ -6,7 +6,7 @@
 
   background-image: url("../img/audit-products-bg.webp");
 
-  @supports not (background-image: image-set(url("../img/audit-products-bg.webp"))) {
+  @supports not (background-image: url("../img/audit-products-bg.webp")) {
     background-image: url("../img/audit-products-bg.png");
   }
 
