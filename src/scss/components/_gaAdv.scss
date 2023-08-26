@@ -1,0 +1,47 @@
+.ga-adv {
+  &__title {
+    max-width: 960px;
+    & span {
+      color: var(--secondary-accent-color);
+    }
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__cards {
+    max-width: 960px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &-left,
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @media (max-width: 600px) {
+        gap: 20px;
+      }
+    }
+  }
+
+  &__card {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

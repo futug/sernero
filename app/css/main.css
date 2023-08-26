@@ -6831,4 +6831,58 @@ h1 {
 .ga-provides__form {
   margin-top: 70px;
 }
+
+.ga-adv__title {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ga-adv__title span {
+  color: var(--secondary-accent-color);
+}
+.ga-adv__cards {
+  max-width: 960px;
+  margin-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 600px) {
+  .ga-adv__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.ga-adv__cards-left, .ga-adv__cards-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 600px) {
+  .ga-adv__cards-left, .ga-adv__cards-right {
+    gap: 20px;
+  }
+}
+.ga-adv__card {
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .ga-adv__card {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
