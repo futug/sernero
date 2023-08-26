@@ -6913,4 +6913,72 @@ h1 {
 .ga-why__title span {
   color: #8db48d;
 }
+
+@media (max-width: 480px) {
+  .ga-cta {
+    background: url("../img/ga-cta.webp") no-repeat 120px 50%/contain;
+  }
+}
+.ga-cta__content {
+  background: url("../img/ga-cta.webp") no-repeat bottom right;
+}
+@media (max-width: 480px) {
+  .ga-cta__content {
+    max-width: 408px;
+    background: none;
+  }
+}
+.ga-cta__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .ga-cta__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.ga-cta__list {
+  max-width: 760px;
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .ga-cta__list {
+    font-size: 20px;
+    max-width: 378px;
+  }
+}
+.ga-cta__list-item {
+  margin-top: 40px;
+}
+.ga-cta__summary {
+  font-size: 26px;
+  line-height: 32px;
+  margin-top: 70px;
+}
+.ga-cta__summary span {
+  font-weight: 500;
+}
+@media (max-width: 480px) {
+  .ga-cta__summary {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

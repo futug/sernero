@@ -1,0 +1,51 @@
+@media (max-width: 480px) {
+  .ga-cta__content {
+    max-width: 408px;
+  }
+}
+.ga-cta__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 480px) {
+  .ga-cta__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.ga-cta__list {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .ga-cta__list {
+    font-size: 20px;
+    max-width: 378px;
+  }
+}
+.ga-cta__list-item {
+  margin-top: 40px;
+}
+.ga-cta__summary {
+  font-size: 26px;
+  line-height: 32px;
+}
+.ga-cta__summary span {
+  font-weight: 500;
+}
+@media (max-width: 480px) {
+  .ga-cta__summary {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+/*# sourceMappingURL=gaCta.css.map */
