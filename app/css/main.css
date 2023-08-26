@@ -6808,4 +6808,27 @@ h1 {
     line-height: 24px;
   }
 }
+
+.ga-provides {
+  color: var(--light-color);
+}
+@media (max-width: 480px) {
+  .ga-provides__content {
+    max-width: 408px;
+  }
+}
+.ga-provides__subtitle {
+  margin-top: 40px;
+  font-size: 24px;
+  line-height: 29px;
+}
+@media (max-width: 480px) {
+  .ga-provides__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.ga-provides__form {
+  margin-top: 70px;
+}
 /*# sourceMappingURL=main.css.map */
