@@ -1,0 +1,55 @@
+.ga-cta {
+  @media (max-width: 480px) {
+    background: url("../img/ga-cta.webp") no-repeat 120px 50% / contain;
+  }
+
+  &__content {
+    background: url("../img/ga-cta.webp") no-repeat bottom right;
+    @media (max-width: 480px) {
+      max-width: 408px;
+      background: none;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__list {
+    max-width: 760px;
+    margin: 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    @media (max-width: 480px) {
+      font-size: 20px;
+      max-width: 378px;
+    }
+    &-item {
+      margin-top: 40px;
+    }
+  }
+
+  &__summary {
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 70px;
+    & span {
+      font-weight: 500;
+    }
+    @media (max-width: 480px) {
+      margin-top: 40px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
