@@ -1,16 +1,9 @@
 .audit-tasks {
-  background: #000000;
+  background: url("../img/audit-tasks-bg.webp") no-repeat center, #000000;
 
-  background-image: image-set(
-    url("../img/audit-tasks-bg.webp") type("image/webp"),
-    url("../img/audit-tasks-bg.png") type("image/png"));
-
-  background-image: -webkit-image-set(
-    url("../img/audit-tasks-bg.webp"),
-    url("../img/audit-tasks-bg.png"));
-
-  background-repeat: no-repeat;
-  background-position: center;
+  @supports not (background: url("../img/audit-tasks-bg.webp")) {
+    background: url("../img/audit-tasks-bg.png") no-repeat center, #000000;
+  }
 
   &__content {
     color: var(--light-color);

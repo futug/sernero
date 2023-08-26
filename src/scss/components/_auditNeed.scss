@@ -1,19 +1,13 @@
 .audit-need {
-  background: #8DB48D;
+  background: url("../img/audit-need-bg.webp") no-repeat center/ 100% 100%,
+    linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%),
+    #8DB48D;
 
-  background-image: image-set(
-    url("../img/audit-need-bg.webp") type("image/webp"),
-    url("../img/audit-need-bg.png") type("image/png")),
-    linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
-
-  background-image: -webkit-image-set(
-    url("../img/audit-need-bg.webp"),
-    url("../img/audit-need-bg.png")),
-    linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%);
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
+  @supports not (background: url("../img/audit-need-bg.webp")) {
+    background: url("../img/audit-need-bg.png") no-repeat center/ 100% 100%,
+      linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%),
+      #8DB48D;
+  }
 
   &__content {
     @media (max-width: 480px) {
@@ -76,6 +70,6 @@
   }
 }
 
-.audit_need__text-item > span {
+.audit_need__text-item>span {
   font-weight: 500;
 }

@@ -1,17 +1,17 @@
 .audit-problems {
-  background-image: image-set(url("../img/audit-problems-bg.webp") type("image/webp"),
-      url("../img/audit-problems-bg.png") type("image/png"));
-  background-image: -webkit-image-set(url("../img/audit-problems-bg.webp"),
-      url("../img/audit-problems-bg.png"));
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../img/audit-problems-bg.webp") no-repeat center;
+
+  @supports not (background: url("../img/audit-problems-bg.webp")) {
+    background: url("../img/audit-hero-bg.png") no-repeat center;
+  }
   color: var(--dark-color);
 
   @media (max-width: 480px) {
-    background-image: image-set(url("../img/audit-problems-bg_mobile.webp") type("image/webp"),
-        url("../img/audit-problems-bg_mobile.png") type("image/png"));
-    background-image: -webkit-image-set(url("../img/audit-problems-bg_mobile.webp"),
-        url("../img/audit-problems-bg_mobile.png"));
+    background: url("../img/audit-problems-bg_mobile.webp") no-repeat center;
+
+    @supports not (background: url("../img/audit-problems-bg_mobile.webp")) {
+      background: url("../img/audit-problems-bg_mobile.png") no-repeat center;
+    }
   }
 
   &__content {
