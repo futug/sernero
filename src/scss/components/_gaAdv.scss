@@ -1,4 +1,9 @@
 .ga-adv {
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
   &__title {
     max-width: 960px;
     & span {

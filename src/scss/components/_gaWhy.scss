@@ -1,0 +1,18 @@
+.ga-why {
+  background: url("../img/ga-why-bg.webp") no-repeat center;
+
+  @media (max-width: 480px) {
+    background: url("../img/ga-why-bg-mob.webp") no-repeat center/contain;
+  }
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+  }
+
+  &__title {
+    & span {
+      color: #8db48d;
+    }
+  }
+}
