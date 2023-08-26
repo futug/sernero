@@ -1,0 +1,92 @@
+.video-variants {
+  color: var(--dark-color);
+  &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+    &-title {
+      font-family: "RubikMonoOne";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 38px;
+      line-height: 47px;
+
+      @media (max-width: 480px) {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    &-item {
+      max-width: 378px;
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 110%;
+      letter-spacing: -0.05em;
+      color: #8db48d;
+    }
+
+    &-desc {
+      max-width: 340px;
+      margin-top: 20px;
+    }
+
+    &-btn {
+      margin-top: 30px;
+      max-width: fit-content;
+      display: block;
+      color: inherit;
+      padding: 14px 36px;
+      border: 1px solid var(--dark-color);
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      font-size: 18px;
+      line-height: 22px;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        background-color: var(--dark-color);
+        color: var(--light-color);
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 15px;
+    list-style: none;
+    margin-top: 5px;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 8px;
+        width: 2px;
+        height: 2px;
+        background-color: var(--dark-color);
+      }
+    }
+  }
+}

@@ -5,6 +5,11 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/brown-gradient-section";
+@import "./components/main-list";
+@import "./components/section-title";
+@import "./components/marked-block-list";
+@import "./components/attentionMessage";
 @import "./components/preloader";
 @import "./components/primary-button";
 @import "./components/secondary-button";
@@ -61,3 +66,18 @@
 @import "./components/landingStructure";
 @import "./components/landingVariants";
 @import "./components/landingOrder";
+
+@import "./components/videoHero";
+@import "./components/videoQuestion";
+@import "./components/videoVariants";
+@import "./components/videoAdvantages.scss";
+@import "./components/videoProperties";
+@import "./components/videoAnalysis";
+
+@import "./components/searchHero";
+@import "./components/searchHow";
+@import "./components/searchAdv";
+@import "./components/searchNegatives";
+@import "./components/searchReasons";
+@import "./components/searchSetup";
+@import "./components/searchDiffs";
