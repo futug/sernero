@@ -1,5 +1,4 @@
 .services__content {
-  padding: 120px 15px;
   max-width: 1170px;
   margin: 0 auto;
   @media (max-width: 1200px) {
@@ -12,11 +11,6 @@
 
   &-title {
     max-width: 937px;
-    font-family: "RubikMonoOne";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 47px;
     color: var(--secondary-accent-color);
 
     & span {
@@ -236,7 +230,6 @@
 }
 
 .services-mobile__content {
-  padding: 120px 15px;
   max-width: 1170px;
   margin: 0 auto;
   display: none;
@@ -416,6 +409,7 @@
 
       @media (max-width: 700px) {
         flex-direction: column;
+        max-width: 211px;
       }
     }
 
@@ -442,6 +436,11 @@
 
   .services-mobile__content {
     display: block;
-    padding: 90px 15px 120px 15px;
+  }
+
+  @media (max-width: 480px) {
+    .services-mobile__content {
+      max-width: 408px;
+    }
   }
 }

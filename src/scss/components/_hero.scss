@@ -1,37 +1,26 @@
 .hero {
-  min-height: 100vh;
-  margin: 0 auto;
+  color: var(--light-color);
   background: url("../img/hero_background.webp") no-repeat center/ cover,
     url("../img/hero_background.jpg") no-repeat center / cover;
   box-shadow: inset 1px 1px 232px #000000;
 
   &__content {
     @include flex-all-sb;
-    padding-top: 250px;
+    width: 100%;
     align-items: center;
     flex-wrap: wrap;
 
     @media (max-width: 481px) {
-      padding-top: 170px;
+      max-width: 408px;
     }
   }
 
   .content__text {
     &-title {
       max-width: 700px;
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 45px;
-      line-height: 56px;
-      color: var(--light-color);
 
       & span {
         color: var(--primary-accent-color);
-      }
-
-      @media (max-width: 375px) {
-        font-size: 36px;
       }
     }
 
@@ -44,7 +33,7 @@
       font-size: 24px;
       line-height: 29px;
       letter-spacing: -0.05em;
-      color: rgba(255, 255, 255, 0.6);
+      opacity: 0.6;
 
       @media (max-width: 375px) {
         font-size: 21px;
@@ -58,24 +47,30 @@
       margin-top: 21px;
 
       .text__cta-button {
-        font-size: 14px;
+        // font-size: 14px;
+        // flex-grow: 0;
+        // padding: 14px;
       }
     }
 
     @media (max-width: 481px) {
-      &-title {
-        max-width: 361px;
-      }
-      &-subtitle {
-        margin-top: 4px;
-        max-width: 381px;
-      }
-
       &-cta {
         margin-top: 50px;
         gap: 10px;
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .text__cta-button {
+        font-size: 14px;
+        flex-grow: 0;
+        padding: 14px;
+        min-width: 155px;
+      }
+
+      .text__cta-button:nth-child(2) {
+        min-width: 185px;
       }
     }
 
@@ -93,6 +88,13 @@
 
     @media (max-width: 481px) {
       text-align: left;
+    }
+
+    @media (max-width: 375px) {
+      justify-content: start;
+      .text__cta-button {
+        min-width: 180px;
+      }
     }
   }
 
@@ -155,6 +157,14 @@
 
     @media (max-width: 375px) {
       min-width: 327px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 }
