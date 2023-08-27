@@ -1,0 +1,58 @@
+.audit-result {
+  background: url("../img/audit-result-bg.webp") no-repeat 10% 0;
+
+  @supports not (background: url("../img/audit-result-bg.webp")) {
+    background: url("../img/audit-hero-bg.png") no-repeat 10% 0;
+  }
+
+  @media (max-width: 480px) {
+    background: url("../img/audit-result-bg_mobile.webp") no-repeat;
+
+    @supports not (background: url("../img/audit-result-bg_mobile.webp")) {
+      background: url("../img/audit-result-bg_mobile.png") no-repeat;
+    }
+  }
+
+  &__content {
+    display: flex;
+    color: var(--dark-color);
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    flex: 1 1 260px;
+    font-family: 'RubikMonoOne';
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 47px;
+
+    @media (max-width: 480px) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__text {
+    flex: 1 1 695px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__paragraph {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    span {
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

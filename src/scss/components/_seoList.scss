@@ -7,17 +7,7 @@
       max-width: 408px;
     }
     &-title {
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 38px;
-      line-height: 47px;
       color: var(--light-color);
-
-      @media (max-width: 480px) {
-        font-size: 24px;
-        line-height: 29px;
-      }
     }
   }
 
