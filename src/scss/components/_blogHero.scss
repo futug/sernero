@@ -1,4 +1,5 @@
 .blog-hero {
+  color: var(--dark-color);
   background: url("../img/blog-hero-bg.webp") no-repeat center/ contain,
     url("../img/blog-hero-bg.png") no-repeat center / contain;
 
@@ -7,18 +8,9 @@
   }
 
   &__content {
-    padding-top: 233px;
-    padding-bottom: 120px;
-
-    &-title {
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 45px;
-      line-height: 56px;
-      color: var(--dark-color);
+    @media (max-width: 480px) {
+      max-width: 408px;
     }
-
     &-subtitle {
       margin-top: 30px;
       max-width: 959px;
@@ -35,6 +27,9 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      @media (max-width: 480px) {
+        gap: 10px;
+      }
     }
   }
 }

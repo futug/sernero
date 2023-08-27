@@ -1,0 +1,21 @@
+.green-gradient-section {
+  background: url("../img/audit-price-bg2.webp") no-repeat center / 100% 100%,
+    linear-gradient(
+      136.82deg,
+      rgba(205, 255, 204, 0) 24.2%,
+      #e8ffe8 43.55%,
+      #cdffcc 69.26%
+    ),
+    #8db48d;
+
+  @supports not (background-image: url("../img/audit-price-bg.webp")) {
+    background: url("../img/audit-price-bg2.png") no-repeat center / 100% 100%,
+      linear-gradient(
+        136.82deg,
+        rgba(205, 255, 204, 0) 24.2%,
+        #e8ffe8 43.55%,
+        #cdffcc 69.26%
+      ),
+      #8db48d;
+  }
+}
