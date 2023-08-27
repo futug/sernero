@@ -1,17 +1,18 @@
 .portfolio-list {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: url("../img/portfolio-background.webp") no-repeat top center /
-      contain,
-    url("../img/portfolio-background.png") no-repeat top center / contain;
+    contain;
+
+  @supports not (background: url("../img/portfolio-background.webp")) {
+    background: url("../img/portfolio-background.png") no-repeat center/contain;
+  }
 
   @media (max-width: 480px) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-
     background: url("../img/portfolio-bg-mobile.webp") no-repeat top center /
-        contain,
-      url("../img/portfolio-bg-mobile.png") no-repeat top center / contain;
+      contain;
+
+    @supports not (background: url("../img/portfolio-bg-mobile.webp")) {
+      background: url("../img/portfolio-bg-mobile.png") no-repeat center/contain;
+    }
   }
 
   &__content {
@@ -44,6 +45,7 @@
 
       & span {
         color: var(--light-color);
+        display: block;
       }
     }
 
