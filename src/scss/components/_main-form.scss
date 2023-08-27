@@ -114,14 +114,14 @@
   }
 
   button {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    border: 1px solid var(--light-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
 
     &:hover {
       background-color: transparent;
-      color: var(--light-color);
-      border: 1px solid var(--light-color);
+      color: var(--dark-color);
+      border: 1px solid var(--dark-color);
     }
   }
 }
