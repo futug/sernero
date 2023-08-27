@@ -74,7 +74,7 @@
 
     &-cta {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       gap: 30px;
       margin-top: 70px;
       grid-column: 1/2;
@@ -83,6 +83,10 @@
       @media (max-width: 768px) {
         grid-column: 1/2;
         grid-row: 4/5;
+      }
+
+      @media (max-width: 480px) {
+        gap: 10px;
       }
 
       @media (max-width: 450px) {
