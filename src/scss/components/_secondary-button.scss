@@ -21,7 +21,11 @@
   }
 
   @media (max-width: 481px) {
-    padding: 13px 18px 13px 14px;
+    padding: 14px;
+    gap: 12px;
+    flex-grow: 1;
+    text-align: center;
+    min-width: 180px;
   }
   @media (max-width: 375px) {
     font-size: 14px;
