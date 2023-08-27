@@ -288,6 +288,92 @@ h1 {
   }
 }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 210px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 14px;
+  margin: 0;
+  gap: 17px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  outline: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  .btn {
+    min-width: 155px;
+  }
+}
+@media (max-width: 450px) {
+  .btn {
+    min-width: 185px;
+  }
+}
+
+.btn--black {
+  --btn-color: var(--dark-color);
+  --btn-secondary-color: var(--light-color);
+}
+
+.btn--green {
+  --btn-color: var(--primary-accent-color);
+  --btn-secondary-color: var(--dark-color);
+}
+
+.btn--brown {
+  --btn-color: var(--secondary-accent-color);
+  --btn-secondary-color: var(--light-color);
+}
+
+.btn-msg-ico {
+  padding-left: -16px;
+  width: 20px;
+  height: 20px;
+  fill: transparent;
+  stroke: var(--btn-color);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.btn-primary {
+  background: var(--btn-color);
+  color: var(--btn-secondary-color);
+  border: 1px solid var(--btn-color);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+}
+.btn-secondary:hover {
+  background: var(--btn-color);
+  color: var(--btn-secondary-color);
+}
+.btn-secondary:hover .btn-msg-ico {
+  stroke: var(--btn-secondary-color);
+}
+
 .block-list {
   margin: 0;
 }
@@ -3945,9 +4031,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   gap: 30px;
   margin-top: 70px;
   -ms-grid-column: 1;
@@ -3965,6 +4051,11 @@ h1 {
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4/5;
+  }
+}
+@media (max-width: 480px) {
+  .audit-hero__content-cta {
+    gap: 10px;
   }
 }
 @media (max-width: 450px) {
