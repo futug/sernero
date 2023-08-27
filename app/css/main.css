@@ -2009,16 +2009,19 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  opacity: 0.7;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.socials-bar:hover {
-  opacity: 1;
 }
 .socials-bar__item {
   height: 55px;
   width: 55px;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.socials-bar__item:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .socials-bar__ico {
   width: 100%;
@@ -2670,6 +2673,9 @@ h1 {
   display: flex;
   gap: 10px;
   color: inherit;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .footer__contacts-item:hover .footer__contacts-ico,
 .footer__contacts-item:hover .footer__contacts-text {
