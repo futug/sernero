@@ -1,8 +1,8 @@
 .services-list {
   &__content {
-    padding-top: 120px;
-    padding-bottom: 120px;
-
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
     &-title {
       max-width: 560px;
       font-family: "RubikMonoOne";

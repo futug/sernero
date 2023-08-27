@@ -1,15 +1,5 @@
 .about-represent {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  background: url("../img/whitenoise-bg.webp") no-repeat center/ cover,
-    url("../img/whitenoise-bg.png") no-repeat center/ cover,
-    var(--secondary-accent-color);
-
-  @media (max-width: 480px) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
-
+  color: var(--light-color);
   &__content {
     display: flex;
     justify-content: space-between;
@@ -42,7 +32,6 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: var(--light-color);
 
       .content-text-paragraph:nth-child(2) {
         opacity: 0.5;
