@@ -284,6 +284,7 @@ h1 {
   font-size: 22px;
   line-height: 27px;
   position: relative;
+  padding-left: 20px;
 }
 .attention-message::before {
   content: "";
@@ -293,7 +294,7 @@ h1 {
   display: block;
   position: absolute;
   top: -10px;
-  left: -15px;
+  left: 0px;
 }
 
 .preloader {
@@ -4382,8 +4383,6 @@ h1 {
   }
 }
 .audit-tasks__attention {
-  position: relative;
-  margin-left: 20px;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 22px;
@@ -4394,13 +4393,6 @@ h1 {
   .audit-tasks__attention {
     font-size: 18px;
   }
-}
-.audit-tasks__attention:before {
-  position: absolute;
-  left: -20px;
-  width: 11px;
-  height: 43px;
-  content: url("../img/attention.svg");
 }
 
 .audit-tasks__item > span {
@@ -4980,11 +4972,6 @@ h1 {
   background: url("../img/seo-section-bg.webp") no-repeat center/cover;
 }
 .seo-question__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
   color: var(--dark-color);
 }
 .seo-question__content-subtitle {
@@ -5013,11 +5000,6 @@ h1 {
 }
 .seo-result__content-title {
   max-width: 795px;
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
   color: var(--light-color);
 }
 .seo-result__content-title span {
@@ -5082,18 +5064,7 @@ h1 {
   }
 }
 .seo-list__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
   color: var(--light-color);
-}
-@media (max-width: 480px) {
-  .seo-list__content-title {
-    font-size: 24px;
-    line-height: 29px;
-  }
 }
 .seo-list__list {
   margin-top: 40px;
@@ -5147,18 +5118,7 @@ h1 {
   }
 }
 .seo-cta__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
   color: var(--dark-color);
-}
-@media (max-width: 480px) {
-  .seo-cta__content-title {
-    font-size: 26px;
-    line-height: 32px;
-  }
 }
 .seo-cta__form {
   margin-top: 40px;
@@ -6451,12 +6411,13 @@ h1 {
 }
 .search-setup__list {
   position: relative;
+  padding-left: 60px;
 }
 .search-setup__list::before {
   content: "";
   position: absolute;
   top: 1px;
-  left: -11px;
+  left: 8px;
   width: 4px;
   height: 87%;
   background-color: var(--dark-color);

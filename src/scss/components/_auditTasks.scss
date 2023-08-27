@@ -45,8 +45,6 @@
   }
 
   &__attention {
-    position: relative;
-    margin-left: 20px;
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 22px;
@@ -55,14 +53,6 @@
 
     @media (max-width: 480px) {
       font-size: 18px;
-    }
-
-    &:before {
-      position: absolute;
-      left: -20px;
-      width: 11px;
-      height: 43px;
-      content: url('../img/attention.svg');
     }
   }
 }
