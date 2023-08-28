@@ -1,8 +1,16 @@
 .ga-why {
   background: url("../img/ga-why-bg.webp") no-repeat center;
 
+  @supports not (background: url("../img/ga-why-bg.webp")) {
+    background: url("../img/ga-why-bg.png") no-repeat center;
+  }
+
   @media (max-width: 480px) {
     background: url("../img/ga-why-bg-mob.webp") no-repeat center/contain;
+
+    @supports not (background: url("../img/ga-why-bg-mob.webp")) {
+      background: url("../img/ga-why-bg-mob.png") no-repeat center/contain;
+    }
   }
   &__content {
     @media (max-width: 480px) {

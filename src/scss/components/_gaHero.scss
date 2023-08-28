@@ -3,6 +3,10 @@
   padding-bottom: 120px;
   background: url("../img/lp-cards-bg.webp") no-repeat center;
 
+  @supports not (background: url("../img/lp-cards-bg.webp")) {
+    background: url("../img/lp-cards-bg.png") no-repeat center;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

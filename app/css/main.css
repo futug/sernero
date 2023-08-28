@@ -6666,6 +6666,11 @@ h1 {
   padding-bottom: 120px;
   background: url("../img/lp-cards-bg.webp") no-repeat center;
 }
+@supports not (background: url("../img/lp-cards-bg.webp")) {
+  .ga-hero {
+    background: url("../img/lp-cards-bg.png") no-repeat center;
+  }
+}
 .ga-hero__content {
   display: -ms-grid;
   display: grid;
@@ -6894,9 +6899,19 @@ h1 {
 .ga-why {
   background: url("../img/ga-why-bg.webp") no-repeat center;
 }
+@supports not (background: url("../img/ga-why-bg.webp")) {
+  .ga-why {
+    background: url("../img/ga-why-bg.png") no-repeat center;
+  }
+}
 @media (max-width: 480px) {
   .ga-why {
     background: url("../img/ga-why-bg-mob.webp") no-repeat center/contain;
+  }
+  @supports not (background: url("../img/ga-why-bg-mob.webp")) {
+    .ga-why {
+      background: url("../img/ga-why-bg-mob.png") no-repeat center/contain;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -6912,9 +6927,19 @@ h1 {
   .ga-cta {
     background: url("../img/ga-cta.webp") no-repeat 120px 50%/contain;
   }
+  @supports not (background: url("../img/ga-cta.webp")) {
+    .ga-cta {
+      background: url("../img/ga-cta.png") no-repeat 120px 50%/contain;
+    }
+  }
 }
 .ga-cta__content {
   background: url("../img/ga-cta.webp") no-repeat bottom right;
+}
+@supports not (background: url("../img/ga-cta.webp")) {
+  .ga-cta__content {
+    background: url("../img/ga-cta.png") no-repeat bottom right;
+  }
 }
 @media (max-width: 480px) {
   .ga-cta__content {

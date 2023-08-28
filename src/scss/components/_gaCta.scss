@@ -1,10 +1,18 @@
 .ga-cta {
   @media (max-width: 480px) {
     background: url("../img/ga-cta.webp") no-repeat 120px 50% / contain;
+
+    @supports not (background: url("../img/ga-cta.webp")) {
+      background: url("../img/ga-cta.png") no-repeat 120px 50% / contain;
+    }
   }
 
   &__content {
     background: url("../img/ga-cta.webp") no-repeat bottom right;
+
+    @supports not (background: url("../img/ga-cta.webp")) {
+      background: url("../img/ga-cta.png") no-repeat bottom right;
+    }
     @media (max-width: 480px) {
       max-width: 408px;
       background: none;
