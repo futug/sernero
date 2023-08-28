@@ -70,7 +70,6 @@
 
     &-cta {
       display: flex;
-      align-items: flex-end;
       gap: 30px;
       margin-top: 70px;
       grid-column: 1/2;
@@ -87,6 +86,7 @@
 
       @media (max-width: 450px) {
         flex-direction: column;
+        justify-self: start;
       }
     }
 
