@@ -63,7 +63,16 @@
 </header>
 
         <main class="main">
-          <section class="search-hero">
+          <section class="search-hero hero-section">
+  <picture>
+    <source srcset="img/google-search-bg.webp" type="image/webp" />
+    <img
+      loading="lazy"
+      src="img/google-search-bg.jpeg"
+      class="search-hero__bg"
+      alt="hero bg"
+    />
+  </picture>
   <div class="search-hero__content container">
     <h1 class="search-hero__content-title">Реклама в Google-поиске</h1>
     <p class="search-hero__content-subtitle">
@@ -74,7 +83,9 @@
       Поисковая реклама пользуется огромной популярностью по всему миру.
     </p>
     <div class="search-hero__cta">
-      <a href="/services.html" class="btn btn-primary btn--white">Наши услуги</a>
+      <a href="/services.html" class="btn btn-primary btn--white"
+        >Наши услуги</a
+      >
       <a href="/contacts.html" class="btn btn-secondary btn--white">
         <svg class="btn-msg-ico">
           <use xlink:href="img/sprite.svg#prime_message"></use>
