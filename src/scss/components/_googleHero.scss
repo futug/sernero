@@ -13,6 +13,10 @@
     padding-top: 233px;
     padding-bottom: 120px;
 
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+
     &-title {
       max-width: 959px;
       color: var(--light-color);
@@ -22,7 +26,6 @@
       }
 
       @media (max-width: 575px) {
-        max-width: 378px;
         font-size: 24px;
         line-height: 30px;
         margin-left: auto;
@@ -46,7 +49,6 @@
       @media (max-width: 575px) {
         margin-left: auto;
         margin-right: auto;
-        max-width: 378px;
         font-size: 20px;
         line-height: 24px;
       }
@@ -55,19 +57,15 @@
     &-cta {
       margin-top: 60px;
       display: flex;
-      align-items: center;
       gap: 30px;
 
       @media (max-width: 480px) {
-        max-width: 378px;
-        margin-left: auto;
-        margin-right: auto;
-        flex-direction: column;
-        align-items: start;
+        justify-content: center;
+        gap: 10px;
+      }
 
-        button {
-          min-width: 209px;
-        }
+      @media (max-width: 450px) {
+        flex-direction: column;
       }
     }
   }
