@@ -1,10 +1,18 @@
 .advantages {
   background: url("../img/home-background-decore-1.webp") no-repeat center /
       373px 361px,
-    url("../img/home-background-decore-1.png") no-repeat center / 373px 361px,
     url("../img/home-background-decore-2.webp") no-repeat 12% 88%/ 336px 325px,
-    url("../img/home-background-decore-2.png") no-repeat 12% 88%/ 336px 325px,
     var(--primary-accent-color);
+
+  @supports not (background: url("../img/home-background-decore-1.webp")) {
+    background: url("../img/home-background-decore-1.png") no-repeat center /
+      373px 361px;
+  }
+
+  @supports not (background: url("../img/home-background-decore-2.webp")) {
+    background: url("../img/home-background-decore-2.png") no-repeat 12% 88%/ 336px
+      325px;
+  }
   margin: 0;
 
   & .container {
@@ -12,7 +20,7 @@
 
     .image {
       position: absolute;
-      top: -5%;
+      top: -30%;
       right: 0;
     }
     @media (max-width: 980px) {
@@ -56,14 +64,25 @@
   @media (max-width: 980px) {
     background: url("../img/home-decore-mobile-1.webp") no-repeat top right /
         373px 361px,
-      url("../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,
       url("../img/home-decore-mobile-2.webp") no-repeat center/ 373px 361px,
-      url("../img/home-decore-mobile-2.png") no-repeat center/ 373px 361px,
       url("../img/home-decore-mobile-3.webp") no-repeat bottom left / 336px
         325px,
-      url("../img/home-decore-mobile-3.png") no-repeat bottom left / 336px 325px,
       var(--primary-accent-color);
 
+    @supports not (background: url("../img/home-decore-mobile-1.webp")) {
+      background: url("../img/home-decore-mobile-1.png") no-repeat top right /
+        373px 361px;
+    }
+
+    @supports not (background: url("../img/home-decore-mobile-2.webp")) {
+      background: url("../img/home-decore-mobile-2.png") no-repeat center/ 373px
+        361px;
+    }
+
+    @supports not (background: url("../img/home-decore-mobile-3.webp")) {
+      background: url("../img/home-decore-mobile-3.png") no-repeat bottom left /
+        336px 325px;
+    }
     &-title {
       font-size: 26px;
       text-align: center;
@@ -89,13 +108,25 @@
   @media (max-width: 480px) {
     background: url("../img/home-decore-mobile-1.webp") no-repeat top right /
         373px 361px,
-      url("../img/home-decore-mobile-1.png") no-repeat top right / 373px 361px,
-      url("../img/home-decore-mobile-2.webp") no-repeat left center/ 373px 361px,
-      url("../img/home-decore-mobile-2.png") no-repeat left center/ 373px 361px,
-      url("../img/home-decore-mobile-3.webp") no-repeat 10% 97% / 336px 325px,
-      url("../img/home-decore-mobile-3.png") no-repeat 10% 97% / 336px 325px,
+      url("../img/home-decore-mobile-2.webp") no-repeat center/ 373px 361px,
+      url("../img/home-decore-mobile-3.webp") no-repeat bottom left / 336px
+        325px,
       var(--primary-accent-color);
 
+    @supports not (background: url("../img/home-decore-mobile-1.webp")) {
+      background: url("../img/home-decore-mobile-1.png") no-repeat top right /
+        373px 361px;
+    }
+
+    @supports not (background: url("../img/home-decore-mobile-2.webp")) {
+      background: url("../img/home-decore-mobile-2.png") no-repeat center/ 373px
+        361px;
+    }
+
+    @supports not (background: url("../img/home-decore-mobile-3.webp")) {
+      background: url("../img/home-decore-mobile-3.png") no-repeat bottom left /
+        336px 325px;
+    }
     &__list {
       font-weight: 300;
       max-width: 400px;

@@ -1,5 +1,10 @@
 .landing-variants {
   background: url("../img/lp-cards-bg.webp") no-repeat center, var(--dark-color);
+
+  @supports not (background: url("../img/lp-cards-bg.webp")) {
+    background: url("../img/lp-cards-bg.png") no-repeat center,
+      var(--dark-color);
+  }
   color: var(--light-color);
 
   &__content {

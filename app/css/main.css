@@ -2188,15 +2188,25 @@ h1 {
 }
 
 .advantages {
-  background: url("../img/home-background-decore-1.webp") no-repeat center/373px 361px, url("../img/home-background-decore-1.png") no-repeat center/373px 361px, url("../img/home-background-decore-2.webp") no-repeat 12% 88%/336px 325px, url("../img/home-background-decore-2.png") no-repeat 12% 88%/336px 325px, var(--primary-accent-color);
+  background: url("../img/home-background-decore-1.webp") no-repeat center/373px 361px, url("../img/home-background-decore-2.webp") no-repeat 12% 88%/336px 325px, var(--primary-accent-color);
   margin: 0;
+}
+@supports not (background: url("../img/home-background-decore-1.webp")) {
+  .advantages {
+    background: url("../img/home-background-decore-1.png") no-repeat center/373px 361px;
+  }
+}
+@supports not (background: url("../img/home-background-decore-2.webp")) {
+  .advantages {
+    background: url("../img/home-background-decore-2.png") no-repeat 12% 88%/336px 325px;
+  }
 }
 .advantages .container {
   position: relative;
 }
 .advantages .container .image {
   position: absolute;
-  top: -5%;
+  top: -30%;
   right: 0;
 }
 @media (max-width: 980px) {
@@ -2236,7 +2246,22 @@ h1 {
 }
 @media (max-width: 980px) {
   .advantages {
-    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat center/373px 361px, url("../img/home-decore-mobile-2.png") no-repeat center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat bottom left/336px 325px, url("../img/home-decore-mobile-3.png") no-repeat bottom left/336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat bottom left/336px 325px, var(--primary-accent-color);
+  }
+  @supports not (background: url("../img/home-decore-mobile-1.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px;
+    }
+  }
+  @supports not (background: url("../img/home-decore-mobile-2.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-2.png") no-repeat center/373px 361px;
+    }
+  }
+  @supports not (background: url("../img/home-decore-mobile-3.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-3.png") no-repeat bottom left/336px 325px;
+    }
   }
   .advantages-title {
     font-size: 26px;
@@ -2258,7 +2283,22 @@ h1 {
 }
 @media (max-width: 480px) {
   .advantages {
-    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat left center/373px 361px, url("../img/home-decore-mobile-2.png") no-repeat left center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat 10% 97%/336px 325px, url("../img/home-decore-mobile-3.png") no-repeat 10% 97%/336px 325px, var(--primary-accent-color);
+    background: url("../img/home-decore-mobile-1.webp") no-repeat top right/373px 361px, url("../img/home-decore-mobile-2.webp") no-repeat center/373px 361px, url("../img/home-decore-mobile-3.webp") no-repeat bottom left/336px 325px, var(--primary-accent-color);
+  }
+  @supports not (background: url("../img/home-decore-mobile-1.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-1.png") no-repeat top right/373px 361px;
+    }
+  }
+  @supports not (background: url("../img/home-decore-mobile-2.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-2.png") no-repeat center/373px 361px;
+    }
+  }
+  @supports not (background: url("../img/home-decore-mobile-3.webp")) {
+    .advantages {
+      background: url("../img/home-decore-mobile-3.png") no-repeat bottom left/336px 325px;
+    }
   }
   .advantages__list {
     font-weight: 300;
@@ -5130,11 +5170,17 @@ h1 {
 }
 
 .landing-hero {
-  padding-top: 233px;
-  padding-bottom: 120px;
-  background: url("../img/landing-hero-bg.webp") no-repeat center/cover, var(--dark-color);
+  background: var(--dark-color);
   position: relative;
   z-index: 1;
+}
+.landing-hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 .landing-hero::after {
   content: "";
@@ -5146,11 +5192,11 @@ h1 {
   background: rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: inset 1px 1px 232px #000000;
   box-shadow: inset 1px 1px 232px #000000;
-  z-index: 2;
+  z-index: 3;
 }
 .landing-hero__content {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 @media (max-width: 480px) {
   .landing-hero__content {
@@ -5210,6 +5256,9 @@ h1 {
   }
 }
 
+.landing-diff {
+  color: var(--dark-color);
+}
 .landing-diff__content {
   display: -ms-grid;
   display: grid;
@@ -5235,18 +5284,6 @@ h1 {
 }
 .landing-diff__content-title {
   max-width: 500px;
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-  color: var(--dark-color);
-}
-@media (max-width: 480px) {
-  .landing-diff__content-title {
-    font-size: 26px;
-    line-height: 31px;
-  }
 }
 .landing-diff__content-text {
   margin-top: 40px;
@@ -5254,7 +5291,6 @@ h1 {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: var(--dark-color);
 }
 @media (max-width: 480px) {
   .landing-diff__content-text {
@@ -5267,25 +5303,11 @@ h1 {
 }
 
 .landing-list {
-  background: url("../img/whitenoise-bg.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(137, 110, 78, 0) 24.2%, #715a40 43.55%, #896e4e 69.26%), var(--secondary-accent-color);
   color: var(--light-color);
 }
 @media (max-width: 480px) {
   .landing-list__content {
     max-width: 408px;
-  }
-}
-.landing-list__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .landing-list__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .landing-list__content-subtitle {
@@ -5328,9 +5350,24 @@ h1 {
 .landing-structure {
   background: url("../img/lp-struc-bg-top.webp") no-repeat 95% 5%, url("../img/lp-struc-bg-bot.webp") no-repeat 5% 95%;
 }
+@supports not (background: url("../img/lp-struc-bg-top.webp")) {
+  .landing-structure {
+    background: url("../img/lp-struc-bg-top.png") no-repeat 95% 5%, url("../img/lp-struc-bg-bot.png") no-repeat 5% 95%;
+  }
+}
+@supports not (background: url("../img/lp-struc-bg-bot.webp")) {
+  .landing-structure {
+    background: url("../img/lp-struc-bg-bot.png") no-repeat 5% 95%, url("../img/lp-struc-bg-top.png") no-repeat 95% 5%;
+  }
+}
 @media (max-width: 480px) {
   .landing-structure {
     background: url("../img/lp-struc-bg-mob.webp") no-repeat center/cover;
+  }
+  @supports not (background: url("../img/lp-struc-bg-mob.webp")) {
+    .landing-structure {
+      background: url("../img/lp-struc-bg-mob.png") no-repeat center/cover;
+    }
   }
 }
 .landing-structure__content {
@@ -5339,19 +5376,6 @@ h1 {
 @media (max-width: 480px) {
   .landing-structure__content {
     max-width: 408px;
-  }
-}
-.landing-structure__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .landing-structure__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .landing-structure__content-subtitle {
@@ -5393,6 +5417,11 @@ h1 {
 .landing-variants {
   background: url("../img/lp-cards-bg.webp") no-repeat center, var(--dark-color);
   color: var(--light-color);
+}
+@supports not (background: url("../img/lp-cards-bg.webp")) {
+  .landing-variants {
+    background: url("../img/lp-cards-bg.png") no-repeat center, var(--dark-color);
+  }
 }
 @media (max-width: 480px) {
   .landing-variants__content {
@@ -5506,22 +5535,14 @@ h1 {
   background: url("../img/lp-cards-bg.webp") no-repeat center;
   color: var(--dark-color);
 }
+@supports not (background: url("../img/lp-cards-bg.webp")) {
+  .landing-order {
+    background: url("../img/lp-cards-bg.png") no-repeat center;
+  }
+}
 @media (max-width: 480px) {
   .landing-order__content {
     max-width: 408px;
-  }
-}
-.landing-order__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .landing-order__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .landing-order__content-paragraph {
