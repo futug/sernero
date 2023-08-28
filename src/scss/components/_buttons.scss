@@ -5,7 +5,7 @@
   align-items: center;
   min-width: 210px;
   box-sizing: border-box;
-  padding: 14px;
+  padding: 14px 10px;
   margin: 0;
   gap: 17px;
   transition: all 0.3s ease-out;
@@ -22,7 +22,6 @@
 
   @media (max-width: 450px) {
     min-width: 185px;
-    width: 100%;
   }
 }
 
