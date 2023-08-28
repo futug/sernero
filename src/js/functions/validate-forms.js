@@ -16,7 +16,7 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask("+3 (999) 999-99-99");
+    const inputMask = new Inputmask("+9 (999) 999-99-99");
     inputMask.mask(telSelector);
 
     for (let item of rules) {
@@ -25,7 +25,7 @@ export const validateForms = (selector, rules, afterSend) => {
           rule: "function",
           validator: function () {
             const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 9;
+            return phone.length === 11;
           },
           errorMessage: item.telError,
         });
@@ -42,21 +42,23 @@ export const validateForms = (selector, rules, afterSend) => {
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
 
-    let xhr = new XMLHttpRequest();
+    // let xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          if (afterSend) {
-            afterSend();
-          }
-          console.log("Отправлено");
-        }
-      }
-    };
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status === 200) {
+    //       if (afterSend) {
+    //         afterSend();
+    //       }
+    //       console.log("Отправлено");
+    //     }
+    //   }
+    // };
 
-    xhr.open("POST", "mail.php", true);
-    xhr.send(formData);
+    // xhr.open("POST", "mail.php", true);
+    // xhr.send(formData);
+
+    console.log(formData);
 
     ev.target.reset();
   });

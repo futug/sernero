@@ -855,9 +855,7 @@ h1 {
 .main-form {
   padding: 35px;
   max-width: 350px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  max-height: 440px;
 }
 .main-form__title {
   max-width: 259px;

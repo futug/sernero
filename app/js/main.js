@@ -346,7 +346,7 @@ const validateForms = (selector, rules, afterSend) => {
     return false;
   }
   if (telSelector) {
-    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+3 (999) 999-99-99");
+    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+9 (999) 999-99-99");
     inputMask.mask(telSelector);
     for (let item of rules) {
       if (item.tel) {
@@ -354,7 +354,7 @@ const validateForms = (selector, rules, afterSend) => {
           rule: "function",
           validator: function () {
             const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 9;
+            return phone.length === 11;
           },
           errorMessage: item.telError
         });
@@ -367,19 +367,24 @@ const validateForms = (selector, rules, afterSend) => {
   }
   validation.onSuccess(ev => {
     let formData = new FormData(ev.target);
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          if (afterSend) {
-            afterSend();
-          }
-          console.log("Отправлено");
-        }
-      }
-    };
-    xhr.open("POST", "mail.php", true);
-    xhr.send(formData);
+
+    // let xhr = new XMLHttpRequest();
+
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status === 200) {
+    //       if (afterSend) {
+    //         afterSend();
+    //       }
+    //       console.log("Отправлено");
+    //     }
+    //   }
+    // };
+
+    // xhr.open("POST", "mail.php", true);
+    // xhr.send(formData);
+
+    console.log(formData);
     ev.target.reset();
   });
 };
