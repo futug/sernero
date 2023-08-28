@@ -855,7 +855,9 @@ h1 {
 .main-form {
   padding: 35px;
   max-width: 350px;
-  max-height: 440px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 .main-form__title {
   max-width: 259px;
@@ -1158,6 +1160,14 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   border: 1px solid var(--dark-color);
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
 }
 .main-form-horizont__input {
   -webkit-box-flex: 1;

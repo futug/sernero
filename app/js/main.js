@@ -199,8 +199,8 @@ window.addEventListener("load", () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/validate-forms */ "./src/js/functions/validate-forms.js");
 
-const rulesHero = [{
-  ruleSelector: ".home-hero__input-name",
+const rulesMain = [{
+  ruleSelector: ".name__input",
   rules: [{
     rule: "minLength",
     value: 3
@@ -210,7 +210,7 @@ const rulesHero = [{
     errorMessage: "Заполните имя!"
   }]
 }, {
-  ruleSelector: ".home-hero__input-tel",
+  ruleSelector: ".tel__input",
   tel: true,
   telError: "Введите корректный телефон",
   rules: [{
@@ -219,7 +219,7 @@ const rulesHero = [{
     errorMessage: "Заполните телефон!"
   }]
 }, {
-  ruleSelector: ".home-hero__input-email",
+  ruleSelector: ".email__input",
   rules: [{
     rule: "minLength",
     value: 6
@@ -229,8 +229,8 @@ const rulesHero = [{
     errorMessage: "Заполните email!"
   }]
 }];
-const rulesIndex = [{
-  ruleSelector: ".home-horiz-form__input-name",
+const rulesHorizont = [{
+  ruleSelector: ".name__input",
   rules: [{
     rule: "minLength",
     value: 3
@@ -240,7 +240,7 @@ const rulesIndex = [{
     errorMessage: "Заполните имя!"
   }]
 }, {
-  ruleSelector: ".home-horiz-form__input-tel",
+  ruleSelector: ".tel__input",
   tel: true,
   telError: "Введите корректный телефон",
   rules: [{
@@ -249,7 +249,7 @@ const rulesIndex = [{
     errorMessage: "Заполните телефон!"
   }]
 }, {
-  ruleSelector: ".home-horiz-form__input-email",
+  ruleSelector: ".email__input",
   rules: [{
     rule: "minLength",
     value: 6
@@ -257,16 +257,35 @@ const rulesIndex = [{
     rule: "required",
     value: true,
     errorMessage: "Заполните email!"
+  }]
+}, {
+  ruleSelector: ".url__input",
+  rules: [{
+    rule: "minLength",
+    value: 3
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните Адрес!"
   }]
 }];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 document.addEventListener("DOMContentLoaded", function () {
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".home-hero__form", rulesHero, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".main-form", rulesMain, afterForm);
 });
 document.addEventListener("DOMContentLoaded", function () {
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".home-horiz-form", rulesIndex, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".main-form-horizont", rulesHorizont, afterForm);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".search-setup__form", rulesHorizont, afterForm);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".video-properties__form", rulesHorizont, afterForm);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".audit-price__form", rulesMain, afterForm);
 });
 
 /***/ }),
@@ -319,7 +338,7 @@ const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
   if (!form) {
-    console.error("Нет такого селектора!");
+    // console.error("Нет такого селектора!");
     return false;
   }
   if (!rules) {
