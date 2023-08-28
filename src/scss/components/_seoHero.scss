@@ -58,7 +58,6 @@
     &-cta {
       margin-top: 101px;
       display: flex;
-      align-items: center;
       gap: 30px;
 
       @media (max-width: 480px) {
@@ -66,19 +65,8 @@
         gap: 10px;
       }
 
-      @media (max-width: 460px) {
+      @media (max-width: 450px) {
         flex-direction: column;
-        align-items: start;
-      }
-    }
-
-    &-btn {
-      @media (max-width: 480px) {
-        padding: 14px;
-        gap: 12px;
-        flex-grow: 1;
-        text-align: center;
-        min-width: 180px;
       }
     }
   }

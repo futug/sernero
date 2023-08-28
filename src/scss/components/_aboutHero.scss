@@ -18,7 +18,7 @@
       }
 
       .content-top__text {
-        max-width: 710px;
+        flex: 1 1 755px;
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
@@ -37,12 +37,12 @@
         flex-direction: column;
         gap: 13px;
 
-        @media (max-width: 975px) {
+        @media (max-width: 1024px) {
           flex-direction: row;
           justify-content: center;
           width: 100%;
 
-          .filled {
+          .btn-primary {
             display: none;
           }
         }
