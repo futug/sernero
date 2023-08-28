@@ -65,21 +65,28 @@
         <section class="hero hero-section">
   <picture>
     <source srcset="img/hero_background.webp" type="image/webp" />
-    <img loading="lazy" src="img/hero_background.jpg" class="hero__bg" alt="hero-bg" />
+    <img
+      loading="lazy"
+      src="img/hero_background.jpg"
+      class="hero__bg"
+      alt="hero-bg"
+    />
   </picture>
   <div class="hero__content container">
-    <div class="content__text" data-aos="fade-up">
-      <h1 class="content__text-title">
+    <div class="hero__content-text" data-aos="fade-up">
+      <h1 class="hero__content-title">
         Умный <span>digital маркетинг </span> <br />
         для Вашего бизнеса
       </h1>
-      <p class="content__text-subtitle">
+      <p class="hero__content-subtitle">
         Мощные стратегии. Прогнозируемые результаты. Наша команда готова
         привести ваш бренд к успеху.
       </p>
-      <div class="content__text-cta">
-        <a href="/services.html" class="btn btn-primary btn--green">Наши услуги</a>
-        <a href="/contacts.html" class="btn btn-secondary btn--white ">
+      <div class="hero__content-cta">
+        <a href="/services.html" class="btn btn-primary btn--green"
+          >Наши услуги</a
+        >
+        <a href="/contacts.html" class="btn btn-secondary btn--white">
           <svg class="btn-msg-ico">
             <use xlink:href="img/sprite.svg#prime_message"></use>
           </svg>
@@ -87,26 +94,39 @@
         </a>
       </div>
     </div>
-    <div class="content__form">
-      <form action="#" class="form">
-        <p class="content__form-title">Запишись на консультацию</p>
-        <p class="content__form-subtittle">
-          Наши менеджеры свяжутся с вами в ближайшее время!
-        </p>
-        <div class="form__labels">
-          <label class="form__labels-item">
-            <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя" />
-          </label>
-          <label class="form__labels-item">
-            <input type="tel" name="Телефон" class="input-reset form__input" placeholder="Ваш телефон" />
-          </label>
-          <label class="form__labels-item">
-            <input type="email" name="email" class="input-reset form__input" placeholder="Ваш e-mail" />
-          </label>
-        </div>
-        <button class="btn-reset form__btn black">Отправить</button>
-      </form>
-    </div>
+    <form action="#" class="hero__form main-form green-version">
+      <p class="main-form__title">Запишись на консультацию</p>
+      <p class="main-form__subtitle">
+        Наши менеджеры свяжутся с вами в ближайшее время!
+      </p>
+      <div class="wrapper">
+        <label class="form__label main-form__label">
+          <input
+            type="text"
+            name="Имя"
+            class="input-reset form__input main-form__input"
+            placeholder="Ваше имя"
+          />
+        </label>
+        <label class="form__label main-form__label">
+          <input
+            type="tel"
+            name="Имя"
+            class="input-reset form__input main-form__input"
+            placeholder="Ваш телефон"
+          />
+        </label>
+        <label class="form__label main-form__label">
+          <input
+            type="email"
+            name="Имя"
+            class="input-reset form__input main-form__input"
+            placeholder="Ваш e-mail"
+          />
+        </label>
+      </div>
+      <button class="btn-reset form__btn main-form__button">Отправить</button>
+    </form>
   </div>
 </section>
  <section class="services section-offset">
@@ -252,7 +272,7 @@
     </div>
     <form
       action="#"
-      class="google-content__content-form main-form-horizont horiz-white-version"
+      class="google-content__content-form home-horiz-form main-form-horizont horiz-white-version"
     >
       <h2 class="main-form-horizont__title">
         Заполните форму и узнайте стоимость продвижения
@@ -267,7 +287,7 @@
               <input
                 type="text"
                 name="Имя"
-                class="input-reset main-form-horizont__input"
+                class="input-reset main-form-horizont__input home-horiz-form__input-name"
                 placeholder="Имя"
               />
             </label>
@@ -275,15 +295,15 @@
               <input
                 type="tel"
                 name="Телефон"
-                class="input-reset main-form-horizont__input"
+                class="input-reset main-form-horizont__input home-horiz-form__input-tel"
                 placeholder="Ваш телефон"
               />
             </label>
             <label class="main-form-horizont__label">
               <input
-                type="text"
+                type="email"
                 name="Почта"
-                class="input-reset main-form-horizont__input"
+                class="input-reset main-form-horizont__input home-horiz-form__input-email"
                 placeholder="Ваш e-mail"
               />
             </label>
@@ -291,7 +311,7 @@
               <input
                 type="text"
                 name="Сайт"
-                class="input-reset main-form-horizont__input"
+                class="input-reset main-form-horizont__input home-horiz-form__input-name-website"
                 placeholder="Ваш сайт"
               />
             </label>

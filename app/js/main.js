@@ -200,7 +200,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/validate-forms */ "./src/js/functions/validate-forms.js");
 
 const rulesHero = [{
-  ruleSelector: ".hero-form__name",
+  ruleSelector: ".home-hero__input-name",
   rules: [{
     rule: "minLength",
     value: 3
@@ -210,7 +210,7 @@ const rulesHero = [{
     errorMessage: "Заполните имя!"
   }]
 }, {
-  ruleSelector: ".hero-form__tel",
+  ruleSelector: ".home-hero__input-tel",
   tel: true,
   telError: "Введите корректный телефон",
   rules: [{
@@ -218,12 +218,55 @@ const rulesHero = [{
     value: true,
     errorMessage: "Заполните телефон!"
   }]
+}, {
+  ruleSelector: ".home-hero__input-email",
+  rules: [{
+    rule: "minLength",
+    value: 6
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните email!"
+  }]
+}];
+const rulesIndex = [{
+  ruleSelector: ".home-horiz-form__input-name",
+  rules: [{
+    rule: "minLength",
+    value: 3
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните имя!"
+  }]
+}, {
+  ruleSelector: ".home-horiz-form__input-tel",
+  tel: true,
+  telError: "Введите корректный телефон",
+  rules: [{
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните телефон!"
+  }]
+}, {
+  ruleSelector: ".home-horiz-form__input-email",
+  rules: [{
+    rule: "minLength",
+    value: 6
+  }, {
+    rule: "required",
+    value: true,
+    errorMessage: "Заполните email!"
+  }]
 }];
 const afterForm = () => {
   console.log("Произошла отправка, тут можно писать любые действия");
 };
 document.addEventListener("DOMContentLoaded", function () {
-  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".hero-form", rulesHero, afterForm);
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".home-hero__form", rulesHero, afterForm);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_0__.validateForms)(".home-horiz-form", rulesIndex, afterForm);
 });
 
 /***/ }),
