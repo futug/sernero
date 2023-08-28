@@ -1,8 +1,10 @@
 .audit-quote {
-  background: url("../img/audit-quote-bg.webp") no-repeat 5% 0/contain;
+  background: url("../img/audit-quote-bg.webp") no-repeat 5% 0 / contain;
 
-  @supports not (background: url("../img/audit-quote-bg.webp") no-repeat 5% 0/contain) {
-    background: url("../img/audit-quote-bg.png") no-repeat 5% 0/contain;
+  @supports not (
+    background: url("../img/audit-quote-bg.webp") no-repeat 5% 0 / contain
+  ) {
+    background: url("../img/audit-quote-bg.png") no-repeat 5% 0 / contain;
   }
 
   @media (max-width: 1024px) {
@@ -23,20 +25,11 @@
 
   &__title {
     flex: 1 1 230px;
-    font-family: 'RubikMonoOne';
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 37px;
-
-    @media (max-width: 480px) {
-      font-size: 26px;
-      line-height: 32px;
-    }
   }
 
   &__subtitle {
     flex: 1 1 725px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;

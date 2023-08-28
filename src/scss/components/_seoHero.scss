@@ -1,13 +1,14 @@
 .seo-hero {
-  padding-top: 247px;
-  padding-bottom: 120px;
-  background: url("../img/seo-bg.webp") no-repeat center/ cover,
-    url("../img/seo-bg.jpg") no-repeat center/ cover, var(--dark-color);
   position: relative;
   z-index: 1;
 
-  @media (max-width: 480px) {
-    padding-top: 178px;
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
   }
 
   &::after {
@@ -19,15 +20,16 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     box-shadow: inset 1px 1px 232px #000000;
-    z-index: 2;
+    z-index: 3;
   }
 
   &__content {
+    width: 100%;
     @media (max-width: 480px) {
       max-width: 408px;
     }
     position: relative;
-    z-index: 3;
+    z-index: 4;
     &-title {
       font-style: normal;
       font-weight: 400;

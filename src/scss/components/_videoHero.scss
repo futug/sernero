@@ -1,17 +1,15 @@
 .video-hero {
-  padding-top: 233px;
-  padding-bottom: 120px;
   background: url("../img/audit-hero-bg.webp") no-repeat center/ contain;
 
-  @media (max-width: 480px) {
-    padding-top: 178px;
+  @supports not (background: url("../img/audit-hero-bg.webp")) {
+    background: url("../img/audit-hero-bg.png") no-repeat center/ contain;
   }
 
+  color: var(--dark-color);
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    color: var(--dark-color);
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
@@ -25,10 +23,6 @@
     &-title {
       grid-column: 1/2;
       grid-row: 1/2;
-      @media (max-width: 480px) {
-        font-size: 24px;
-        line-height: 29px;
-      }
     }
 
     &-subtitle {

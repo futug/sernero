@@ -2,8 +2,22 @@
   background: url("../img/lp-struc-bg-top.webp") no-repeat 95% 5%,
     url("../img/lp-struc-bg-bot.webp") no-repeat 5% 95%;
 
+  @supports not (background: url("../img/lp-struc-bg-top.webp")) {
+    background: url("../img/lp-struc-bg-top.png") no-repeat 95% 5%,
+      url("../img/lp-struc-bg-bot.png") no-repeat 5% 95%;
+  }
+
+  @supports not (background: url("../img/lp-struc-bg-bot.webp")) {
+    background: url("../img/lp-struc-bg-bot.png") no-repeat 5% 95%,
+      url("../img/lp-struc-bg-top.png") no-repeat 95% 5%;
+  }
+
   @media (max-width: 480px) {
     background: url("../img/lp-struc-bg-mob.webp") no-repeat center/cover;
+
+    @supports not (background: url("../img/lp-struc-bg-mob.webp")) {
+      background: url("../img/lp-struc-bg-mob.png") no-repeat center/cover;
+    }
   }
   &__content {
     color: var(--dark-color);
@@ -12,17 +26,6 @@
       max-width: 408px;
     }
 
-    &-title {
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 38px;
-      line-height: 47px;
-      @media (max-width: 480px) {
-        font-size: 26px;
-        line-height: 32px;
-      }
-    }
     &-subtitle {
       margin-top: 40px;
       font-size: 22px;

@@ -1,6 +1,4 @@
 .audit-hero {
-  padding-top: 233px;
-  padding-bottom: 120px;
   background: url("../img/audit-hero-bg.webp") no-repeat center/contain;
 
   @supports not (background: url("../img/audit-hero-bg.webp")) {
@@ -13,8 +11,6 @@
     @supports not (background: url("../img/audit-hero-bg_mobile.webp")) {
       background: url("../img/audit-hero-bg_mobile.png") no-repeat center;
     }
-
-    padding-top: 178px;
   }
 
   &__content {

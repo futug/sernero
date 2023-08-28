@@ -2,21 +2,13 @@
   color: var(--dark-color);
   background: url("../img/lp-cards-bg.webp") no-repeat center;
 
+  @supports not (background: url("../img/lp-cards-bg.webp")) {
+    background: url("../img/lp-cards-bg.png") no-repeat center;
+  }
+
   &__content {
     @media (max-width: 480px) {
       max-width: 408px;
-    }
-
-    &-title {
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 38px;
-      line-height: 47px;
-      @media (max-width: 480px) {
-        font-size: 26px;
-        line-height: 32px;
-      }
     }
   }
 

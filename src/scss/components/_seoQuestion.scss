@@ -1,17 +1,15 @@
 .seo-question {
   background: url("../img/seo-section-bg.webp") no-repeat center/ cover;
-  &__content {
-    &-title {
-      color: var(--dark-color);
-    }
+  color: var(--dark-color);
 
+  @supports not (background: url("../img/seo-section-bg.webp")) {
+    background: url("../img/seo-section-bg.png") no-repeat center/ cover;
+  }
+  &__content {
     &-subtitle {
       margin-top: 40px;
-      font-style: normal;
-      font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: var(--dark-color);
 
       & span {
         font-weight: 500;

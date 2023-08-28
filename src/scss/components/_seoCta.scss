@@ -1,9 +1,17 @@
 .seo-cta {
   @media (max-width: 480px) {
     background: url("../img/seo-cta-bg.webp") no-repeat center/200%;
+
+    @supports not (background: url("../img/seo-cta-bg.webp")) {
+      background: url("../img/seo-cta-bg.png") no-repeat center/200%;
+    }
   }
   &__content {
     background: url("../img/seo-cta-bg.webp") no-repeat center/contain;
+
+    @supports not (background: url("../img/seo-cta-bg.webp")) {
+      background: url("../img/seo-cta-bg.png") no-repeat center/contain;
+    }
 
     @media (max-width: 480px) {
       max-width: 408px;

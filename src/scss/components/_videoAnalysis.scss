@@ -1,31 +1,9 @@
 .video-analysis {
   color: var(--dark-color);
-  background: url("../img/whitenoise-bg.webp") no-repeat center/ cover,
-    linear-gradient(
-      136.82deg,
-      rgba(205, 255, 204, 0) 24.2%,
-      #e8ffe8 43.55%,
-      #cdffcc 69.26%
-    ),
-    #8db48d;
 
   &__content {
     @media (max-width: 480px) {
       max-width: 408px;
-    }
-
-    &-title {
-      font-family: "RubikMonoOne";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 38px;
-      line-height: 47px;
-      padding-bottom: 10px;
-
-      @media (max-width: 480px) {
-        font-size: 26px;
-        line-height: 31px;
-      }
     }
   }
 
