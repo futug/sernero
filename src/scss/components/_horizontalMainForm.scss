@@ -54,6 +54,10 @@
     flex-grow: 1;
     display: flex;
     border: 1px solid var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
   }
   &__input {
     flex-grow: 1;

@@ -54,8 +54,6 @@
   }
 
   @media (max-width: 575px) {
-    padding-top: 90px;
-
     &-list {
       margin-top: 30px;
       grid-template-columns: repeat(6, 1fr);

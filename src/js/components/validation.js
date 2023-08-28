@@ -1,8 +1,8 @@
 import { validateForms } from "../functions/validate-forms";
 
-const rulesHero = [
+const rulesMain = [
   {
-    ruleSelector: ".home-hero__input-name",
+    ruleSelector: ".name__input",
     rules: [
       {
         rule: "minLength",
@@ -16,7 +16,7 @@ const rulesHero = [
     ],
   },
   {
-    ruleSelector: ".home-hero__input-tel",
+    ruleSelector: ".tel__input",
     tel: true,
     telError: "Введите корректный телефон",
     rules: [
@@ -28,7 +28,7 @@ const rulesHero = [
     ],
   },
   {
-    ruleSelector: ".home-hero__input-email",
+    ruleSelector: ".email__input",
     rules: [
       {
         rule: "minLength",
@@ -43,9 +43,9 @@ const rulesHero = [
   },
 ];
 
-const rulesIndex = [
+const rulesHorizont = [
   {
-    ruleSelector: ".home-horiz-form__input-name",
+    ruleSelector: ".name__input",
     rules: [
       {
         rule: "minLength",
@@ -59,7 +59,7 @@ const rulesIndex = [
     ],
   },
   {
-    ruleSelector: ".home-horiz-form__input-tel",
+    ruleSelector: ".tel__input",
     tel: true,
     telError: "Введите корректный телефон",
     rules: [
@@ -71,7 +71,7 @@ const rulesIndex = [
     ],
   },
   {
-    ruleSelector: ".home-horiz-form__input-email",
+    ruleSelector: ".email__input",
     rules: [
       {
         rule: "minLength",
@@ -81,6 +81,20 @@ const rulesIndex = [
         rule: "required",
         value: true,
         errorMessage: "Заполните email!",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".url__input",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните Адрес!",
       },
     ],
   },
@@ -91,9 +105,21 @@ const afterForm = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  validateForms(".home-hero__form", rulesHero, afterForm);
+  validateForms(".main-form", rulesMain, afterForm);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  validateForms(".home-horiz-form", rulesIndex, afterForm);
+  validateForms(".main-form-horizont", rulesHorizont, afterForm);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  validateForms(".search-setup__form", rulesHorizont, afterForm);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  validateForms(".video-properties__form", rulesHorizont, afterForm);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  validateForms(".audit-price__form", rulesMain, afterForm);
 });

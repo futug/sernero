@@ -272,7 +272,7 @@
               <input
                 type="text"
                 name="Имя"
-                class="input-reset main-form-horizont__input"
+                class="input-reset name__input main-form-horizont__input"
                 placeholder="Имя"
               />
             </label>
@@ -280,24 +280,20 @@
               <input
                 type="tel"
                 name="Телефон"
-                class="input-reset main-form-horizont__input"
+                class="input-reset tel__input main-form-horizont__input"
                 placeholder="Ваш телефон"
               />
             </label>
             <label class="main-form-horizont__label">
               <input
-                type="text"
+                type="email"
                 name="Почта"
-                class="input-reset main-form-horizont__input"
+                class="input-reset email__input main-form-horizont__input"
                 placeholder="Ваш e-mail"
               />
             </label>
             <div class="main-form-horizont__select">
-              <select
-                name=""
-                id=""
-                class="input-reset main-form-horizont__input"
-              >
+              <select class="input-reset main-form-horizont__input">
                 <option value="search-advertisement">Реклама в поиске</option>
                 <option value="media-advertisement">Медийная реклама</option>
                 <option value="video-advertisement">Видеореклама</option>
@@ -315,7 +311,7 @@
             <input
               type="text"
               name="Сайт"
-              class="input-reset main-form-horizont__input"
+              class="input-reset url__input main-form-horizont__input"
               placeholder="Ваш сайт"
             />
           </label>
@@ -426,12 +422,22 @@
       Политика конфиденциальности и условия использования
     </a>
     <div class="footer__socials-bar socials-bar">
-      <a class="socials-bar__item" href="#">
+      <a
+        class="socials-bar__item"
+        href="https://t.me/greenfield112"
+        aria-label="Telegram link"
+        target="_blank"
+      >
         <svg class="socials-bar__ico">
           <use xlink:href="img/sprite.svg#telegram-ico"></use>
         </svg>
       </a>
-      <a class="socials-bar__item" href="#">
+      <a
+        class="socials-bar__item"
+        href="https://wa.me/37255551661?text="
+        aria-label="WhatsApp link"
+        target="_blank"
+      >
         <svg class="socials-bar__ico">
           <use xlink:href="img/sprite.svg#whatsapp-ico"></use>
         </svg>
