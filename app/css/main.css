@@ -5565,13 +5565,12 @@ h1 {
 }
 
 .video-hero {
-  padding-top: 233px;
-  padding-bottom: 120px;
   background: url("../img/audit-hero-bg.webp") no-repeat center/contain;
+  color: var(--dark-color);
 }
-@media (max-width: 480px) {
+@supports not (background: url("../img/audit-hero-bg.webp")) {
   .video-hero {
-    padding-top: 178px;
+    background: url("../img/audit-hero-bg.png") no-repeat center/contain;
   }
 }
 .video-hero__content {
@@ -5581,7 +5580,6 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  color: var(--dark-color);
 }
 @media (max-width: 900px) {
   .video-hero__content {
@@ -5602,12 +5600,6 @@ h1 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-}
-@media (max-width: 480px) {
-  .video-hero__content-title {
-    font-size: 24px;
-    line-height: 29px;
-  }
 }
 .video-hero__content-subtitle {
   margin-top: 40px;
@@ -5721,7 +5713,6 @@ h1 {
 }
 
 .video-question {
-  background: url("../img/whitenoise-bg.webp") no-repeat center/cover, linear-gradient(136.82deg, rgba(137, 110, 78, 0) 24.2%, #715a40 43.55%, #896e4e 69.26%), var(--secondary-accent-color);
   color: var(--light-color);
 }
 @media (max-width: 480px) {
@@ -5731,42 +5722,11 @@ h1 {
 }
 .video-question__content-title {
   max-width: 960px;
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .video-question__content-title {
-    font-size: 26px;
-    line-height: 32px;
-  }
 }
 .video-question__content-form {
   margin-top: 70px;
 }
-.video-question__list {
-  margin: 0;
-  font-size: 24px;
-  line-height: 29px;
-}
-@media (max-width: 480px) {
-  .video-question__list {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-.video-question__list-block {
-  margin-top: 35px;
-}
-.video-question__list-title {
-  font-weight: 500;
-}
-.video-question__list-text {
-  margin-top: 35px;
-}
-.video-question__list-splice {
+.video-question__content .video-question__list-splice {
   margin-top: 35px;
   display: block;
 }
@@ -5777,19 +5737,6 @@ h1 {
 @media (max-width: 480px) {
   .video-variants__content {
     max-width: 408px;
-  }
-}
-.video-variants__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .video-variants__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .video-variants__cards {
@@ -5875,22 +5822,14 @@ h1 {
   background: url("../img/seo-cta-bg.webp") no-repeat center, var(--dark-color);
   color: var(--light-color);
 }
+@supports not (background: url("../img/seo-cta-bg.webp")) {
+  .video-advantages {
+    background: url("../img/seo-cta-bg.png") no-repeat center, var(--dark-color);
+  }
+}
 @media (max-width: 480px) {
   .video-advantages__content {
     max-width: 408px;
-  }
-}
-.video-advantages__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .video-advantages__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .video-advantages__list {
@@ -5915,22 +5854,14 @@ h1 {
   color: var(--dark-color);
   background: url("../img/lp-cards-bg.webp") no-repeat center;
 }
+@supports not (background: url("../img/lp-cards-bg.webp")) {
+  .video-properties {
+    background: url("../img/lp-cards-bg.png") no-repeat center;
+  }
+}
 @media (max-width: 480px) {
   .video-properties__content {
     max-width: 408px;
-  }
-}
-.video-properties__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .video-properties__content-title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 .video-properties__list {
@@ -5973,25 +5904,10 @@ h1 {
 
 .video-analysis {
   color: var(--dark-color);
-  background: url("../img/whitenoise-bg.webp") no-repeat center/cover, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #e8ffe8 43.55%, #cdffcc 69.26%), #8db48d;
 }
 @media (max-width: 480px) {
   .video-analysis__content {
     max-width: 408px;
-  }
-}
-.video-analysis__content-title {
-  font-family: "RubikMonoOne";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-  padding-bottom: 10px;
-}
-@media (max-width: 480px) {
-  .video-analysis__content-title {
-    font-size: 26px;
-    line-height: 31px;
   }
 }
 .video-analysis__list {
