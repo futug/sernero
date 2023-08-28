@@ -158,3 +158,36 @@
     }
   }
 }
+
+.green-version {
+  background-color: var(--primary-accent-color);
+
+  .main-form__title {
+    color: var(--dark-color);
+  }
+
+  .main-form__subtitle {
+    color: var(--dark-color);
+  }
+
+  input {
+    border: 1px solid var(--dark-color);
+    color: var(--dark-color);
+
+    &::placeholder {
+      color: var(--dark-color);
+    }
+  }
+
+  button {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: 1px solid var(--dark-color);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--dark-color);
+      border: 1px solid var(--dark-color);
+    }
+  }
+}
