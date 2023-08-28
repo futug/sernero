@@ -1,8 +1,16 @@
 .search-diffs {
   background: url("../img/search-diffs-bg.webp") no-repeat center/ contain;
 
+  @supports not (background: url("../img/search-diffs-bg.webp")) {
+    background: url("../img/search-diffs-bg.png") no-repeat center/ contain;
+  }
+
   @media (max-width: 480px) {
     background: url("../img/search-diffs-bg-mob.webp") no-repeat center;
+
+    @supports not (background: url("../img/search-diffs-bg-mob.webp")) {
+      background: url("../img/search-diffs-bg-mob.png") no-repeat center;
+    }
   }
   &__content {
     @media (max-width: 480px) {

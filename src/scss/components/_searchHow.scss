@@ -1,8 +1,16 @@
 .search-how {
   background: url("../img/search-how-bg.webp") no-repeat center/ contain;
 
+  @supports not (background: url("../img/search-how-bg.webp")) {
+    background: url("../img/search-how-bg.png") no-repeat center/ contain;
+  }
+
   @media (max-width: 480px) {
     background: url("../img/search-how-bg-mobile.webp") no-repeat center;
+
+    @supports not (background: url("../img/search-how-bg-mobile.webp")) {
+      background: url("../img/search-how-bg-mobile.png") no-repeat center;
+    }
   }
   &__content {
     @media (max-width: 480px) {
