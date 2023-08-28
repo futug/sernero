@@ -23,13 +23,8 @@
   &__title {
     margin-bottom: 93px;
     max-width: 960px;
-    font-family: 'RubikMonoOne';
-    font-weight: 400;
-    font-size: 38px;
-    line-height: normal;
 
     @media (max-width: 480px) {
-      font-size: 26px;
       margin-bottom: 70px;
     }
   }
@@ -53,7 +48,7 @@
     width: 100%;
     position: relative;
     padding-left: 50px;
-    font-family: 'RubikMonoOne';
+    font-family: "RubikMonoOne";
     font-weight: 400;
     font-size: 30px;
     line-height: normal;
@@ -66,9 +61,8 @@
       font-size: 22px;
     }
 
-
     &:before {
-      content: counter(list-counter)".";
+      content: counter(list-counter) ".";
       counter-increment: list-counter;
       position: absolute;
       left: 0;
@@ -77,7 +71,7 @@
 
   &__item-text {
     flex: 1 1 535px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: 24px;
     line-height: normal;
@@ -92,7 +86,7 @@
   }
 
   &__bot {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: 26px;
     line-height: normal;
@@ -103,6 +97,6 @@
   }
 }
 
-.audit-problems__bot>span {
+.audit-problems__bot > span {
   font-weight: 700;
 }

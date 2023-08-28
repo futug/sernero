@@ -3968,8 +3968,6 @@ h1 {
 }
 
 .audit-hero {
-  padding-top: 233px;
-  padding-bottom: 120px;
   background: url("../img/audit-hero-bg.webp") no-repeat center/contain;
 }
 @supports not (background: url("../img/audit-hero-bg.webp")) {
@@ -3980,7 +3978,6 @@ h1 {
 @media (max-width: 480px) {
   .audit-hero {
     background: url("../img/audit-hero-bg_mobile.webp") no-repeat center;
-    padding-top: 178px;
   }
   @supports not (background: url("../img/audit-hero-bg_mobile.webp")) {
     .audit-hero {
@@ -4164,16 +4161,6 @@ h1 {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 230px;
   flex: 1 1 230px;
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 37px;
-}
-@media (max-width: 480px) {
-  .audit-quote__title {
-    font-size: 26px;
-    line-height: 32px;
-  }
 }
 .audit-quote__subtitle {
   -webkit-box-flex: 1;
@@ -4192,12 +4179,7 @@ h1 {
 }
 
 .audit-need {
-  background: url("../img/audit-need-bg.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%), #8DB48D;
-}
-@supports not (background: url("../img/audit-need-bg.webp")) {
-  .audit-need {
-    background: url("../img/audit-need-bg.png") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, rgba(231, 255, 230, 0.959184) 43.54%, #E8FFE8 43.55%, #E8FFE7 43.56%, #CDFFCC 69.26%), #8DB48D;
-  }
+  color: var(--dark-color);
 }
 @media (max-width: 480px) {
   .audit-need__content {
@@ -4207,16 +4189,6 @@ h1 {
 .audit-need__title {
   margin-bottom: 70px;
   max-width: 960px;
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
-  line-height: normal;
-  color: var(--dark-color);
-}
-@media (max-width: 768px) {
-  .audit-need__title {
-    font-size: 26px;
-  }
 }
 @media (max-width: 480px) {
   .audit-need__title {
@@ -4268,7 +4240,6 @@ h1 {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: var(--dark-color);
 }
 
 .audit_need__text-item > span {
@@ -4292,15 +4263,11 @@ h1 {
   }
 }
 .audit-tasks__title {
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
   margin-bottom: 70px;
   max-width: 960px;
 }
 @media (max-width: 480px) {
   .audit-tasks__title {
-    font-size: 26px;
     max-width: 315px;
     margin-bottom: 40px;
   }
@@ -4370,14 +4337,9 @@ h1 {
 .audit-problems__title {
   margin-bottom: 93px;
   max-width: 960px;
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
-  line-height: normal;
 }
 @media (max-width: 480px) {
   .audit-problems__title {
-    font-size: 26px;
     margin-bottom: 70px;
   }
 }
@@ -4465,7 +4427,7 @@ h1 {
 }
 
 .audit-product {
-  background: #000000;
+  background: var(--dark-color);
   background-repeat: no-repeat;
   background-position: center;
   color: var(--light-color);
@@ -4482,16 +4444,7 @@ h1 {
   }
 }
 .audit-product__title {
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
-  line-height: normal;
   margin-bottom: 70px;
-}
-@media (max-width: 480px) {
-  .audit-product__title {
-    font-size: 26px;
-  }
 }
 .audit-product__text {
   font-family: "Montserrat";
@@ -4549,11 +4502,11 @@ h1 {
 }
 
 .audit-product__title > span {
-  color: #CDFFCC;
+  color: #cdffcc;
 }
 
 .audit-product__text > span {
-  color: #CDFFCC;
+  color: #cdffcc;
 }
 
 .audit-product__item > span {
@@ -4562,11 +4515,11 @@ h1 {
 
 .audit-price {
   color: var(--dark-color);
-  background: url("../img/audit-price-bg.webp") no-repeat center, url("../img/audit-price-bg2.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%), #8DB48D;
+  background: url("../img/audit-price-bg.webp") no-repeat center, url("../img/audit-price-bg2.webp") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #e8ffe8 43.55%, #cdffcc 69.26%), #8db48d;
 }
 @supports not (background-image: url("../img/audit-price-bg.webp")) {
   .audit-price {
-    background: url("../img/audit-price-bg.png") no-repeat center, url("../img/audit-price-bg2.png") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #E8FFE8 43.55%, #CDFFCC 69.26%), #8DB48D;
+    background: url("../img/audit-price-bg.png") no-repeat center, url("../img/audit-price-bg2.png") no-repeat center/100% 100%, linear-gradient(136.82deg, rgba(205, 255, 204, 0) 24.2%, #e8ffe8 43.55%, #cdffcc 69.26%), #8db48d;
   }
 }
 @media (max-width: 480px) {
@@ -4575,16 +4528,7 @@ h1 {
   }
 }
 .audit-price__title {
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
-  line-height: normal;
   margin-bottom: 70px;
-}
-@media (max-width: 480px) {
-  .audit-price__title {
-    font-size: 26px;
-  }
 }
 .audit-price__main {
   display: -webkit-box;
@@ -4654,16 +4598,6 @@ h1 {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 260px;
   flex: 1 1 260px;
-  font-family: "RubikMonoOne";
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 47px;
-}
-@media (max-width: 480px) {
-  .audit-result__title {
-    font-size: 26px;
-    line-height: 32px;
-  }
 }
 .audit-result__text {
   -webkit-box-flex: 1;
