@@ -1,5 +1,6 @@
 .seo-result {
   background-color: var(--dark-color);
+  color: var(--light-color);
 
   &__content {
     margin-left: auto;
@@ -10,7 +11,6 @@
     }
     &-title {
       max-width: 795px;
-      color: var(--light-color);
 
       & span {
         color: var(--primary-accent-color);
@@ -48,11 +48,8 @@
 
     &-text {
       max-width: 1100px;
-      font-style: normal;
-      font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: var(--light-color);
 
       & span {
         color: var(--primary-accent-color);
