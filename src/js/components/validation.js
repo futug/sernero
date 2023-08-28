@@ -2,7 +2,7 @@ import { validateForms } from "../functions/validate-forms";
 
 const rulesHero = [
   {
-    ruleSelector: ".hero-form__name",
+    ruleSelector: ".home-hero__input-name",
     rules: [
       {
         rule: "minLength",
@@ -16,7 +16,7 @@ const rulesHero = [
     ],
   },
   {
-    ruleSelector: ".hero-form__tel",
+    ruleSelector: ".home-hero__input-tel",
     tel: true,
     telError: "Введите корректный телефон",
     rules: [
@@ -27,6 +27,63 @@ const rulesHero = [
       },
     ],
   },
+  {
+    ruleSelector: ".home-hero__input-email",
+    rules: [
+      {
+        rule: "minLength",
+        value: 6,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните email!",
+      },
+    ],
+  },
+];
+
+const rulesIndex = [
+  {
+    ruleSelector: ".home-horiz-form__input-name",
+    rules: [
+      {
+        rule: "minLength",
+        value: 3,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните имя!",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".home-horiz-form__input-tel",
+    tel: true,
+    telError: "Введите корректный телефон",
+    rules: [
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните телефон!",
+      },
+    ],
+  },
+  {
+    ruleSelector: ".home-horiz-form__input-email",
+    rules: [
+      {
+        rule: "minLength",
+        value: 6,
+      },
+      {
+        rule: "required",
+        value: true,
+        errorMessage: "Заполните email!",
+      },
+    ],
+  },
 ];
 
 const afterForm = () => {
@@ -34,5 +91,9 @@ const afterForm = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  validateForms(".hero-form", rulesHero, afterForm);
+  validateForms(".home-hero__form", rulesHero, afterForm);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  validateForms(".home-horiz-form", rulesIndex, afterForm);
 });
