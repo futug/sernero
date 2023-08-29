@@ -26,7 +26,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/google-ads-mark */ "./src/js/components/google-ads-mark.js");
+/* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__);
 console.log("components");
+
 
 
 
@@ -177,16 +180,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/google-ads-mark.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/google-ads-mark.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const block1 = document.querySelector('[data-list="list1"]');
+const block2 = document.querySelector('[data-list="list2"]');
+const item1 = block1.querySelector('.google-args__item:last-child');
+const item2 = block2.querySelector('.google-args__item');
+const resolvePadding = (block1, block2) => {
+  const rect1 = block1.getBoundingClientRect();
+  const rect2 = block2.getBoundingClientRect();
+  const distanceX = Math.abs(rect2.left - rect1.right);
+  document.documentElement.style.setProperty('--mark-padding', `-${distanceX / 2}px`);
+};
+const resolveHeight = (item1, item2) => {
+  const rect1 = item1.getBoundingClientRect();
+  const rect2 = item2.getBoundingClientRect();
+  const distanceY = Math.abs(rect2.top - rect1.top);
+  document.documentElement.style.setProperty('--line-height', `${distanceY}px`);
+};
+if (block1 && block2) {
+  resolvePadding(block1, block2);
+  resolveHeight(item1, item2);
+  window.addEventListener("resize", () => {
+    resolvePadding(block1, block2);
+    resolveHeight(item1, item2);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/components/navbar-selector.js":
 /*!**********************************************!*\
   !*** ./src/js/components/navbar-selector.js ***!
   \**********************************************/
 /***/ (() => {
 
+const servicePaths = ['/google-ads.html', '/google-search-ads.html', '/video-marketing.html', '/google-analytics.html', '/audit.html', '/landing-page.html', '/seo.html'];
 const path = window.location.pathname;
-console.log(path);
-const activeLink = document.querySelector(`[data-link="${path}"]`);
-activeLink.classList.add('nav__list-link--active');
+let activeLink = document.querySelector(`[data-link="${path}"]`);
+if (servicePaths.includes(path)) {
+  activeLink = document.querySelector('[data-link="/services.html"]');
+}
+if (activeLink) {
+  activeLink.classList.add('nav__list-link--active');
+}
 
 /***/ }),
 

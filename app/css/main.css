@@ -4537,6 +4537,122 @@ h1 {
   margin-top: 40px;
 }
 
+:root {
+  --line-height: 400px;
+  --mark-padding: -85px;
+}
+
+.google-args {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+.google-args__title {
+  margin-bottom: 70px;
+}
+@media (max-width: 480px) {
+  .google-args__title {
+    max-width: 378px;
+    margin: 0 auto 70px auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.google-args__title span {
+  color: var(--primary-accent-color);
+}
+.google-args__box {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 476px) {
+  .google-args__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.google-args__list {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  max-width: 500px;
+  margin: 0;
+  padding: 0 0 0 30px;
+  color: var(--light-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  font-family: "Montserrat";
+  font-style: normal;
+  gap: 1.2em;
+}
+@media (max-width: 576px) {
+  .google-args__list {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.google-args__item {
+  position: relative;
+}
+@media (min-width: 476px) {
+  .google-args__item--left::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: calc(var(--mark-padding) - 9px);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+  }
+}
+@media (min-width: 476px) {
+  .google-args__item--right::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: calc(var(--mark-padding) - 39px);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--primary-accent-color);
+  }
+}
+.google-args__list--green {
+  position: relative;
+  color: var(--primary-accent-color);
+}
+@media (min-width: 476px) {
+  .google-args__list--green::before {
+    position: absolute;
+    left: calc(var(--mark-padding) - 2px);
+    top: 15px;
+    content: "";
+    height: var(--line-height);
+    width: 4px;
+    background-color: var(--light-color);
+  }
+}
+
 .seo-hero {
   position: relative;
   z-index: 1;

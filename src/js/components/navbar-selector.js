@@ -1,6 +1,19 @@
+const servicePaths = ['/google-ads.html',
+  '/google-search-ads.html',
+  '/video-marketing.html',
+  '/google-analytics.html',
+  '/audit.html',
+  '/landing-page.html',
+  '/seo.html',
+];
+
 const path = window.location.pathname;
-console.log(path);
 
-const activeLink = document.querySelector(`[data-link="${path}"]`);
+let activeLink = document.querySelector(`[data-link="${path}"]`);
+if (servicePaths.includes(path)) {
+  activeLink = document.querySelector('[data-link="/services.html"]');
+}
 
-activeLink.classList.add('nav__list-link--active');
+if (activeLink) {
+  activeLink.classList.add('nav__list-link--active');
+}
