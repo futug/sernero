@@ -1,0 +1,107 @@
+:root {
+  --line-height: 400px;
+  --mark-padding: -85px;
+}
+
+.google-args {
+  background: var(--dark-color);
+  color: var(--light-color);
+
+  &__title {
+    margin-bottom: 70px;
+
+    @media (max-width: 480px) {
+      max-width: 378px;
+      margin: 0 auto 70px auto;
+      box-sizing: border-box;
+    }
+
+    span {
+      color: var(--primary-accent-color);
+    }
+  }
+
+  &__box {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 476px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__list {
+    flex: 1 1;
+    max-width: 500px;
+    margin: 0;
+    padding: 0 0 0 30px;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    gap: 1.2em;
+    @media (max-width: 576px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item--left {
+    @media (min-width: 476px) {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 5px;
+        right: calc(var(--mark-padding) - 9px);
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background-color: var(--light-color);
+      }
+    }
+  }
+
+  &__item--right {
+    @media (min-width: 476px) {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: calc(var(--mark-padding) - 39px);
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background-color: var(--primary-accent-color);
+      }
+    }
+  }
+
+  &__list--green {
+    position: relative;
+    color: var(--primary-accent-color);
+
+    @media (min-width: 476px) {
+      &::before {
+        position: absolute;
+        left: calc(var(--mark-padding) - 2px);
+        top: 15px;
+        content: "";
+        height: var(--line-height);
+        width: 4px;
+        background-color: var(--light-color);
+      }
+    }
+  }
+}
