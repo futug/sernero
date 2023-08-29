@@ -7,6 +7,4 @@ import "./components/navbar-selector";
 import "./components/google-ads-mark";
 
 import "./components/scrollToTop";
-// import "./components/navbar-selector";
 import "./components/blogShowMore";
-

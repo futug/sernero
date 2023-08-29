@@ -24,23 +24,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_ex__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
-
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/google-ads-mark */ "./src/js/components/google-ads-mark.js");
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__);
-
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
-/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_4__);
-
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__);
 console.log("components");
 
 
 
 
-// import "./components/navbar-selector";
+
 
 
 
@@ -214,6 +211,15 @@ posts?.forEach(post => {
 
 /***/ }),
 
+/***/ "./src/js/components/ex.js":
+/*!*********************************!*\
+  !*** ./src/js/components/ex.js ***!
+  \*********************************/
+/***/ (() => {
+
+
+
+/***/ }),
 
 /***/ "./src/js/components/google-ads-mark.js":
 /*!**********************************************!*\
@@ -221,21 +227,21 @@ posts?.forEach(post => {
   \**********************************************/
 /***/ (() => {
 
-const block1 = document.querySelector('[data-list="list1"]');
-const block2 = document.querySelector('[data-list="list2"]');
-const item1 = block1.querySelector('.google-args__item:last-child');
-const item2 = block2.querySelector('.google-args__item');
+const block1 = document?.querySelector('[data-list="list1"]');
+const block2 = document?.querySelector('[data-list="list2"]');
+const item1 = block1?.querySelector(".google-args__item:last-child");
+const item2 = block2?.querySelector(".google-args__item");
 const resolvePadding = (block1, block2) => {
-  const rect1 = block1.getBoundingClientRect();
-  const rect2 = block2.getBoundingClientRect();
+  const rect1 = block1?.getBoundingClientRect();
+  const rect2 = block2?.getBoundingClientRect();
   const distanceX = Math.abs(rect2.left - rect1.right);
-  document.documentElement.style.setProperty('--mark-padding', `-${distanceX / 2}px`);
+  document.documentElement.style.setProperty("--mark-padding", `-${distanceX / 2}px`);
 };
 const resolveHeight = (item1, item2) => {
-  const rect1 = item1.getBoundingClientRect();
-  const rect2 = item2.getBoundingClientRect();
+  const rect1 = item1?.getBoundingClientRect();
+  const rect2 = item2?.getBoundingClientRect();
   const distanceY = Math.abs(rect2.top - rect1.top);
-  document.documentElement.style.setProperty('--line-height', `${distanceY}px`);
+  document.documentElement.style.setProperty("--line-height", `${distanceY}px`);
 };
 if (block1 && block2) {
   resolvePadding(block1, block2);
@@ -263,15 +269,6 @@ if (servicePaths.includes(path)) {
 if (activeLink) {
   activeLink.classList.add('nav__list-link--active');
 }
-
-/***/ "./src/js/components/ex.js":
-/*!*********************************!*\
-  !*** ./src/js/components/ex.js ***!
-  \*********************************/
-/***/ (() => {
-
-
-
 
 /***/ }),
 
