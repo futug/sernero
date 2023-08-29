@@ -3509,6 +3509,19 @@ h1 {
   }
 }
 
+.read-more-button,
+.read-less-button {
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.read-more-button:hover,
+.read-less-button:hover {
+  color: var(--secondary-accent-color);
+}
+
 .contacts-hero {
   color: var(--dark-color);
   background: url("../img/contacts-hero-bg.webp") no-repeat center/contain;
