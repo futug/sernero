@@ -82,6 +82,7 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -5283,16 +5284,14 @@ h1 {
   margin-top: 20px;
   display: block;
   color: inherit;
-  padding: 14px 36px;
+  padding: 14px 20px;
   border: 1px solid var(--light-color);
   text-align: center;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-size: 18px;
   line-height: 22px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: 100%;
 }
 .landing-variants__cards-btn:hover {
   background-color: var(--light-color);

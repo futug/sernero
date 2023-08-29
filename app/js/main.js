@@ -24,14 +24,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_ex__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
-
 /* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
 /* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__);
-
-/* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
-/* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
+/* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_4__);
 console.log("components");
+
 
 
 
