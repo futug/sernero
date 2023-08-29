@@ -1360,13 +1360,11 @@ h1 {
   left: 0;
   top: 0;
   z-index: 999;
+  color: var(--light-color);
 }
 .header__logo-image {
   width: 140px;
   height: 68px;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 @media (max-width: 840px) {
   .header__logo-image {
@@ -1397,46 +1395,8 @@ h1 {
   }
 }
 
-.light-header {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-.light-header__logo-image {
-  width: 140px;
-  height: 68px;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-@media (max-width: 840px) {
-  .light-header__logo-image {
-    width: 120px;
-    height: 59px;
-  }
-}
-.light-header__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-top: 45px;
-}
-@media (max-width: 840px) {
-  .light-header__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 16px;
-    padding-top: 35px;
-  }
+.header--light {
+  color: var(--dark-color);
 }
 
 .hero {
@@ -1985,6 +1945,10 @@ h1 {
     max-width: 408px;
   }
 }
+.nav {
+  --primary-color: inherit;
+  --secondary-color: var(--primary-accent-color);
+}
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1995,33 +1959,34 @@ h1 {
   gap: 55px;
 }
 .nav__list-link {
+  color: var(--primary-color);
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 24px;
-  color: var(--light-color);
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 .nav__list-link:after {
   content: "";
   display: block;
-  width: 0%;
+  width: 0;
   height: 1px;
-  background-color: var(--primary-accent-color);
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
+  background-color: var(--secondary-color);
 }
 .nav__list-link:hover::after {
-  background-color: var(--primary-accent-color);
   width: 100%;
+  background-color: var(--secondary-color);
 }
 .nav__list-link:hover {
-  color: var(--primary-accent-color);
+  color: var(--secondary-color);
 }
 .nav__list-link--active {
-  color: var(--primary-accent-color);
+  color: var(--secondary-color);
+  font-weight: 500;
 }
 @media (max-width: 840px) {
   .nav__list-link {
@@ -2057,87 +2022,10 @@ h1 {
     -ms-flex-pack: center;
     justify-content: center;
   }
-}
-.nav .contacts-link {
-  font-weight: 500;
 }
 
-.light-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 55px;
-}
-.light-nav__list-link {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 24px;
-  color: var(--dark-color);
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-}
-.light-nav__list-link:after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 1px;
-  background-color: var(--dark-color);
-  -webkit-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.light-nav__list-link:hover::after {
-  color: var(--primary-accent-color);
-  width: 100%;
-}
-.light-nav__list-link--active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: var(--dark-color);
-}
-@media (max-width: 840px) {
-  .light-nav__list-link {
-    font-size: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .light-nav__list-link {
-    font-size: 16px;
-  }
-}
-@media (max-width: 600px) {
-  .light-nav__list-link {
-    font-size: 14px;
-  }
-}
-@media (max-width: 600px) {
-  .light-nav__list {
-    gap: 35px;
-  }
-}
-@media (max-width: 480px) {
-  .light-nav__list {
-    gap: 25px;
-  }
-}
-@media (max-width: 375px) {
-  .light-nav__list {
-    gap: 15px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-}
-.light-nav .contacts-link {
-  font-weight: 500;
+.header--light .nav {
+  --secondary-color: var(--dark-color);
 }
 
 .socials-bar {
@@ -4751,6 +4639,12 @@ h1 {
 }
 .seo-question__content-subtitle span {
   font-weight: 500;
+}
+@media (max-width: 480px) {
+  .seo-question__content-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .seo-result {
