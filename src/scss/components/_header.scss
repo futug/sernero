@@ -4,11 +4,12 @@
   left: 0;
   top: 0;
   z-index: 999;
+  color: var(--light-color);
+
   &__logo {
     &-image {
       width: 140px;
       height: 68px;
-      transform: scale(1.2);
       @media (max-width: 840px) {
         width: 120px;
         height: 59px;
@@ -26,4 +27,8 @@
       padding-top: 35px;
     }
   }
+}
+
+.header--light {
+  color: var(--dark-color);
 }
