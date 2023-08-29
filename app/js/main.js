@@ -24,14 +24,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_ex__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
+
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/google-ads-mark */ "./src/js/components/google-ads-mark.js");
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__);
+
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_4__);
+
 console.log("components");
 
 
 
+
+// import "./components/navbar-selector";
 
 
 
@@ -170,15 +179,41 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/components/ex.js":
-/*!*********************************!*\
-  !*** ./src/js/components/ex.js ***!
-  \*********************************/
+/***/ "./src/js/components/blogShowMore.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/blogShowMore.js ***!
+  \*******************************************/
 /***/ (() => {
 
-
+const posts = document?.querySelectorAll(".blog-item__post");
+posts?.forEach(post => {
+  const postWords = post.textContent.split(" ");
+  if (postWords.length > 93) {
+    const visibleWords = postWords.slice(0, 93).join(" ");
+    const hiddenWords = postWords.slice(93).join(" ");
+    post.innerHTML = `
+      <p>${visibleWords}... <span class="read-more" style="display:none">${hiddenWords}</span></p>
+      <span class="read-more-button">Читать далее...</span>
+      <span class="read-less-button" style="display:none">Скрыть...</span>
+    `;
+    const readMoreButton = post.querySelector(".read-more-button");
+    const readLessButton = post.querySelector(".read-less-button");
+    const hiddenWordsElement = post.querySelector(".read-more");
+    readMoreButton.addEventListener("click", () => {
+      readMoreButton.style.display = "none";
+      readLessButton.style.display = "inline";
+      hiddenWordsElement.style.display = "inline";
+    });
+    readLessButton.addEventListener("click", () => {
+      readMoreButton.style.display = "inline";
+      readLessButton.style.display = "none";
+      hiddenWordsElement.style.display = "none";
+    });
+  }
+});
 
 /***/ }),
+
 
 /***/ "./src/js/components/google-ads-mark.js":
 /*!**********************************************!*\
@@ -229,6 +264,15 @@ if (activeLink) {
   activeLink.classList.add('nav__list-link--active');
 }
 
+/***/ "./src/js/components/ex.js":
+/*!*********************************!*\
+  !*** ./src/js/components/ex.js ***!
+  \*********************************/
+/***/ (() => {
+
+
+
+
 /***/ }),
 
 /***/ "./src/js/components/preloader.js":
@@ -241,6 +285,31 @@ const preloader = document.querySelector(".preloader");
 window.addEventListener("load", () => {
   console.log("Загружено");
   preloader.classList.add("preloader--hide");
+});
+
+/***/ }),
+
+/***/ "./src/js/components/scrollToTop.js":
+/*!******************************************!*\
+  !*** ./src/js/components/scrollToTop.js ***!
+  \******************************************/
+/***/ (() => {
+
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.querySelector(".to-top").classList.add("to-top--active");
+  } else {
+    document.querySelector(".to-top").classList.remove("to-top--active");
+  }
+}
+document.querySelector(".to-top").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 
 /***/ }),

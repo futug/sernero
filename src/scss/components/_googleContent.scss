@@ -1,22 +1,21 @@
 .google-content {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  color: var(--dark-color);
   background: url("../img/google-content-bg.webp") no-repeat center/ contain;
+
+  @supports not (background: url("../img/google-content-bg.webp")) {
+    background: url("../img/google-content-bg.png") no-repeat center/ contain;
+  }
 
   &__content {
     &-title {
       max-width: 876px;
-      color: var(--dark-color);
     }
 
     &-paragraph {
       margin-top: 30px;
-      font-family: "Montserrat";
-      font-style: normal;
-      font-weight: 400;
       font-size: 22px;
       line-height: 27px;
-      color: rgba(0, 0, 0, 0.8);
+      opacity: 0.8;
     }
 
     &-form {
@@ -28,25 +27,20 @@
     margin-top: 40px;
 
     &-title {
-      font-style: normal;
       font-weight: 500;
       font-size: 24px;
       line-height: 29px;
-      color: var(--dark-color);
     }
 
     &-list {
       padding-left: 30px;
-      font-style: normal;
-      font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: rgba(0, 0, 0, 0.8);
+      opacity: 0.8;
 
       & li {
         & span {
           font-weight: 500;
-          color: var(--dark-color);
         }
       }
 
