@@ -383,22 +383,25 @@ const validateForms = (selector, rules, afterSend) => {
     console.error("Вы не передали правила валидации!");
     return false;
   }
-  if (telSelector) {
-    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())("+9 (999) 999-99-99");
-    inputMask.mask(telSelector);
-    for (let item of rules) {
-      if (item.tel) {
-        item.rules.push({
-          rule: "function",
-          validator: function () {
-            const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 11;
-          },
-          errorMessage: item.telError
-        });
-      }
-    }
-  }
+
+  // if (telSelector) {
+  //   const inputMask = new Inputmask("+9 (999) 999-99-99");
+  //   inputMask.mask(telSelector);
+
+  //   for (let item of rules) {
+  //     if (item.tel) {
+  //       item.rules.push({
+  //         rule: "function",
+  //         validator: function () {
+  //           const phone = telSelector.inputmask.unmaskedvalue();
+  //           return phone.length === 11;
+  //         },
+  //         errorMessage: item.telError,
+  //       });
+  //     }
+  //   }
+  // }
+
   const validation = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](selector);
   for (let item of rules) {
     validation.addField(item.ruleSelector, item.rules);
