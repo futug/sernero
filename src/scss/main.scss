@@ -5,6 +5,7 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/backToTop.scss";
 @import "./components/green-gradient-section";
 @import "./components/hero-section";
 @import "./components/brown-gradient-section";
@@ -56,6 +57,9 @@
 
 @import "./components/googleHero";
 @import "./components/googleContent";
+
+@import "./components/googleArgs";
+
 @import "./components/seoHero";
 @import "./components/seoQuestion";
 @import "./components/seoResult";

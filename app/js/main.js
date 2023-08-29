@@ -26,7 +26,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navbar-selector */ "./src/js/components/navbar-selector.js");
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/google-ads-mark */ "./src/js/components/google-ads-mark.js");
+/* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__);
 console.log("components");
+
+
+
 
 
 
@@ -167,6 +176,41 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/blogShowMore.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/blogShowMore.js ***!
+  \*******************************************/
+/***/ (() => {
+
+const posts = document?.querySelectorAll(".blog-item__post");
+posts?.forEach(post => {
+  const postWords = post.textContent.split(" ");
+  if (postWords.length > 93) {
+    const visibleWords = postWords.slice(0, 93).join(" ");
+    const hiddenWords = postWords.slice(93).join(" ");
+    post.innerHTML = `
+      <p>${visibleWords}... <span class="read-more" style="display:none">${hiddenWords}</span></p>
+      <span class="read-more-button">Читать далее...</span>
+      <span class="read-less-button" style="display:none">Скрыть...</span>
+    `;
+    const readMoreButton = post.querySelector(".read-more-button");
+    const readLessButton = post.querySelector(".read-less-button");
+    const hiddenWordsElement = post.querySelector(".read-more");
+    readMoreButton.addEventListener("click", () => {
+      readMoreButton.style.display = "none";
+      readLessButton.style.display = "inline";
+      hiddenWordsElement.style.display = "inline";
+    });
+    readLessButton.addEventListener("click", () => {
+      readMoreButton.style.display = "inline";
+      readLessButton.style.display = "none";
+      hiddenWordsElement.style.display = "none";
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/ex.js":
 /*!*********************************!*\
   !*** ./src/js/components/ex.js ***!
@@ -177,16 +221,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/google-ads-mark.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/google-ads-mark.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const block1 = document?.querySelector('[data-list="list1"]');
+const block2 = document?.querySelector('[data-list="list2"]');
+const item1 = block1?.querySelector(".google-args__item:last-child");
+const item2 = block2?.querySelector(".google-args__item");
+const resolvePadding = (block1, block2) => {
+  const rect1 = block1?.getBoundingClientRect();
+  const rect2 = block2?.getBoundingClientRect();
+  const distanceX = Math.abs(rect2.left - rect1.right);
+  document.documentElement.style.setProperty("--mark-padding", `-${distanceX / 2}px`);
+};
+const resolveHeight = (item1, item2) => {
+  const rect1 = item1?.getBoundingClientRect();
+  const rect2 = item2?.getBoundingClientRect();
+  const distanceY = Math.abs(rect2.top - rect1.top);
+  document.documentElement.style.setProperty("--line-height", `${distanceY}px`);
+};
+if (block1 && block2) {
+  resolvePadding(block1, block2);
+  resolveHeight(item1, item2);
+  window.addEventListener("resize", () => {
+    resolvePadding(block1, block2);
+    resolveHeight(item1, item2);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/components/navbar-selector.js":
 /*!**********************************************!*\
   !*** ./src/js/components/navbar-selector.js ***!
   \**********************************************/
 /***/ (() => {
 
+const servicePaths = ['/google-ads.html', '/google-search-ads.html', '/video-marketing.html', '/google-analytics.html', '/audit.html', '/landing-page.html', '/seo.html'];
 const path = window.location.pathname;
-console.log(path);
-const activeLink = document.querySelector(`[data-link="${path}"]`);
-activeLink.classList.add('nav__list-link--active');
+let activeLink = document.querySelector(`[data-link="${path}"]`);
+if (servicePaths.includes(path)) {
+  activeLink = document.querySelector('[data-link="/services.html"]');
+}
+if (activeLink) {
+  activeLink.classList.add('nav__list-link--active');
+}
 
 /***/ }),
 
@@ -200,6 +282,31 @@ const preloader = document.querySelector(".preloader");
 window.addEventListener("load", () => {
   console.log("Загружено");
   preloader.classList.add("preloader--hide");
+});
+
+/***/ }),
+
+/***/ "./src/js/components/scrollToTop.js":
+/*!******************************************!*\
+  !*** ./src/js/components/scrollToTop.js ***!
+  \******************************************/
+/***/ (() => {
+
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.querySelector(".to-top").classList.add("to-top--active");
+  } else {
+    document.querySelector(".to-top").classList.remove("to-top--active");
+  }
+}
+document.querySelector(".to-top").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 
 /***/ }),
