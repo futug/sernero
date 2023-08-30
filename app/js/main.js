@@ -260,15 +260,15 @@ if (block1 && block2) {
   \**********************************************/
 /***/ (() => {
 
-const servicePaths = ['/google-ads.html', '/google-search-ads.html', '/video-marketing.html', '/google-analytics.html', '/audit.html', '/landing-page.html', '/seo.html'];
+const servicePaths = ['google-ads', 'google-search-ads', 'video-marketing', 'google-analytics', 'audit', 'landing-page', 'seo'];
 const path = window.location.pathname;
-let activeLink = document.querySelector(`[data-link="${path}"]`);
-if (servicePaths.includes(path)) {
-  activeLink = document.querySelector('[data-link="/services.html"]');
+const paths = path.split('/');
+const lastPath = paths[paths.length - 1]?.replace(/\.html$/, "");
+let activeLink = document.querySelector(`[data-link="${lastPath}"]`);
+if (servicePaths.includes(lastPath)) {
+  activeLink = document.querySelector('[data-link="services"]');
 }
-if (activeLink) {
-  activeLink.classList.add('nav__list-link--active');
-}
+activeLink?.classList.add('nav__list-link--active');
 
 /***/ }),
 
