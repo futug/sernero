@@ -7,6 +7,7 @@ const rulesMain = [
       {
         rule: "minLength",
         value: 3,
+        errorMessage: "Минимум 3 символа",
       },
       {
         rule: "required",
@@ -17,13 +18,21 @@ const rulesMain = [
   },
   {
     ruleSelector: ".tel__input",
-    tel: true,
-    telError: "Введите корректный телефон",
     rules: [
       {
         rule: "required",
         value: true,
         errorMessage: "Заполните телефон!",
+      },
+      {
+        rule: "minLength",
+        value: 8,
+        errorMessage: "Минимум 8 символов",
+      },
+      {
+        rule: 'customRegexp',
+        value: /^(\+?\d+)$/,
+        errorMessage: "Введите корректный телефон",
       },
     ],
   },
@@ -31,14 +40,14 @@ const rulesMain = [
     ruleSelector: ".email__input",
     rules: [
       {
-        rule: "minLength",
-        value: 6,
-      },
-      {
         rule: "required",
         value: true,
         errorMessage: "Заполните email!",
       },
+      {
+        rule: "email",
+        errorMessage: "Введите корректный email",
+      }
     ],
   },
 ];
@@ -50,6 +59,7 @@ const rulesHorizont = [
       {
         rule: "minLength",
         value: 3,
+        errorMessage: "Минимум 3 символа",
       },
       {
         rule: "required",
@@ -60,13 +70,21 @@ const rulesHorizont = [
   },
   {
     ruleSelector: ".tel__input",
-    tel: true,
-    telError: "Введите корректный телефон",
     rules: [
       {
         rule: "required",
         value: true,
         errorMessage: "Заполните телефон!",
+      },
+      {
+        rule: "minLength",
+        value: 8,
+        errorMessage: "Минимум 8 символов",
+      },
+      {
+        rule: 'customRegexp',
+        value: /^(\+?\d+)$/,
+        errorMessage: "Введите корректный телефон",
       },
     ],
   },
@@ -74,14 +92,14 @@ const rulesHorizont = [
     ruleSelector: ".email__input",
     rules: [
       {
-        rule: "minLength",
-        value: 6,
-      },
-      {
         rule: "required",
         value: true,
         errorMessage: "Заполните email!",
       },
+      {
+        rule: "email",
+        errorMessage: "Введите корректный email",
+      }
     ],
   },
   {
@@ -89,7 +107,8 @@ const rulesHorizont = [
     rules: [
       {
         rule: "minLength",
-        value: 3,
+        value: 5,
+        errorMessage: "Минимум 5 символов",
       },
       {
         rule: "required",
@@ -112,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   validateForms(".main-form-horizont", rulesHorizont, afterForm);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   validateForms(".search-setup__form", rulesHorizont, afterForm);
 });
 
@@ -123,3 +142,5 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   validateForms(".audit-price__form", rulesMain, afterForm);
 });
+
+*/

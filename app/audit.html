@@ -41,19 +41,19 @@
     <nav class="header__nav nav" title="Navigation">
       <ul class="list-reset nav__list">
         <li class="nav__item">
-          <a href="about.html" class="nav__list-link" data-link="/about.html">О нас</a>
+          <a href="about.html" class="nav__list-link" data-link="about">О нас</a>
         </li>
         <li class="nav__item">
-          <a href="services.html" class="nav__list-link" data-link="/services.html">Услуги</a>
+          <a href="services.html" class="nav__list-link" data-link="services">Услуги</a>
         </li>
         <li class="nav__item">
-          <a href="portfolio.html" class="nav__list-link" data-link="/porfolio.html">Портфолио</a>
+          <a href="portfolio.html" class="nav__list-link" data-link="porfolio">Портфолио</a>
         </li>
         <li class="nav__item">
-          <a href="blog.html" class="nav__list-link" data-link="/blog.html">Блог</a>
+          <a href="blog.html" class="nav__list-link" data-link="blog">Блог</a>
         </li>
         <li class="nav__item">
-          <a href="contacts.html" class="nav__list-link" data-link="/contacts.html"
+          <a href="contacts.html" class="nav__list-link" data-link="contacts"
             >Контакты</a
           >
         </li>
@@ -82,39 +82,41 @@
         Напиши нам
       </a>
     </div>
-    <form action="#" class="audit-hero__content-form main-form black-version">
-      <p class="main-form__title">Запишись на консультацию</p>
-      <p class="main-form__subtitle">
-        Наши менеджеры свяжутся с вами в ближайшее время!
-      </p>
-      <div class="wrapper">
-        <label class="form__label main-form__label">
-          <input
-            type="text"
-            name="Имя"
-            class="input-reset name__input form__input main-form__input"
-            placeholder="Ваше имя"
-          />
-        </label>
-        <label class="form__label main-form__label">
-          <input
-            type="tel"
-            name="Телефон"
-            class="input-reset tel__input form__input main-form__input"
-            placeholder="Ваш телефон"
-          />
-        </label>
-        <label class="form__label main-form__label">
-          <input
-            type="email"
-            name="Почта"
-            class="input-reset email__input form__input main-form__input"
-            placeholder="Ваш e-mail"
-          />
-        </label>
-      </div>
-      <button class="btn-reset form__btn main-form__button">Отправить</button>
-    </form>
+    <div class="audit-hero__content-form">
+      <form action="#" class="main-form black-version" id="audit-hero-form">
+        <p class="main-form__title">Запишись на консультацию</p>
+        <p class="main-form__subtitle">
+          Наши менеджеры свяжутся с вами в ближайшее время!
+        </p>
+        <div class="wrapper">
+          <label class="form__label main-form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset name__input form__input main-form__input"
+              placeholder="Ваше имя"
+            />
+          </label>
+          <label class="form__label main-form__label">
+            <input
+              type="tel"
+              name="Телефон"
+              class="input-reset tel__input form__input main-form__input"
+              placeholder="Ваш телефон"
+            />
+          </label>
+          <label class="form__label main-form__label">
+            <input
+              type="email"
+              name="Почта"
+              class="input-reset email__input form__input main-form__input"
+              placeholder="Ваш e-mail"
+            />
+          </label>
+        </div>
+        <button class="btn-reset form__btn main-form__button">Отправить</button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -417,47 +419,35 @@
           кабинета, оставьте заявку, и мы свяжемся с вами.
         </p>
         <div class="audit-price__socials-bar socials-bar">
-          <a class="socials-bar__item" href="https://t.me/">
+          <a class="socials-bar__item" href="https://t.me/greenfield112" aria-label="Telegram link" target="_blank">
             <svg class="socials-bar__ico">
               <use xlink:href="img/sprite.svg#telegram-ico"></use>
             </svg>
           </a>
-          <a class="socials-bar__item" href="https://wa.me/">
+          <a class="socials-bar__item" href="https://wa.me/37255551661?text=" aria-label="WhatsApp link" target="_blank">
             <svg class="socials-bar__ico">
               <use xlink:href="img/sprite.svg#whatsapp-ico"></use>
             </svg>
           </a>
         </div>
       </div>
-      <form action="#" class="audit-price__form main-form light-version">
+      <form action="#" class="audit-price__form main-form light-version" id="audit-price-form">
         <p class="main-form__title">Запишись на консультацию</p>
         <p class="main-form__subtitle">
           Наши менеджеры свяжутся с вами в ближайшее время!
         </p>
         <div class="wrapper">
           <label class="form__label main-form__label">
-            <input
-              type="text"
-              name="Имя"
-              class="input-reset name__input form__input main-form__input"
-              placeholder="Ваше имя"
-            />
+            <input type="text" name="Имя" class="input-reset name__input form__input main-form__input"
+              placeholder="Ваше имя" />
           </label>
           <label class="form__label main-form__label">
-            <input
-              type="tel"
-              name="Телефон"
-              class="input-reset tel__input form__input main-form__input"
-              placeholder="Ваш телефон"
-            />
+            <input type="tel" name="Телефон" class="input-reset tel__input form__input main-form__input"
+              placeholder="Ваш телефон" />
           </label>
           <label class="form__label main-form__label">
-            <input
-              type="email"
-              name="Почта"
-              class="input-reset email__input form__input main-form__input"
-              placeholder="Ваш e-mail"
-            />
+            <input type="email" name="Почта" class="input-reset email__input form__input main-form__input"
+              placeholder="Ваш e-mail" />
           </label>
         </div>
         <button class="btn-reset form__btn main-form__button">Отправить</button>
@@ -496,7 +486,7 @@
         <footer class="footer footer_light">
   <div class="footer__container container">
     <div class="footer__contacts-bar">
-      <a href="#" class="footer__contacts-bar-item">
+      <a href="tel:+3726188161" class="footer__contacts-bar-item">
         <svg class="footer__contacts-bar-ico">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
@@ -505,7 +495,7 @@
           <p class="footer__contacts-bar-bot">+372 618 81 61</p>
         </div>
       </a>
-      <a href="#" class="footer__contacts-bar-item">
+      <a href="mailto:info@sernero.com" class="footer__contacts-bar-item">
         <svg class="footer__contacts-bar-ico">
           <use xlink:href="img/sprite.svg#mail"></use>
         </svg>
@@ -514,7 +504,7 @@
           <p class="footer__contacts-bar-bot">info@sernero.com</p>
         </div>
       </a>
-      <a href="#" class="footer__contacts-bar-item">
+      <div class="footer__contacts-bar-item">
         <svg class="footer__contacts-bar-ico">
           <use xlink:href="img/sprite.svg#clock"></use>
         </svg>
@@ -522,7 +512,7 @@
           <p class="footer__contacts-bar-top">Рабочие часы</p>
           <p class="footer__contacts-bar-bot">Пн-Пт 9:00–18:00</p>
         </div>
-      </a>
+      </div>
     </div>
     <div class="footer__address">
       <p class="footer__subtitle">наш адрес</p>

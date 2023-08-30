@@ -47,6 +47,10 @@
     }
   }
 
+  &__form {
+    align-self: flex-start;
+  }
+
   &__summary {
     font-size: 26px;
     line-height: 32px;

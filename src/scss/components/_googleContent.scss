@@ -7,6 +7,10 @@
   }
 
   &__content {
+    @media (max-width: 480px) {
+      max-width: 408px;
+    }
+
     &-title {
       max-width: 876px;
     }

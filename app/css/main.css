@@ -875,7 +875,7 @@ h1 {
 .main-form {
   padding: 35px;
   max-width: 350px;
-  max-height: 440px;
+  max-height: 500px;
 }
 .main-form__title {
   max-width: 259px;
@@ -1150,8 +1150,8 @@ h1 {
 }
 .main-form-horizont__inputs {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1171,9 +1171,10 @@ h1 {
   flex-wrap: wrap;
 }
 .main-form-horizont__label {
+  position: relative;
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3730,9 +3731,20 @@ h1 {
 }
 @media (max-width: 480px) {
   .privat-hero__content-title {
-    font-weight: 400;
     font-size: 24px;
     line-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .privat-hero__content-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 360px) {
+  .privat-hero__content-title {
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 .privat-hero__content-cta {
@@ -3749,23 +3761,26 @@ h1 {
 .privat-rules {
   color: var(--dark-color);
 }
-.privat-rules__content-title {
-  font-weight: 500;
+.privat-rules__content {
+  font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  margin-top: 40px;
 }
-.privat-rules__content-paragraph {
-  font-size: 24px;
-  line-height: 29px;
+@media (max-width: 480px) {
+  .privat-rules__content {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.privat-rules__content-title {
+  margin-top: 40px;
+  font-weight: 500;
 }
 .privat-rules__content-paragraph a {
   color: inherit;
   text-decoration: none;
 }
 .privat-rules__content-list {
-  font-size: 24px;
-  line-height: 29px;
   list-style-type: none;
 }
 .privat-rules__content-list li {
@@ -4541,6 +4556,11 @@ h1 {
     background: url("../img/google-content-bg.png") no-repeat center/contain;
   }
 }
+@media (max-width: 480px) {
+  .google-content__content {
+    max-width: 408px;
+  }
+}
 .google-content__content-title {
   max-width: 876px;
 }
@@ -5146,6 +5166,11 @@ h1 {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+}
+@media (max-width: 768px) {
+  .landing-diff__content-text {
+    max-width: none;
+  }
 }
 @media (max-width: 480px) {
   .landing-diff__content-text {
@@ -6821,6 +6846,10 @@ h1 {
 }
 .ga-cta__list-item {
   margin-top: 40px;
+}
+.ga-cta__form {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 .ga-cta__summary {
   font-size: 26px;
