@@ -15,6 +15,7 @@
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
+  outline: none;
 
   @media (max-width: 480px) {
     min-width: 155px;
@@ -68,9 +69,6 @@
   &:hover {
     background: transparent;
     color: var(--btn-color);
-    border: none;
-    border: 1px solid transparent;
-    outline: var(--btn-color) solid 1px;
   }
 }
 
@@ -82,7 +80,7 @@
   &:hover {
     background: var(--btn-color);
     color: var(--btn-secondary-color);
-    outline: var(--btn-secondary-color) solid 1px;
+    border: var(--btn-secondary-color) solid 1px;
 
     .btn-msg-ico {
       stroke: var(--btn-secondary-color);
