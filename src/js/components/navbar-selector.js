@@ -9,9 +9,9 @@ const servicePaths = ['google-ads',
 
 const path = window.location.pathname;
 
-const paths = path.split('/');
+const paths = path.split('/').filter((path) => path);
 
-const lastPath = paths[paths.length - 1]?.replace(/\.html$/, "");
+let lastPath = paths[paths.length - 1]?.replace(/\.html$/, "");
 
 let activeLink = document.querySelector(`[data-link="${lastPath}"]`);
 if (servicePaths.includes(lastPath)) {
