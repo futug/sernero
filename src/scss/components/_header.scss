@@ -1,15 +1,20 @@
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 999;
   color: var(--light-color);
+  --burger-color: var(--light-color);
+  --burger-background: rgba(0, 0, 0, 0.8);
+  background: transparent;
 
   &__logo {
+    z-index: 501;
     &-image {
       width: 140px;
       height: 68px;
+
       @media (max-width: 840px) {
         width: 120px;
         height: 59px;
@@ -20,15 +25,124 @@
   &__inner {
     @include flex-all-sb;
     padding-top: 45px;
+    transition: all 0.3s ease-in;
 
     @media (max-width: 840px) {
       flex-direction: column;
       gap: 16px;
       padding-top: 35px;
     }
+
+    @media (max-width: 425px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    z-index: 500;
+    @media (max-width: 425px) {
+      position: fixed;
+      top: -100vh;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--burger-background);
+      color: var(--burger-color);
+      backdrop-filter: blur(3px);
+      transition: all 0.3s ease-in;
+
+      .nav__list {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+    }
+  }
+
+  &__nav_active {
+    top: 0;
+  }
+
+  &__burger {
+    z-index: 500;
+    display: none;
+    position: relative;
+    height: 26px;
+    width: 33px;
+    background: transparent;
+
+    @media (max-width: 425px) {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      height: 3px;
+      width: 70%;
+      height: 3px;
+      transition: all 0.3s ease;
+      background-color: var(--burger-color);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transition: all 0.3s ease;
+      background-color: var(--burger-color);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      transition: all 0.3s ease;
+      background-color: var(--burger-color);
+    }
+
+    &.active {
+      &:before {
+        transform: rotate(45deg);
+        top: 11px;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 12px;
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+.header_scrolled {
+  background-color: var(--burger-background);
+  backdrop-filter: blur(5px);
+
+  .header__inner {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .header__logo {
+    transform: scale(0.8);
   }
 }
 
 .header--light {
   color: var(--dark-color);
+  --burger-color: var(--dark-color);
+  --burger-background: rgba(255, 255, 255, 0.9);
 }
