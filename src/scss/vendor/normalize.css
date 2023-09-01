@@ -39,10 +39,10 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-	font-size: 2em;
+/*h1 {
+/	font-size: 2em;
 	margin: 0.67em 0;
-}
+}*/
 
 /* Grouping content
    ========================================================================== */
@@ -376,4 +376,20 @@ template {
 
 [hidden] {
 	display: none;
+}
+
+/**
+ * Delete button highlighting
+ */
+
+button:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+ * Delete link highlighting
+ */
+
+a:active {
+  -webkit-tap-highlight-color: transparent;
 }

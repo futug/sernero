@@ -28,11 +28,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_navbar_selector__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navbar_selector__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/google-ads-mark */ "./src/js/components/google-ads-mark.js");
 /* harmony import */ var _components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_google_ads_mark__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
-/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
-/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_lightBox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/lightBox */ "./src/js/components/lightBox.js");
+/* harmony import */ var _components_lightBox__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_lightBox__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_infinityScroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/infinityScroll */ "./src/js/components/infinityScroll.js");
+/* harmony import */ var _components_infinityScroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_infinityScroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/blogShowMore */ "./src/js/components/blogShowMore.js");
+/* harmony import */ var _components_blogShowMore__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_blogShowMore__WEBPACK_IMPORTED_MODULE_8__);
 console.log("components");
+
+
 
 
 
@@ -251,6 +257,101 @@ if (block1 && block2) {
     resolveHeight(item1, item2);
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/components/infinityScroll.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/infinityScroll.js ***!
+  \*********************************************/
+/***/ (() => {
+
+const portfolioList = document.querySelector('.portfolio-list__content');
+if (portfolioList) {
+  const footer = document.querySelector('footer');
+  const items = portfolioList.querySelectorAll('.portfolio-list__item');
+  const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svgElement.setAttribute("class", "spinner");
+  svgElement.setAttribute("viewBox", "0 0 50 50");
+  const circleElement = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  circleElement.setAttribute("class", "path");
+  circleElement.setAttribute("cx", "25");
+  circleElement.setAttribute("cy", "25");
+  circleElement.setAttribute("r", "20");
+  circleElement.setAttribute("fill", "none");
+  circleElement.setAttribute("stroke-width", "5");
+  svgElement.appendChild(circleElement);
+  const count = 3;
+  let isReady = true;
+  for (let i = 0; i < count && i < items.length; i += 1) {
+    items[i].classList.add('portfolio-list__item--show');
+  }
+  let start = count;
+  let finish = start + count - 1;
+  const options = {
+    root: null,
+    rootMargin: '90px',
+    threshold: 0
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && isReady) {
+        isReady = false;
+        portfolioList.appendChild(svgElement);
+        setTimeout(() => {
+          for (let i = start; i <= finish && i < items.length; i += 1) {
+            items[i].classList.add('portfolio-list__item--show');
+          }
+          start = start + count;
+          finish = finish + count;
+          if (start >= items.length) {
+            observer.unobserve(entry.target);
+          }
+          isReady = true;
+          const spinner = portfolioList.lastChild;
+          spinner.remove();
+        }, 1200);
+      }
+    });
+  }, options);
+  if (start < items.length) {
+    observer.observe(footer);
+  }
+}
+;
+
+/***/ }),
+
+/***/ "./src/js/components/lightBox.js":
+/*!***************************************!*\
+  !*** ./src/js/components/lightBox.js ***!
+  \***************************************/
+/***/ (() => {
+
+const gallery = document.querySelectorAll('[data-lightbox="gallery"]');
+const overlay = document.querySelector('.overlay');
+const lightBox = document.querySelector('.lightbox');
+const closeButton = document.querySelector('.close-button');
+gallery.forEach(item => {
+  item.addEventListener('click', e => {
+    e.stopPropagation();
+    const src = item.getAttribute('src');
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'lightbox__image';
+    lightBox.append(img);
+    overlay.classList.toggle('overlay_active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+overlay?.addEventListener('click', e => {
+  e.stopPropagation();
+  if (e.target.className !== 'lightbox__image') {
+    overlay.classList.toggle('overlay_active');
+    document.body.style.overflow = 'auto';
+    lightBox?.replaceChildren();
+  }
+});
 
 /***/ }),
 

@@ -334,6 +334,7 @@ h1 {
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
+  outline: none;
 }
 @media (max-width: 480px) {
   .btn {
@@ -389,9 +390,6 @@ h1 {
 .btn-primary:hover {
   background: transparent;
   color: var(--btn-color);
-  border: none;
-  border: 1px solid transparent;
-  outline: var(--btn-color) solid 1px;
 }
 
 .btn-secondary {
@@ -402,7 +400,7 @@ h1 {
 .btn-secondary:hover {
   background: var(--btn-color);
   color: var(--btn-secondary-color);
-  outline: var(--btn-secondary-color) solid 1px;
+  border: var(--btn-secondary-color) solid 1px;
 }
 .btn-secondary:hover .btn-msg-ico {
   stroke: var(--btn-secondary-color);
@@ -1178,9 +1176,9 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1192,9 +1190,6 @@ h1 {
 .main-form-horizont__input {
   border: 1px solid var(--dark-color);
   width: 100%;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   padding: 13px;
   outline: none;
   background-color: transparent;
@@ -1363,6 +1358,8 @@ h1 {
 
 .just-validate-error-label {
   white-space: nowrap;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .secondary-title {
@@ -3291,18 +3288,45 @@ h1 {
   flex-direction: column;
   gap: 36px;
 }
+@media (max-width: 480px) {
+  .portfolio-list__content {
+    gap: 20px;
+  }
+}
 .portfolio-list__item {
   background: #715a40;
   -webkit-box-shadow: inset 0px 0px 100px #000000;
   box-shadow: inset 0px 0px 100px #000000;
   padding: 30px;
+  display: none;
+  gap: 15px 30px;
+}
+@media (max-width: 1024px) {
+  .portfolio-list__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.portfolio-list__item--show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
 }
-.portfolio-list__item .portfolio__item-text {
-  max-width: 312px;
+.portfolio-list__item-image {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 700px;
+  flex: 1 1 700px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: left top;
+  object-position: left top;
+  min-height: 100%;
+  cursor: pointer;
+}
+.portfolio-list__item-text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 400px;
+  flex: 1 1 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3310,37 +3334,151 @@ h1 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-.portfolio-list__item .portfolio__item-text .item__text-paragraph {
+  gap: 1.2em;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: rgba(255, 255, 255, 0.8);
-}
-.portfolio-list__item .portfolio__item-text span {
   color: var(--light-color);
-  display: block;
 }
-@media (max-width: 768px) {
-  .portfolio-list__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+@media (max-width: 480px) {
+  .portfolio-list__item-text {
+    font-size: 14px;
+    line-height: 17px;
   }
-  .portfolio-list__item .portfolio__item-text {
-    max-width: 558px;
+}
+.portfolio-list__text-paragraph {
+  opacity: 0.8;
+}
+.portfolio-list__text-paragraph span {
+  font-weight: 500;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.lightbox {
+  max-width: 50%;
+  max-height: 80%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.overlay_active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay_active .lightbox {
+  max-width: 80%;
+}
+
+.lightbox__image {
+  border-radius: 15px;
+  border: 5px solid var(--light-color);
+}
+
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 27px;
+  height: 27px;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: all 0.3 ease-in;
+  transition: all 0.3 ease-in;
+}
+.close-button:hover {
+  opacity: 1;
+}
+
+.spinner {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+}
+@media (max-width: 480px) {
+  .spinner {
+    width: 20px;
+    height: 20px;
   }
-  .portfolio-list__item .portfolio__item-text .item__text-paragraph:not(:first-child) {
-    margin-top: 20px;
+}
+.spinner .path {
+  stroke: #D3D3D3;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
 .blog-hero {
   color: var(--dark-color);
   background: url("../img/blog-hero-bg.webp") no-repeat center/contain, url("../img/blog-hero-bg.png") no-repeat center/contain;
