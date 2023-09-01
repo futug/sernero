@@ -7,6 +7,7 @@ import "./components/navbar-selector";
 import "./components/google-ads-mark";
 import "./components/lightBox";
 import "./components/infinityScroll";
+import "./components/burger";
 
 import "./components/scrollToTop";
 import "./components/blogShowMore";
