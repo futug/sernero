@@ -3667,6 +3667,7 @@ h1 {
   }
 }
 .blog-list__decore {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -3700,36 +3701,26 @@ h1 {
   background-color: var(--light-color);
   position: relative;
 }
-@media (max-width: 768px) {
-  .blog-list__content .blog-item {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
+.blog-list__content .blog-item__left {
+  width: 400px;
 }
-.blog-list__content .blog-item__image {
-  width: 250px;
-  height: 350px;
-  overflow: hidden;
-  position: relative;
-}
-@media (max-width: 768px) {
-  .blog-list__content .blog-item__image {
-    width: 378px;
-  }
-}
-@media (max-width: 460px) {
-  .blog-list__content .blog-item__image {
+@media (max-width: 1024px) {
+  .blog-list__content .blog-item__left {
     width: 100%;
   }
 }
+.blog-list__content .blog-item__image {
+  overflow: hidden;
+}
+.blog-list__content .blog-item__image picture {
+  width: 100%;
+}
 .blog-list__content .blog-item__image .blog-image {
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 100%;
-  width: auto;
-  -o-object-position: right;
-  object-position: right;
+  -o-object-position: center;
+  object-position: center;
 }
 .blog-list__content .blog-item__name {
   font-family: "RubikMonoOne";
@@ -3750,6 +3741,10 @@ h1 {
   color: var(--dark-color);
 }
 .blog-list__content .blog-item__right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 505px;
+  flex: 1 1 505px;
+  gap: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3757,13 +3752,8 @@ h1 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 646px;
 }
 .blog-list__content .blog-item__title {
-  max-width: 306px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
