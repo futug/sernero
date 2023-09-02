@@ -50,7 +50,7 @@
         font-size: 14px;
       }
 
-      @media (max-width: 425px) {
+      @media (max-width: 475px) {
         font-size: 20px;
       }
     }
@@ -61,12 +61,6 @@
 
     @media (max-width: 480px) {
       gap: 25px;
-    }
-
-    @media (max-width: 375px) {
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
   }
 }
