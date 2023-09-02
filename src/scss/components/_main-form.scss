@@ -4,6 +4,7 @@
   max-height: 500px;
 
   &__title {
+    margin-bottom: 11px;
     max-width: 259px;
     font-family: "Montserrat";
     font-style: normal;
@@ -13,8 +14,8 @@
   }
 
   &__subtitle {
-    margin-top: 11px;
     max-width: 259px;
+    margin-bottom: 25px;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 300;
@@ -24,14 +25,7 @@
 
   &__label {
     display: block;
-    flex-grow: 1;
-  }
-
-  .wrapper {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin: 0 0 10px 0;
   }
 
   &__input {
@@ -40,10 +34,20 @@
     background-color: transparent;
     outline: 0;
     -webkit-tap-highlight-color: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   &__button {
-    margin-top: 26px;
+    margin-top: 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -98,6 +102,10 @@
     &::placeholder {
       color: var(--light-color);
     }
+  }
+
+  .just-validate-error-label {
+    color: white !important;
   }
 }
 
