@@ -1204,6 +1204,7 @@ h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  background: transparent;
 }
 .main-form-horizont__privacy-warn {
   font-style: normal;
@@ -3776,6 +3777,7 @@ h1 {
 
 .read-more-button,
 .read-less-button {
+  color: grey;
   font-size: 16px;
   cursor: pointer;
   margin-top: 30px;
