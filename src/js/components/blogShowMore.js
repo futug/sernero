@@ -3,12 +3,12 @@ const posts = document?.querySelectorAll(".blog-item__post");
 posts?.forEach((post) => {
   const postWords = post.textContent.split(" ");
 
-  if (postWords.length > 93) {
-    const visibleWords = postWords.slice(0, 93).join(" ");
-    const hiddenWords = postWords.slice(93).join(" ");
+  if (postWords.length > 120) {
+    const visibleWords = postWords.slice(0, 120).join(" ");
+    const hiddenWords = postWords.slice(120).join(" ");
 
     post.innerHTML = `
-      <p>${visibleWords}... <span class="read-more" style="display:none">${hiddenWords}</span></p>
+      <p>${visibleWords}<span class="read-more" style="display:none">${hiddenWords}</span></p>
       <span class="read-more-button">Читать далее...</span>
       <span class="read-less-button" style="display:none">Скрыть...</span>
     `;
